@@ -1,0 +1,22 @@
+name: Phase-Link Siphon
+type: Conduit
+description: "Uses localized phase-folding technology to transport liquids across gaps and over obstacles."
+health: 400
+size: 1
+category: liquid
+
+# The distance it can jump (vanilla is 4, this is 12)
+range: 15
+
+# How much it can hold during the 'jump'
+liquidCapacity: 50
+
+hasPower: false
+
+requirements: [
+  titanium/10
+  metaglass/15
+  phase-fabric/5
+]
+
+research: bridge-conduit

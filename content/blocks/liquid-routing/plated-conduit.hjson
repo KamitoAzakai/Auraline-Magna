@@ -1,0 +1,22 @@
+name: "Plated Conduit"
+type: Conduit
+description: "A heavy-duty armored pipeline. Utilizing a hardened carbide shell and internal metaglass lining, it can transport high-viscosity liquids at extreme pressures with zero structural fatigue."
+health: 650
+size: 1
+category: liquid
+
+# Superior throughput for high-tier crafters
+liquidCapacity: 50
+liquidPressure: 2.0
+
+# Visuals - making it look "Giga"
+# botColor is used for the 'under' part of the pipe
+botColor: 3d3d41
+
+requirements: [
+  hardened-carbide/2
+  metaglass/3
+  silicon/2
+]
+
+research: pulse-conduit

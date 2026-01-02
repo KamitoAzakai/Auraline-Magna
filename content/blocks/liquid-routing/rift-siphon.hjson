@@ -1,0 +1,27 @@
+type: Pump
+name: Rift-Siphon
+description: "A Tier 7 ultra-heavy pump. Uses quantum-vacuum suction to extract liquids at a staggering rate. Capable of saturating multiple high-tier pipe networks simultaneously."
+size: 4
+health: 3200
+category: liquid
+
+# Performance Stats - Target: 800/sec
+# Pump 'pumpAmount' is per tile, per tick.
+# 4x4 size = 16 tiles. 
+# 0.85 * 16 tiles * 60 ticks = 816 units/second.
+pumpAmount: 0.85
+
+hasPower: true
+consumes: {
+  power: 15.0
+}
+
+# High-tier materials for a high-tier pump
+requirements: [
+  tau-forged-quantum-alloy/80
+  hardened-carbide/200
+  crystalline-silicon/150
+  metaglass/500
+]
+
+research: rotary-pump

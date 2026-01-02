@@ -1,0 +1,19 @@
+name: Titan Reservoir
+type: LiquidRouter
+description: "A massive, reinforced storage tank for liquids. Features high-pressure gaskets to prevent leakage."
+health: 4000
+size: 4
+category: liquid
+hasLiquids: true
+
+# 5,000 is 10x the capacity of a vanilla Large Liquid Tank
+liquidCapacity: 5000
+
+requirements: [
+  lead/500
+  metaglass/300
+  titanium/200
+  silicon/100
+]
+
+research: liquid-tank
