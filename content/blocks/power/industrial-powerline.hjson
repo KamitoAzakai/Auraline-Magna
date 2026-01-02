@@ -1,0 +1,15 @@
+type: PowerNode
+name: "Industrial Powerline"
+description: "A high-capacity power node that can connect to multiple power sources and distribute energy efficiently."
+category: "power"
+size: 2
+requirements: [
+    copper/40
+    titanium/20
+    lead/30
+]
+
+laserRange: 200
+maxNodes: 2
+
+research: local-powernode

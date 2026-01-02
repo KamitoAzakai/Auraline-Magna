@@ -1,0 +1,96 @@
+type: ConsumeGenerator
+name: "Isotope Nuclear Collider"
+description: "A mid-to-high tier particle accelerator. Smashes enriched isotopes at relativistic speeds to generate massive thermal energy. Requires constant Cryofluid cooling to prevent core meltdown."
+size: 4
+health: 3200
+category: power
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Balanced for Mid-Game: 3,000 Power/sec (50 per tick)
+powerProduction: 100
+
+# Efficiency & Timing
+itemDuration: 600
+liquidCapacity: 60
+
+consumes: {
+  items: [
+    # Uses standard Thorium as the collider medium in mid-game
+    thorium/2
+    # Surge Alloy acts as the kinetic anvil
+    surge-alloy/1
+  ]
+  liquids: [
+    # Mandatory cooling requirement
+    cryofluid/0.2
+  ]
+}
+
+# RELIABILITY UPDATES
+# If cooling fails, the machine stops producing power immediately
+breakage: 1.0
+rebuildable: true
+
+# VISUALS: CHERENKOV RESONANCE
+updateEffect: {
+  type: ParticleEffect
+  particles: 2
+  length: 20
+  lifetime: 45
+  colorFrom: 84f4ff # Cryofluid Cyan
+  colorTo: b892ff00 # Auraline Violet
+  sizeFrom: 1.5
+  sizeTo: 0
+}
+updateEffectChance: 0.12
+
+# DRAWER SYSTEM: Thermal Dynamics
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. Cooling Reservoir (Shows blue fluid level)
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 3
+    }
+    # 2. Magnetic Acceleration Ring
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.3
+      rotateSpeed: 9
+    }
+    # 3. Core Glow: Shifts from Cyan to Purple based on heat
+    {
+      type: DrawGlowRegion
+      color: 84f4ff
+      glowIntensity: 0.7
+      glowScale: 10
+    }
+    # 4. Reaction Pulse (Flashes during collision)
+    {
+      type: DrawFlame
+      color: ffffff
+      flareColor: b892ff
+      flareMag: 0.6
+      flareRadius: 4
+    }
+  ]
+}
+
+# MID-GAME REQUIREMENTS
+requirements: [
+  thorium/500
+  titanium/400
+  silicon/450
+  surge-alloy/120
+  metaglass/200
+  plastanium/150
+]
+
+research: impact-reactor

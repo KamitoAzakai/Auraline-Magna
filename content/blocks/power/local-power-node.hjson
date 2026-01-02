@@ -1,0 +1,13 @@
+type: PowerNode
+name: "Local Power Node"
+description: "A basic power node that connects to nearby power sources to distribute energy."
+category: "power"
+size: 1
+requirements: [
+    copper/30
+    lead/20
+]
+laserRange: 50
+maxNodes: 20
+
+research: power-node

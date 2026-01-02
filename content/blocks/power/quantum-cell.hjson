@@ -1,0 +1,41 @@
+# Ensure the filename is exactly quantum-cell.hjson
+type: Battery
+name: "Quantum Cell"
+# 'internalName' should match your sprite filename: quantum-cell.png
+description: "A high-density power storage unit that utilizes stabilized phase-matter to store vast amounts of energy."
+health: 30000
+size: 1
+category: power
+
+# High storage capacity
+consumes: {
+  powerBuffered: 25000000
+}
+
+# DRAWER SYSTEM: This tells the game how to look for your sprite layers
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      # This draws your main 'quantum-cell.png'
+      type: DrawDefault
+    }
+    {
+      # This adds a violet pulse to show it's 'Quantum' technology
+      type: DrawPulseShape
+      color: b892ff
+      radius: 3
+    }
+  ]
+}
+
+requirements: [
+  titanium/100
+  silicon/150
+  lead/200
+  surge-alloy/100
+  # Ensure this item exists in your mod
+  quantum-alloy/10 
+]
+
+research: battery

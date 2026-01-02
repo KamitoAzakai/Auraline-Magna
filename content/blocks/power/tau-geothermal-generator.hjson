@@ -1,0 +1,30 @@
+name: Tau-Geothermal Extractor
+type: ThermalGenerator
+description: "An advanced geothermal harvester. Utilizing the hyper-conductive properties of Tau-forged materials, it extracts thermal energy directly from the lithosphere. Generates massive power when placed on hot terrain."
+size: 5
+health: 5500
+category: power
+
+# Base power generation is massive compared to standard thermal
+# On standard "Hot" floor, this will produce around 8,000 power/sec
+# On lava or volcanic floors, this scales up significantly.
+powerProduction: 133.33 # This is the "per tick" value (approx 8k/sec base)
+
+# It requires a cooling liquid to prevent the Tau-alloys from melting
+consumes: {
+  liquids: [
+    ionic-refrigerant/0.2
+  ]
+}
+
+# Floating point attribute for heat scaling
+attribute: heat
+
+requirements: [
+  tau-forged-thorium/200
+  tau-forged-quantum-alloy/150
+  hardened-carbide/800
+  crystalline-silicon/600
+]
+
+research: thermal-generator

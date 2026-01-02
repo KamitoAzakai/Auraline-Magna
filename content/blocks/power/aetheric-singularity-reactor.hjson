@@ -1,0 +1,102 @@
+type: ImpactReactor
+name: "Aetheric Singularity Reactor"
+description: "The apex of Auraline energy science. Compresses Plasma Flux within a Tau-forged Quantum lattice to trigger a localized gravitational collapse. Generates vast amounts of power but requires constant material 'fuel' to prevent the singularity from evaporating."
+size: 7
+health: 50000
+category: power
+hasItems: true
+hasLiquids: true
+
+# Massive power output (scaled for Giga-Factories)
+powerProduction: 50000.0
+
+# Startup & Maintenance
+itemDuration: 600
+warmupSpeed: 0.001 # Takes a long time to 'spin up' the singularity
+
+consumes: {
+  power: 500.0 
+  items: [
+    tau-forged-quantum-alloy/1
+  ]
+  liquids: [
+    plasma-flux/2.0
+  ]
+}
+
+# VISUALS: THE SINGULARITY EVENT
+# updateEffect: Distant stars/sparks being pulled into the center
+updateEffect: {
+  type: ParticleEffect
+  particles: 5
+  length: 40
+  lifetime: 60
+  interp: pow3In
+  colorFrom: ffffff
+  colorTo: b892ff
+  sizeFrom: 2
+  sizeTo: 0
+}
+
+# When active, it shakes the screen slightly to show its power
+updateEffectChance: 0.2
+
+# DRAWER SYSTEM: Layered Containment and the Void
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault # The heavy lead/alloy base
+    }
+    # 1. The Liquid Containment Ring (Glowing Plasma Flux)
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 4
+    }
+    # 2. Rotating Containment Magnets (The outer shell)
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 1.5
+    }
+    # 3. The Singularity Field (Dark center with a violet corona)
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 1.2
+      glowScale: 30
+    }
+    # 4. The 'Void' Core: A pulsing black-to-white center
+    {
+      type: DrawFlame
+      color: 000000 # Black hole center
+      flareColor: b892ff
+      lightColor: ffffff
+      flareMag: 2.0
+      flareRadius: 8
+      flareRotSpeed: 5
+    }
+    # 5. Plasma 'Tendrils' that arc across the structure
+    {
+      type: DrawPlasma
+      plasmaSections: 10
+      plasmaRange: 15
+      color: b892ff
+    }
+  ]
+}
+
+# FAILURE: What happens when it breaks
+explosionRadius: 150
+explosionDamage: 80000
+flashHit: true
+
+requirements: [
+  tau-forged-quantum-alloy/1000
+  tau-forged-silicon/1500
+  enhanced-quantum-alloy/2000
+  hardened-carbide/5000
+]
+
+research: quantum-power-cell

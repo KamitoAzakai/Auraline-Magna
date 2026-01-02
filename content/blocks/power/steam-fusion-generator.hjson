@@ -1,0 +1,31 @@
+type: ConsumeGenerator
+name: "Steam Fusion Generator"
+description: "An advanced hybrid reactor. It flash-boils water into high-pressure steam by utilizing a controlled fusion reaction between Coal, Thorium, and Surge Alloy."
+health: 8000
+category: power
+size: 2
+hasPower: true
+hasItems: true
+hasLiquids: true
+itemDuration: 600
+powerProduction: 3000 # Increased slightly for the 3-item requirement
+
+consumes: {
+  liquids: [
+    water/0.5
+  ]
+  items: [
+    coal/1
+    thorium/1
+  ]
+}
+
+requirements: [
+  thorium/300
+  silicon/200
+  surge-alloy/150
+  blast-compound/100
+  titanium/150
+  lead/100
+]
+research: "steam-generator"

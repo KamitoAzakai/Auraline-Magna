@@ -1,0 +1,19 @@
+name: Helios Array
+type: SolarGenerator
+description: "A massive, high-efficiency photovoltaic array designed for high-altitude sectors. Generates significant power during the day."
+health: 1500
+size: 3
+category: power
+
+# Power generation per frame (0.1 is roughly 6 power per second)
+# 1.0 is a massive amount of power for a solar panel
+powerProduction: 5.0
+
+requirements: [
+  lead/300
+  silicon/400
+  metaglass/200
+  phase-fabric/50
+]
+
+research: solar-panel-large
