@@ -1,0 +1,21 @@
+name: Kinetic Tau-forged Containment Vault
+type: StorageBlock
+description: "Utilizes gravitational compression technology to store immense quantities of materials in a stabilized 4x4 footprint using Kinetic Tau-forged components."
+health: 6000
+size: 3
+category: effect
+
+# Vanilla Vault is 1000. This is 'Giga' scale.
+itemCapacity: 35000
+
+# High health ensures it can act as a secondary shield for your core.
+corePlaceholder: false
+
+requirements: [
+  enhanced-kinetic-crystal/200
+  tau-forged-thorium/150
+  crystalline-silicon/300
+  surge-alloy/100
+]
+
+research: vault

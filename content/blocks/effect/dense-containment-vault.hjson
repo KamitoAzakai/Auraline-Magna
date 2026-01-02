@@ -1,0 +1,21 @@
+name: Dense Containment Vault
+type: StorageBlock
+description: "Entry-level gravitational compression storage unit. Efficiently stores large quantities of materials in a stabilized 3x3 footprint."
+health: 6000
+size: 3
+category: effect
+
+# Vanilla Vault is 1000. This is 'Giga' scale.
+itemCapacity: 35000
+
+# High health ensures it can act as a secondary shield for your core.
+corePlaceholder: false
+
+requirements: [
+  titanium/500
+  thorium/300
+  silicon/400
+  surge-alloy/100
+]
+
+research: vault

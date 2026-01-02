@@ -1,0 +1,82 @@
+name: Auraline Giga-Core
+type: CoreBlock
+description: "The ultimate command center. Utilizing Tau-forged materials, this core features near-infinite storage capacity and a localized repair field. It is the heart of a Giga-Factory."
+size: 6
+health: 1500000
+armor: 500
+category: effect
+
+# Massive storage capacity
+itemCapacity: 850000
+unitCapModifier: 120
+unitType: omega-prime
+
+# VISUAL EFFECTS
+# updateEffect: Constant 'hum' of gravity and repairing nanites
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: RadialEffect
+      rotationSpacing: 90
+      amount: 4
+      length: 10
+      effect: lightningCharge
+    }
+    {
+      type: ParticleEffect
+      particles: 2
+      length: 20
+      lifetime: 60
+      colorFrom: a488ff
+      colorTo: ffffff00
+    }
+  ]
+}
+
+# Advanced defense features
+thrusterEffect: nuclearcloud
+incendResistance: 0.95
+buildCostMultiplier: 0.5
+
+# DRAWER SYSTEM: The "Living Heart" of the Empire
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # The Gravity Well - A slow, dark spinning ring at the base
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.6
+      rotateSpeed: 1.5
+    }
+    # The Core Pulse - A large violet glow that expands and contracts
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 1.2
+      glowScale: 20
+    }
+    # Internal Repair Field - Shimmering teal-violet arcs
+    {
+      type: DrawArcSmelt
+      color: 8167e6
+      particles: 20
+      size: 15
+    }
+  ]
+}
+
+requirements: [
+  tau-forged-quantum-alloy/2000
+  tau-forged-silicon/3000
+  enhanced-phase-fabric/1500
+  hardened-carbide/5000
+  enhanced-kinetic-crystal/2000
+  enhanced-quantum-alloy/10000
+  tau-forged-thorium/5000
+]
+
+research: core-nucleus

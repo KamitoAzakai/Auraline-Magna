@@ -1,0 +1,46 @@
+type: Unloader
+name: "Quantum Siphon"
+description: "Uses localized gravity wells to pull materials from containers at extreme velocities. Capable of saturating even the fastest Giga-belts."
+health: 200
+size: 1
+category: distribution
+
+# Instant check speed
+speed: 0
+itemCapacity: 20
+
+# VISUAL EFFECTS
+# updateEffect: A subtle violet 'pull' sparkle to show gravity at work
+updateEffect: lightningCharge
+updateEffectChance: 0.03
+
+# DRAWER SYSTEM: Gives the 1x1 block a 'high-tech' identity
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # A small, intense violet core that pulses
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.8
+      glowScale: 3
+    }
+    # A tiny 'event horizon' spin to show items being pulled through space
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 10
+    }
+  ]
+}
+
+requirements: [
+  titanium/25
+  crystalline-silicon/10
+  enhanced-phase-fabric/10
+]
+
+research: unloader
