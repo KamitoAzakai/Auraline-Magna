@@ -1,7 +1,7 @@
 name: Kinetic Tau-forged Containment Vault
 type: StorageBlock
 description: "Utilizes gravitational compression technology to store immense quantities of materials in a stabilized 4x4 footprint using Kinetic Tau-forged components."
-health: 6000
+health: 15000
 size: 3
 category: effect
 

@@ -6,7 +6,7 @@ size: 3
 category: effect
 
 # Vanilla Vault is 1000. This is 'Giga' scale.
-itemCapacity: 35000
+itemCapacity: 7500
 
 # High health ensures it can act as a secondary shield for your core.
 corePlaceholder: false

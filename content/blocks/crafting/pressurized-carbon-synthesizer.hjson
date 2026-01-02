@@ -1,7 +1,7 @@
 name: Pressurized Carbon Synthesizer
 type: GenericCrafter
 description: "A heavy-duty carbon-fixing facility. It uses high-pressure liquid catalysts to compress oil and scrap into high-density coal at an industrial scale."
-health: 1400
+health: 5000
 size: 3
 category: crafting
 hasPower: true

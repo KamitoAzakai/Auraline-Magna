@@ -7,7 +7,7 @@ armor: 500
 category: effect
 
 # Massive storage capacity
-itemCapacity: 850000
+itemCapacity: 1000000
 unitCapModifier: 120
 unitType: omega-prime
 

@@ -2,7 +2,7 @@ type: Incinerator
 name: "Abyssal Void-Vent"
 description: "A localized pocket of collapsed space. Capable of instantly de-materializing massive amounts of waste items and liquids simultaneously. Its 2x2 frame allows for 8 high-speed conveyor inputs."
 size: 2
-health: 2000
+health: 3000
 category: effect
 
 # High health ensures it survives accidental splashes from your reactors
@@ -14,7 +14,7 @@ hasLiquids: true
 updateEffect: {
   type: ParticleEffect
   particles: 3
-  length: -20 # Negative length pulls particles INWARD
+  length: -20
   lifetime: 40
   colorFrom: b892ff
   colorTo: 000000
