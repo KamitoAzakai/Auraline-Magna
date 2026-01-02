@@ -28,7 +28,7 @@ ammoTypes: {
   # THE BEAM AMMO
   volatile-isotope: {
     type: ContinuousLaserBulletType
-    damage: 150 
+    damage: 15000
     # Damage is per tick, so this is extremely high
     length: 660
     width: 12
