@@ -71,12 +71,6 @@ drawer: {
       type: DrawDefault
     }
     {
-      # Visualizes the Ionic Refrigerant through the cooling vents
-      type: DrawLiquidTile
-      drawLiquid: ionic-refrigerant
-      padding: 4
-    }
-    {
       # Thermal requirement visualization
       type: DrawGlowRegion
       color: ff8855
@@ -88,12 +82,6 @@ drawer: {
       type: DrawPulseShape
       square: true
       color: 5a5ebc
-    }
-    {
-      # Central core intensity
-      type: DrawGlowRegion
-      color: a488ff
-      glowIntensity: 0.9
     }
     {
       # Displays the heat intake status on the block surface
