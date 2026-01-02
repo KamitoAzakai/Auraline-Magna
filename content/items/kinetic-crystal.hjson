@@ -12,7 +12,6 @@
   charge: 0.8
   cost: 2.5
   
-  # This tells the game where it sits in the tech tree
   research: {
     parent: phase-fabric
     requirements: [

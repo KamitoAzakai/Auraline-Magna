@@ -1,7 +1,7 @@
 {
 name: Enhanced Quantum Alloy
 description: "An advanced iteration of Quantum Alloy, this hyper-dense metallic compound exhibits superior structural integrity and enhanced resistance to temporal distortions, making it ideal for high-stress applications."
-color: "66ffe0" // A more intense mint/cyan glow
+color: "66ffe0" 
 explosiveness: 0.05
 flammability: 0
 radioactivity: 0.3
