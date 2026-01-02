@@ -10,7 +10,6 @@ density: 3000
 opacity: 0.6
 
 # Gameplay Effects:
-# It cools buildings slightly but obscures the player's view
 attrs: {
   light: -0.5
   # Makes the map significantly darker
