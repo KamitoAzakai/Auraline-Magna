@@ -1,0 +1,21 @@
+name: Kinetic Manifold
+# Changing to 'Router' but with size 2 is the most stable method
+type: Router
+description: "A heavy-duty distribution hub. Utilizing internal high-speed buffers, it can split high-density material streams into all directions with zero throughput loss."
+health: 500
+size: 2
+category: distribution
+
+# This is much higher than a normal distributor to handle Giga-belts
+speed: 25
+# Allows the block to 'hold' items and push them out instantly
+itemCapacity: 40
+
+requirements: [
+  lead/50
+  thorium/30
+  silicon/40
+]
+
+# This ensures it shows up in the tech tree correctly
+research: distributor

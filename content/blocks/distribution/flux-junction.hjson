@@ -1,0 +1,48 @@
+type: Junction
+name: "Flux Junction"
+description: "An advanced spatiotemporal crossway. Utilizes a localized phase-shift to allow perpendicular item streams to pass through one another at near-instant speeds."
+size: 1
+health: 400
+armor: 8
+category: distribution
+
+# Speed 0 ensures the junction processes items as fast as the belts can provide them
+speed: 0
+
+# Visuals: A subtle violet flicker to indicate the phase-shift is active
+updateEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 20
+  colorFrom: b892ff
+  colorTo: b892ff00
+  sizeFrom: 2
+  sizeTo: 0
+}
+updateEffectChance: 0.03
+
+# Drawer System
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # The 'Phase Window' - A glowing center where the bypass occurs
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.5
+      glowScale: 3
+    }
+  ]
+}
+
+requirements: [
+  titanium/5
+  silicon/10
+  crystalline-silicon/2
+]
+
+research: junction

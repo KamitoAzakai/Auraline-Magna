@@ -1,0 +1,56 @@
+type: ArmoredConveyor
+name: "Isolated Kinetic Rail"
+description: "A specialized high-speed transport rail designed for dense factory layouts. Ignores side inputs to prevent cross-contamination of material lines. Reinforced against heavy impact."
+health: 600
+size: 1
+category: distribution
+
+# High-velocity movement
+speed: 0.20
+displayedSpeed: 16
+
+# VISUAL EFFECTS
+# Subtle kinetic sparks when items move through
+updateEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 10
+  colorFrom: ffffff
+  colorTo: a488ff00
+  sizeFrom: 1
+  sizeTo: 0
+}
+updateEffectChance: 0.02
+
+# DRAWER SYSTEM: Gives the rail a 'mag-lev' appearance
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # A soft violet 'rail' glow that runs down the center of the belt
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.8
+      rotateSpeed: 0 # Static blur to simulate a glowing rail line
+    }
+    # An overlay glow to show the kinetic energy path
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.3
+      glowScale: 2
+    }
+  ]
+}
+
+requirements: [
+  thorium/3
+  silicon/2
+  metaglass/2
+  plastanium/1
+]
+
+research: armored-conveyor

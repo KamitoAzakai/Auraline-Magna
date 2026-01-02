@@ -1,0 +1,22 @@
+name: Sub-Space Transfuser
+# Using PointConnection allows for the any-angle, direct-feed logic
+type: ItemBridge
+description: "A wireless injection node. Directly beams materials into the internal storage of any targeted building, regardless of alignment."
+size: 2
+health: 2000
+update: true
+solid: true
+hasItems: true
+configurable: true
+category: distribution
+
+# The range for your wireless connection (e.g., 20 tiles)
+range: 160
+# This hides the bridge line to make it look 'wireless'
+fadeIn: false
+moveArrows: false
+
+requirements: [
+  lead/50
+  silicon/30
+]

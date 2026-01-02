@@ -1,0 +1,52 @@
+type: Router
+name: "Flux Router"
+description: "A high-capacity quantum distribution node. Uses localized spatial folding to route items to three outputs simultaneously without throughput loss."
+size: 1
+health: 450
+armor: 10
+category: distribution
+
+# Speed 0 = Instant distribution (1 item per frame)
+speed: 0
+
+# High capacity prevents the router from 'clogging' during high-velocity bursts
+itemCapacity: 20
+
+# VISUAL EFFECTS
+# updateEffect: A small violet pulse to show the flux core is active
+updateEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 15
+  colorFrom: a488ff
+  colorTo: a488ff00
+  sizeFrom: 2
+  sizeTo: 0
+}
+updateEffectChance: 0.05
+
+# DRAWER SYSTEM
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # The 'Flux Core' - An intense violet center
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.8
+      glowScale: 4
+    }
+  ]
+}
+
+requirements: [
+  thorium/10
+  silicon/15
+  crystalline-silicon/5
+]
+
+research: router

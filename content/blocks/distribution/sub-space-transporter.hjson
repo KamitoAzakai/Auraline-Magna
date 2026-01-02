@@ -1,0 +1,23 @@
+name: Sub-Space Transporter
+type: ItemBridge
+description: "Utilizes localized folding of space to transport items across vast distances. Essential for navigating dense Giga-factory layouts."
+health: 300
+size: 1
+category: distribution
+
+# Vanilla bridge is 4, this is a massive jump.
+range: 30
+
+# Speed at which items travel through the bridge
+transportTime: 0.01
+
+# High capacity to prevent clogging your Collective Transporters
+itemCapacity: 40
+
+requirements: [
+  titanium/15
+  silicon/20
+  phase-fabric/5
+]
+
+research: bridge-conveyor

@@ -1,0 +1,14 @@
+type: stackConveyor
+name: "Heavy Collected Transporter"
+description: "A heavy-duty version of the Collective Transporter, designed to handle extremely high item throughput with enhanced durability and efficiency."
+category: "distribution"
+itemCapacity: 500
+speed: 0.4
+
+requirements: [
+    titanium/4
+    plastanium/4
+    lead/4
+    phase-fabric/4
+    surge-alloy/2
+]

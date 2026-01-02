@@ -1,0 +1,14 @@
+type: Conveyor
+name: "Mass Transporter"
+description: "A high-capacity conveyor belt designed for transporting large quantities of items over long distances."
+category: "distribution"
+
+requirements: [
+    titanium/1
+    plastanium/1
+    lead/1
+    phase-fabric/1
+]
+speed: 2
+
+research: armored-conveyor

@@ -1,0 +1,22 @@
+type: massDriver
+name: "Heavy Payload Driver"
+description: "A mass driver designed to launch heavy payloads over long distances with increased power consumption  and item capacity."
+hasPower: true
+size: 3
+consumes: {
+    power: 2.5
+}
+itemCapacity: 1000
+reload: 110
+range: 800
+requirements: [
+    silicon/80
+    graphite/80
+    lead/100
+    copper/100
+    phase-fabric/30
+    surge-alloy/10
+]
+category: "distribution"
+
+research: mass-driver
