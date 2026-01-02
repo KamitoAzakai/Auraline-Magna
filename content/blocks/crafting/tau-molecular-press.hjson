@@ -71,14 +71,6 @@ drawer: {
       type: DrawDefault
     }
     {
-      # Thermal requirement visualization
-      type: DrawGlowRegion
-      square: true
-      color: ff8855
-      glowIntensity: 0.6
-      glowScale: 8
-    }
-    {
       # The heavy slamming motion of the press
       type: DrawPulseShape
       square: true
