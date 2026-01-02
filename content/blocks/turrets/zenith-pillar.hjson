@@ -28,11 +28,11 @@ ammoTypes: {
   # THE BEAM AMMO
   volatile-isotope: {
     type: ContinuousLaserBulletType
-    damage: 150 
+    damage: 1500
     # Damage is per tick, so this is extremely high
     length: 660
     width: 12
-    lifetime: 160 
+    lifetime: 120
     # How long the beam stays on screen
     drawSize: 660
     
@@ -51,7 +51,7 @@ ammoTypes: {
   # THE RAILGUN AMMO (Alternate)
   tau-forged-quantum-alloy: {
     type: RailgunBulletType
-    damage: 8500
+    damage: 85000
     length: 650
     updateEffect: railTrail
     hitEffect: massiveExplosion
