@@ -1,7 +1,7 @@
 type: Unloader
 name: "Quantum Siphon"
 description: "Uses localized gravity wells to pull materials from containers at extreme velocities. Capable of saturating even the fastest Giga-belts."
-health: 200
+health: 2000
 size: 1
 category: distribution
 
