@@ -1,0 +1,11 @@
+{
+name: Enhanced Phase Fabric
+description: "An advanced version of Phase Fabric, this material has been engineered to exhibit superior phase-shifting capabilities and enhanced durability. It is ideal for applications requiring high resilience and adaptability to extreme conditions."
+color: "88ddff" // A brighter, more vibrant blue
+explosiveness: 1.5
+flammability: 1.0
+radioactivity: 2.5
+charge: 1.0
+cost: 5
+research: phase-fabric
+}

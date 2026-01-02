@@ -1,0 +1,23 @@
+{
+  localizedName: "Kinetic Crystal"
+  name: kinetic-crystal
+  description: "A crystal that vibrates at a frequency which negates a portion of its own mass. Essential for high-speed sub-space transport and anti-gravity manifolds."
+  
+  # Updated color to match your new purple kitbash
+  color: b892ff
+  
+  explosiveness: 0.0
+  flammability: 0.0
+  radioactivity: 0.0
+  charge: 0.8
+  cost: 2.5
+  
+  # This tells the game where it sits in the tech tree
+  research: {
+    parent: phase-fabric
+    requirements: [
+      thorium/500
+      phase-fabric/100
+    ]
+  }
+}

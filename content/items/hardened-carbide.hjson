@@ -1,0 +1,8 @@
+{
+name: Hardened Carbide
+description: "Copper and lead lattices reinforced with carbon. Used for the base plating of Giga-structures."
+color: "8e9e9d" // A heavy, dull metallic gray
+hardness: 3
+cost: 1.5
+research: carbide
+}

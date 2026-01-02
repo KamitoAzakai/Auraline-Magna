@@ -1,0 +1,11 @@
+{
+name: Quantum Alloy
+description: "A hyper-dense metallic compound capable of maintaining structural integrity under extreme temporal pressure."
+color: "98ffd9" // A bright mint/cyan glow
+explosiveness: 0.1
+flammability: 0
+radioactivity: 0.5
+charge: 1.2
+cost: 3
+research: surge-alloy
+}

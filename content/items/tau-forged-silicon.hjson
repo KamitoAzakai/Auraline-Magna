@@ -1,0 +1,8 @@
+{
+name: Tau-forged Silicon
+description: "Silicon atoms rearranged and bonded through tau particle infusion, yielding a material with exceptional durability and conductivity."
+color: "99ccff" // A bright, electric blue
+hardness: 4
+cost: 4
+research: silicon
+}

@@ -1,0 +1,11 @@
+{
+name: Tau-forged Quantum Alloy
+description: "An advanced variant of quantum alloy, infused with tau particles to enhance its temporal stability and structural integrity. This material exhibits superior resistance to time-based distortions and is ideal for high-stress applications."
+color: "66ffee" // A vibrant cyan glow
+explosiveness: 0.05
+flammability: 0
+radioactivity: 0.7
+charge: 1.5
+cost: 5
+research: enhanced-quantum-alloy
+}

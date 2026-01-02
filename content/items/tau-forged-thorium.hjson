@@ -1,0 +1,11 @@
+{
+name: Tau-forged Thorium
+description: "Thorium refined through tau particle bombardment, resulting in a super-dense and resilient material."
+color: "ffdd99" // A warm, glowing amber
+explosiveness: 0.2
+flammability: 0
+radioactivity: 2.0
+charge: 0.8
+cost: 6
+research: volatile-isotope
+}

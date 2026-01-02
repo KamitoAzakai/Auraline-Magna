@@ -1,0 +1,12 @@
+type: item
+name: "Genesis Alloy"
+description: "The ultimate synthesis of Auraline technology. A hyper-stable material that exists in multiple dimensions simultaneously. Used in the construction of T5+ units and world-shaping structures."
+color: "e3b3ff" # Pale, glowing violet
+radioactivity: 10.0
+explosiveness: 2.0
+flammability: 2.0
+hardness: 12
+cost: 10
+charge: 5.0
+
+research: tau-forged-quantum-alloy
