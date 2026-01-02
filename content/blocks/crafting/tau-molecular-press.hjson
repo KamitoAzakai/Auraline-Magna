@@ -24,7 +24,7 @@ updateEffect: {
       rotationSpacing: 45
       amount: 8
       length: 6
-      effect: smeltsmoke 
+      effect: smeltsmoke
     }
   ]
 }
@@ -76,11 +76,7 @@ drawer: {
       square: true
       color: 5a5ebc
     }
-    {
-      # Displays the heat intake status on the block surface
-      type: DrawHeatOutput
-      color: ff8855
-    }
+    
   ]
 }
 
