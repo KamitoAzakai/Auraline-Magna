@@ -7,13 +7,15 @@ category: crafting
 hasItems: true
 hasLiquids: true
 hasPower: true
-hasHeat: true
 
-# Crafting Stats
+# HEAT CONFIGURATION
+hasHeat: true
+# Ensures the machine draws from the heat network
+heatConfig: true 
+
 craftTime: 300 
 itemDuration: 300
 
-# Change ONLY this part in your tau-molecular-press.hjson
 updateEffect: {
   type: MultiEffect
   effects: [
@@ -22,13 +24,11 @@ updateEffect: {
       rotationSpacing: 45
       amount: 8
       length: 6
-      # 'fluxExplosion' was the error. 'smeltsmoke' is safe.
       effect: smeltsmoke 
     }
   ]
 }
 
-# Ground-shaking shockwave when the Tau-matter is forged
 craftEffect: {
   type: MultiEffect
   effects: [
@@ -52,48 +52,52 @@ craftEffect: {
 
 consumes: {
   power: 45.0
-  heat: 20.0
+  # Updated to match the 120 units requirement in the lore
+  heat: 120.0 
   items: [
     thorium/10
     surge-alloy/2
   ]
   liquids: [
-    # Cooling is mandatory to stabilize the '120 units' of internal heat
     ionic-refrigerant/0.4
   ]
 }
 
 outputItem: tau-forged-thorium/5
 
-# DRAWER SYSTEM: Layers the mechanical slam and thermal glow
 drawer: {
   type: DrawMulti
   drawers: [
     {
       type: DrawDefault
     }
-    # Visualizes the Ionic Refrigerant flowing through the base
-    # The 'Heat' Glow: Simulates the 120-unit thermal requirement
     {
+      # Visualizes the Ionic Refrigerant through the cooling vents
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 4
+    }
+    {
+      # Thermal requirement visualization
       type: DrawGlowRegion
       color: ff8855
       glowIntensity: 0.6
       glowScale: 8
     }
-    # THE SLAM: Animates the heavy press moving vertically
     {
+      # The heavy slamming motion of the press
       type: DrawPulseShape
       square: true
       color: 5a5ebc
     }
-    # Central Auraline core glow
     {
+      # Central core intensity
       type: DrawGlowRegion
       color: a488ff
       glowIntensity: 0.9
     }
     {
-      # This draws a glowing orange heat-sync overlay
+      # Displays the heat intake status on the block surface
       type: DrawHeatOutput
       color: ff8855
     }
