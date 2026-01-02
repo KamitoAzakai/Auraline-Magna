@@ -1,0 +1,91 @@
+type: UnitFactory
+name: "Omni-Synthesizer Hub"
+description: "The apex of Auraline engineering. A massive assembly plant that synthesizes the elite Auraline fleet. Uses Nanite Slurry to 'grow' unit frames."
+size: 8
+health: 18000
+category: units
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Increased item capacity per individual item type
+itemCapacity: 5000
+liquidCapacity: 1200
+
+# We only put Power and Liquid here.
+# Items are automatically 'consumed' based on the active plan.
+consumes: {
+  power: 120.0
+  liquid: {
+    liquid: nanite-slurry
+    amount: 1.2
+  }
+}
+
+plans: [
+  {
+    unit: phase-mender
+    time: 5400
+    requirements: [ enhanced-phase-fabric/150, tau-forged-silicon/100 ]
+  }
+  {
+    unit: tectonic-bore
+    time: 10800
+    requirements: [ hardened-carbide/800, thorium/1200, crystalline-silicon/400 ]
+  }
+  {
+    unit: phase-architect
+    time: 10800
+    requirements: [ hardened-carbide/800, thorium/1200, crystalline-silicon/400, enhanced-phase-fabric/100 ]
+  }
+  {
+    unit: leviathan
+    time: 21600
+    requirements: [ quantum-alloy/1500, enhanced-kinetic-crystal/20 ]
+  }
+  {
+    unit: auraline-arch-titan
+    time: 43200
+    requirements: [ tau-forged-quantum-alloy/2500, enhanced-quantum-alloy/3000, volatile-isotope/150 ]
+  }
+  {
+    unit: void-sovereign
+    time: 86400
+    requirements: [ tau-forged-quantum-alloy/5000, tau-forged-silicon/4000, volatile-isotope/500, enhanced-kinetic-crystal/200 ]
+  }
+]
+
+# Visuals remain the same
+drawer: {
+  type: DrawMulti
+  drawers: [
+    { 
+        type: DrawDefault
+    },
+    { 
+        type: DrawLiquidTile
+        drawLiquid: nanite-slurry
+        padding: 6
+    },
+    {
+    type: DrawBlurSpin
+    blurThresh: 0.2
+    rotateSpeed: 1.5
+    },
+    { 
+    type: DrawGlowRegion
+    color: a488ff
+    glowIntensity: 1.5
+    glowScale: 40
+    }
+  ]
+}
+
+requirements: [
+  tau-forged-quantum-alloy/1200
+  enhanced-quantum-alloy/2500
+  hardened-carbide/5000
+  tau-forged-silicon/1500
+]
+
+research: tetrative-reconstructor
