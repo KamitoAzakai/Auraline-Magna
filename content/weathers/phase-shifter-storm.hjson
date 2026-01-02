@@ -1,0 +1,24 @@
+type: ParticleWeather
+name: "Phase-Shimmer Storm"
+description: "A violent atmospheric disturbance where the border between dimensions becomes thin. Distorts vision and interferes with standard electrical systems."
+color: ffd37f # A flickering, pale gold/amber 
+noiseColor: b892ff # With deep violet shadows
+particleRegion: "particle"
+sizeMin: 2
+sizeMax: 6
+density: 2000
+opacity: 0.4
+
+# Gameplay Effects:
+# It increases 'phase' activity but makes standard power less stable
+attrs: {
+  heat: 0.2
+  light: -0.3 # Dims the world significantly
+}
+
+# The storm causes 'glitch' particles to appear
+useWindVector: true
+drawNoise: true
+noiseLayers: 3
+noiseScale: 1100
+noiseSpeed: 0.8

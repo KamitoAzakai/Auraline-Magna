@@ -1,0 +1,22 @@
+type: ParticleWeather
+name: "Crystalline Fallout"
+description: "A secondary effect of hyper-dense industrialization. Micro-shards of crystalline silicon condense in the upper atmosphere and rain down as razor-sharp needles."
+color: 8ca9e8 # Shimmering blue-white silicon color
+particleRegion: "particle"
+sizeMin: 1
+sizeMax: 3
+density: 4000 # Very thick, like a heavy blizzard
+opacity: 0.7
+
+# Gameplay Effects:
+# The falling crystals 'recharge' silicon-based structures
+attrs: {
+  light: 0.2
+  water: -0.5 # Extremely dry weather
+}
+
+# This effect makes it look like it's raining 'shards'
+useWindVector: true
+force: 0.1
+sound: rain
+soundVol: 0.5
