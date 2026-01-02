@@ -1,0 +1,58 @@
+type: LogicBlock
+name: "Auraline Hyper-Processor"
+description: "A transcendental logic hub. Uses quantum-linked circuits to execute complex scripts at nearly instantaneous speeds. Built to manage entire sectors of automated Auraline infrastructure."
+size: 3
+health: 2000
+category: logic
+
+# Logic Stats
+# A standard Micro Processor is 120, Logic is 400. We are going 'Hyper'.
+instructionsPerTick: 2500
+range: 600 # Massive range for controlling distant turrets or units
+
+# Visuals: A dark violet core with floating data-motes
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      # The pulsing 'brain' of the processor
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.8
+      glowScale: 12
+    }
+    {
+      # Spinning data rings representing high-speed calculation
+      type: DrawBlurSpin
+      suffix: "-rings"
+      rotateSpeed: 10
+      blurThresh: 0.05
+      color: b892ff
+    }
+  ]
+}
+
+# Added an update effect to show 'data packets' moving
+updateEffect: {
+  type: ParticleEffect
+  particles: 3
+  length: 15
+  lifetime: 40
+  colorFrom: b892ff
+  colorTo: ffffff00
+  sizeFrom: 1
+  sizeTo: 0
+  interp: circleOut
+}
+
+requirements: [
+  hardened-carbide/100
+  crystalline-silicon/150
+  phase-fabric/50
+  surge-alloy/80
+]
+
+research: logic-processor
