@@ -68,7 +68,7 @@ drawer: {
   type: DrawMulti
   drawers: [
     {
-      type: DrawDefault # The base structure
+      type: DrawDefault
     }
     {
       # The internal forge glow that pulses with energy

@@ -8,14 +8,14 @@ controller: MinerAI
 defaultController: MinerAI
 
 health: 12000
-armor: 12
+armor: 25
 hitSize: 14
-speed: 0.65
+speed: 0.80
 
 # Ensure these stats are high for maximum efficiency
 mineSpeed: 10.5
 mineTier: 6
-itemCapacity: 1500
+itemCapacity: 750
 
 # The unit will prioritize these items in order
 mineItems: [

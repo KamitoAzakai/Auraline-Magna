@@ -45,7 +45,7 @@ weapons: [
     y: 4
     reload: 20
     mirror: false
-    shootSound: beam
+    shootSound: lasershoot
     
     # Targeting logic for the weapon
     predictTarget: false
