@@ -1,0 +1,94 @@
+type: MendProjector
+name: "Phase-Resonance Projector"
+description: "A high-tier mending station. Projects a high-frequency resonance field that vibrates atoms back into their original structural lattice. Highly effective when boosted with Phase Fabric."
+size: 3
+health: 2500
+category: effect
+
+# Mending Stats
+reload: 40
+range: 120
+healPercent: 8.0 # Heals a percentage of max health, making it great for high-HP walls
+
+# Boosting: Adding Phase Fabric increases range and speed significantly
+phaseRangeBoost: 80
+phaseBoost: 2.5
+
+consumes: {
+  power: 5.5
+  items: {
+    items: [
+      enhanced-phase-fabric/1
+    ]
+    boost: true
+    optional: true
+  }
+}
+
+# VISUAL EFFECTS: THE RESONANCE FIELD
+# updateEffect: Soft violet ripples
+updateEffect: {
+  type: WaveEffect
+  sizeTo: 120
+  lifetime: 60
+  colorFrom: b892ff
+  colorTo: b892ff00
+  strokeFrom: 2
+  strokeTo: 0
+}
+
+# healEffect: A bright flash when the 'mending' pulse hits
+healEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 120
+      lifetime: 25
+      colorFrom: ffffff
+      colorTo: b892ff
+      strokeFrom: 4
+    }
+    {
+      type: ParticleEffect
+      particles: 10
+      length: 120
+      lifetime: 30
+      line: true
+      colorFrom: ffffff
+      colorTo: b892ff
+    }
+  ]
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. The Core: A rotating violet crystal
+    {
+      type: DrawRegion
+      suffix: "-crystal"
+      spinSprite: true
+      rotateSpeed: 2
+    }
+    # 2. The Glow: A pulsing aura
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.8
+      glowScale: 10
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/150
+  crystalline-silicon/100
+  phase-fabric/50
+  silicon/200
+]
+
+research: violet-horizon-projector

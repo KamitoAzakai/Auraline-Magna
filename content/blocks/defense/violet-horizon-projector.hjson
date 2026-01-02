@@ -1,0 +1,49 @@
+type: ForceProjector
+name: Violet Horizon Projector
+description: "The ultimate Auraline defensive bastion. Projects a massive, violet-tinted quantum field that can withstand orbital-tier bombardment. Its range and durability are unparalleled."
+size: 4
+health: 25000
+category: defense
+
+# Shield Stats
+phaseRadiusBoost: 80     # Radius increase when supplied with Phase Fabric
+radius: 180              # A massive base scope
+shieldHealth: 1200000    # Immense health to stop T7 railgun shots
+cooldownNormal: 3.5
+cooldownLiquid: 12.0
+cooldownBrokenBase: 0.5
+
+# Visuals
+shieldColor: a488ff
+# Distinctive Violet color
+phaseShieldColor: bf92ff
+# Lighter violet when boosted
+
+consumes: {
+  power: 50.0            # High power cost for the ultimate shield
+  items: [
+    {
+      item: enhanced-phase-fabric
+      amount: 1
+      boost: true
+      optional: true
+    }
+  ]
+  liquids: [
+    {
+      liquid: ionic-refrigerant
+      amount: 0.3
+      booster: true
+      optional: true
+    }
+  ]
+}
+
+requirements: [
+  tau-forged-quantum-alloy/500
+  hardened-carbide/800
+  crystalline-silicon/1000
+  enhanced-phase-fabric/200
+]
+
+research: force-projector
