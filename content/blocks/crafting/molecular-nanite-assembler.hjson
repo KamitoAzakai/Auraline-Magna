@@ -1,0 +1,109 @@
+type: GenericCrafter
+name: "Molecular Nanite-Assembler"
+description: "A high-precision bio-mechanical foundry. It uses an Enhanced Kinetic Crystal to project a harmonic field that 'wakes up' microscopic assemblers within a metallic broth. The resulting Nanite Slurry is capable of autonomous structural repair."
+size: 4
+health: 3500
+armor: 15
+category: crafting
+
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# The process of 'waking' the nanites is delicate
+craftTime: 180 
+itemCapacity: 20
+liquidCapacity: 120
+
+# VISUAL EFFECTS
+# updateEffect: Shimmering 'data' particles rising from the assembler
+updateEffect: {
+  type: ParticleEffect
+  particles: 2
+  length: 15
+  lifetime: 60
+  colorFrom: a488ff
+  colorTo: 80808000
+  sizeFrom: 2
+  sizeTo: 0
+}
+updateEffectChance: 0.1
+
+# craftEffect: A 'Life-Pulse' - A bright white-violet wave when the nanites activate
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: ffffff
+      colorTo: a488ff
+      sizeTo: 40
+      lifetime: 30
+      strokeFrom: 4
+    }
+  ]
+}
+
+consumes: {
+  power: 18.0
+  items: [
+    # The 'brain' for the nanites
+    tau-forged-silicon/2
+    # The physical body of the nanites
+    hardened-carbide/3
+    # The 'soul' that keeps them alive (consumed slowly)
+    enhanced-kinetic-crystal/1
+  ]
+  liquids: [
+    # The conductive medium
+    water/0.5
+  ]
+}
+
+# Output: The life-giving Slurry
+outputLiquid: nanite-slurry/0.4
+
+# DRAWER SYSTEM: The 'Cradle' of the Nanites
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # The metallic broth swirling in the outer ring
+    {
+      type: DrawLiquidTile
+      drawLiquid: nanite-slurry
+      padding: 3
+    }
+    # The Crystal Chamber: A bright, focused violet point
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 1.2
+      glowScale: 12
+    }
+    # Rotating magnetic stabilizers to focus the crystal's harmonics
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.4
+      rotateSpeed: 3
+    }
+    # A soft 'heartbeat' pulse in the center
+    {
+      type: DrawFlame
+      color: a488ff
+      flareMag: 0.5
+      flareRadius: 3
+    }
+  ]
+}
+
+requirements: [
+  tau-forged-quantum-alloy/150
+  tau-forged-silicon/200
+  hardened-carbide/500
+  thorium/800
+]
+
+research: tau-silicon-injector

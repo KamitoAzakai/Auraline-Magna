@@ -1,0 +1,73 @@
+name: Kinetic Resonance Chamber
+type: GenericCrafter
+description: "Utilizes high-frequency plasma flux to overcharge the internal structure of kinetic crystals. The process requires surge alloy to act as a stabilizing conductor, resulting in crystals with infinite kinetic potential."
+size: 4
+health: 3000
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+craftTime: 200
+itemCapacity: 40
+liquidCapacity: 120
+
+# VISUAL EFFECTS
+# updateEffect: Shows the humming resonance while working
+updateEffect: lightningCharge
+# craftEffect: A massive violet shockwave when a crystal is finished
+craftEffect: instBomb
+updateEffectChance: 0.05
+
+consumes: {
+  power: 25.0
+  items: [
+    kinetic-crystal/2
+    surge-alloy/1
+  ]
+  liquids: [
+    plasma-flux/0.5
+  ]
+}
+
+outputItem: enhanced-kinetic-crystal/1
+outputLiquid: abyssal-sludge/0.12
+
+# DRAWER SYSTEM: Layers the visuals for a "deep" look
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Draws the Plasma Flux pooling inside
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 4
+    }
+    # A glowing violet 'eye' in the center that pulses
+    {
+      type: DrawPistons
+      sinMag: 2
+      sinScl: 5
+      sideOffset: 1
+    }
+    # The 'Resonance' glow
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.8
+      glowScale: 10
+    }
+  ]
+}
+
+category: crafting
+requirements: [
+  hardened-carbide/400
+  quantum-alloy/250
+  enhanced-phase-fabric/50
+  silicon/500
+]
+
+research: quantum-loom

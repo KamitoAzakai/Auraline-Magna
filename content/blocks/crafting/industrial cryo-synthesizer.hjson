@@ -1,0 +1,96 @@
+type: GenericCrafter
+name: "Industrial Cryo-Synthesizer"
+description: "A heavy-duty refrigeration plant. Uses high-pressure compression to synthesize cryofluid at four times the speed of a standard mixer."
+size: 3
+health: 1200
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Faster than the base mixer but high energy demand
+craftTime: 45
+itemCapacity: 20
+liquidCapacity: 120
+
+# VISUAL EFFECTS
+# Shows 'frost clouds' leaking from the vents
+updateEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 8
+  lifetime: 40
+  colorFrom: d6f1ff
+  colorTo: ffffff00
+  sizeFrom: 2
+  sizeTo: 5
+}
+updateEffectChance: 0.15
+
+# A cold blue wave when a high-pressure batch is finished
+craftEffect: {
+  type: WaveEffect
+  colorFrom: 6ecdec
+  sizeTo: 25
+  lifetime: 20
+  strokeFrom: 3
+}
+
+consumes: {
+  power: 6.5
+  items: [
+    # Requires more titanium to handle the pressure
+    titanium/2
+  ]
+  liquids: [
+    # Uses water as the base medium
+    water/0.4
+  ]
+}
+
+# High volume output of standard Cryofluid
+outputLiquid: cryofluid/0.6
+
+# DRAWER SYSTEM: Visualizes the water being frozen into Cryofluid
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the water being sucked in
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      padding: 4
+    }
+    # Shows the bright teal Cryofluid filling the central chamber
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 6
+    }
+    # A frosty blue glow that pulses with the 'craftTime'
+    {
+      type: DrawGlowRegion
+      color: 6ecdec
+      glowIntensity: 0.5
+      glowScale: 8
+    }
+    # Top-rotating cooling fan to handle the 6.5 power heat
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 8
+    }
+  ]
+}
+
+requirements: [
+  lead/150
+  titanium/100
+  silicon/100
+  graphite/80
+]
+
+research: cryofluid-mixer

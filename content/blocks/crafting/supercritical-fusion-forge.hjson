@@ -1,0 +1,86 @@
+type: GenericCrafter
+name: "Supercritical Fusion Forge"
+description: "A pinnacle of metallurgical engineering. Utilizing high-frequency magnetic containment, it fuses lead, copper, titanium, and silicon into high-purity surge alloy at unprecedented speeds."
+health: 3200
+size: 4
+category: crafting
+hasPower: true
+hasItems: true
+itemCapacity: 200
+
+# VISUAL EFFECTS
+# Shows constant electrical arc discharge because of the speed
+updateEffect: lightningCharge
+updateEffectChance: 0.1
+
+# Large electric explosion when the 10-pack of Surge is forged
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: faff7f # Surge Yellow
+      sizeTo: 30
+      lifetime: 15
+    }
+    {
+      type: ParticleEffect
+      particles: 10
+      length: 20
+      colorFrom: ffffff
+      colorTo: faff7f
+    }
+  ]
+}
+
+craftTime: 30
+
+consumes: {
+  power: 120
+  items: [
+    copper/3
+    lead/4
+    titanium/2
+    silicon/3
+  ]
+}
+
+outputItem: surge-alloy/10
+
+# DRAWER SYSTEM: Layers for magnetic containment and core plasma
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # The 'Magnetic Field' - A spinning energy ring
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 12
+    }
+    # The Supercritical Core - Pulsing yellow/white heat
+    {
+      type: DrawGlowRegion
+      color: faff7f
+      glowIntensity: 1.2
+      glowScale: 15
+    }
+    # Internal arcs visible through the top vent
+    {
+      type: DrawArcSmelt
+      color: faff7f
+      particles: 15
+    }
+  ]
+}
+
+requirements: [
+  surge-alloy/150
+  thorium/200
+  silicon/250
+  metaglass/100
+]
+
+research: surge-smelter

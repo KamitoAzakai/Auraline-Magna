@@ -1,0 +1,43 @@
+type: GenericCrafter
+name: "Ionic Phase-Weaver"
+description: "An advanced molecular loom. Utilizes Ionic Refrigerant to cryo-stabilize Phase Fabric while Thorium isotopes are woven into the lattice, creating a hyper-dense, warp-stable material."
+size: 4
+health: 2200
+category: crafting
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Crafting Stats
+craftTime: 180 # 3 seconds per craft
+updateEffect: smokeCloud
+craftEffect: shockwave
+
+consumes: {
+  power: 20.0
+  items: [
+    phase-fabric/2
+    thorium/4
+  ]
+  liquids: [
+    ionic-refrigerant/0.2
+  ]
+}
+
+outputItem: enhanced-phase-fabric/1
+
+requirements: [
+  tau-forged-thorium/250
+  hardened-carbide/400
+  crystalline-silicon/150
+  phase-fabric/100
+]
+
+research: {
+  parent: phase-weaver
+  requirements: [
+    tau-forged-thorium/5000
+    phase-fabric/8000
+    crystalline-silicon/3000
+  ]
+}

@@ -1,0 +1,106 @@
+type: GenericCrafter
+name: "Cryo-Silicon Crystallizer"
+description: "A precision alignment chamber. It uses metaglass and titanium to re-structure silicon atoms into a perfect crystalline lattice, stabilized by constant cryofluid immersion."
+size: 3
+health: 1400
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Fast but resource-heavy cycle
+craftTime: 60
+itemCapacity: 30
+liquidCapacity: 80
+
+# VISUAL EFFECTS
+# updateEffect: Subtle frost sparkles to show the sub-zero environment
+updateEffect: {
+  type: ParticleEffect
+  particles: 1
+  length: 0
+  lifetime: 30
+  colorFrom: d6f1ff
+  colorTo: d6f1ff00
+  sizeFrom: 2
+  sizeTo: 0
+}
+updateEffectChance: 0.1
+
+# craftEffect: A sharp 'crystallization' flash with teal shards
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: 6ecdec
+      sizeTo: 20
+      lifetime: 15
+      strokeFrom: 3
+    }
+    {
+      type: ParticleEffect
+      particles: 8
+      length: 12
+      lifetime: 25
+      colorFrom: ffffff
+      colorTo: 6ecdec
+      sizeFrom: 1
+      sizeTo: 3
+    }
+  ]
+}
+
+consumes: {
+  power: 9.0
+  items: [
+    silicon/3
+    titanium/2
+    metaglass/1
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.2
+  }
+}
+
+outputItem: crystalline-silicon/2
+
+# DRAWER SYSTEM: Visualizes the silicon submerged in coolant
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the teal Cryofluid pooling in the core
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 3
+    }
+    # The 'Alignment Laser' - A bright teal central pulse
+    {
+      type: DrawFlame
+      color: 6ecdec
+      flareMag: 0.3
+      flareRadius: 2
+    }
+    # A soft glow representing the 'perfect lattice' formation
+    {
+      type: DrawGlowRegion
+      color: 6ecdec
+      glowIntensity: 0.6
+      glowScale: 10
+    }
+  ]
+}
+
+requirements: [
+  lead/250
+  titanium/150
+  silicon/200
+  graphite/100
+]
+
+research: silicon-smelter

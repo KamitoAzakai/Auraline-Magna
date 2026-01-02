@@ -1,0 +1,115 @@
+type: GenericCrafter
+name: "Resonance Crystallizer"
+description: "Compresses Surge Alloy and Crystalline Silicon using ultrasonic resonance to forge raw Kinetic Crystals. Operates at a frequency that causes the surrounding air to shimmer."
+size: 3
+health: 1800
+category: crafting
+hasItems: true
+hasPower: true
+
+craftTime: 120
+
+# VISUAL EFFECTS: ULTRASONIC VIBRATION
+# updateEffect: High-frequency 'ripples' and static sparks
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 15
+      lifetime: 30
+      colorFrom: ffffff
+      colorTo: b892ff00
+      strokeFrom: 1
+      strokeTo: 0
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 10
+      lifetime: 20
+      colorFrom: ffa64d # Surge Orange
+      colorTo: ffffff00
+      sizeFrom: 2
+      sizeTo: 0
+    }
+  ]
+}
+updateEffectChance: 0.2
+
+# craftEffect: A massive harmonic shockwave upon crystal stabilization
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 40
+      lifetime: 20
+      colorFrom: ffffff
+      colorTo: ffa64d
+      strokeFrom: 4
+    }
+    {
+      type: ParticleEffect
+      particles: 12
+      length: 25
+      lifetime: 40
+      line: true
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: ffa64d
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 15.0
+  items: [
+    crystalline-silicon/3
+    surge-alloy/2
+  ]
+}
+
+outputItem: kinetic-crystal/1
+
+# DRAWER SYSTEM: Harmonic Compression
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. The Harmonic Core (Pulsing Orange/White)
+    {
+      type: DrawGlowRegion
+      color: ffa64d
+      glowIntensity: 0.8
+      glowScale: 8
+    }
+    # 2. Resonance Rings: Fast-spinning transparent rings
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 15 # Ultrasonic speed
+      color: ffffff66 # Semi-transparent white
+    }
+    # 3. Crystal Growth Pulse: A 'beating' light in the center
+    {
+      type: DrawFlame
+      color: ffffff
+      flareColor: ffa64d
+      flareMag: 0.4
+      flareRadius: 5
+    }
+  ]
+}
+
+requirements: [
+  thorium/120
+  silicon/300
+  lead/500
+  crystalline-silicon/200
+]
+
+research: surge-smelter

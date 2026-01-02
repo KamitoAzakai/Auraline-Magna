@@ -1,0 +1,130 @@
+type: GenericCrafter
+name: "Singularity Forge"
+description: "The ultimate Auraline refinement facility. Uses a focused plasma stream to bond Enhanced Kinetic Crystals into the molecular lattice of Quantum Alloy. The resulting material is practically indestructible and dimensionally unstable."
+size: 5
+health: 6400
+armor: 20
+category: crafting
+
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# 5 seconds per craft
+craftTime: 300
+itemCapacity: 50
+liquidCapacity: 200
+
+# VISUAL EFFECTS
+# updateEffect: Constant spatial distortion and violet energy leaks
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 40
+      lifetime: 60
+      colorFrom: a488ff22
+      colorTo: a488ff00
+      strokeFrom: 2
+    }
+    {
+      type: ParticleEffect
+      particles: 3
+      length: 15
+      lifetime: 40
+      colorFrom: a488ff
+      colorTo: 000000
+    }
+  ]
+}
+updateEffectChance: 0.15
+
+# craftEffect: A massive spatial implosion when the Alloy is forged
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: ffffff
+      colorTo: a488ff
+      sizeTo: 60
+      lifetime: 40
+      strokeFrom: 5
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      length: 50
+      lifetime: 60
+      interp: circleOut
+      colorFrom: a488ff
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 45.0
+  items: [
+    quantum-alloy/3
+    enhanced-kinetic-crystal/1
+  ]
+  liquids: [
+    plasma-flux/0.8
+  ]
+}
+
+outputItem: enhanced-quantum-alloy/2
+outputLiquid: abyssal-sludge/0.25
+
+# DRAWER SYSTEM: Simulates a crushing singularity core
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the Abyssal Sludge waste pooling in the outer pipes
+    {
+      type: DrawLiquidTile
+      drawLiquid: abyssal-sludge
+      padding: 4
+    }
+    # The 'Plasma Stream': A fast-moving inner layer
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 8
+    }
+    # THE SINGULARITY: A dark center with a violent pulsing glow
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 1.5
+      glowScale: 15
+    }
+    # Rotating magnetic stabilizers
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.3
+      rotateSpeed: 4
+    }
+    # The Core: Pulsing white-hot energy
+    {
+      type: DrawFlame
+      color: ffffff
+      flareMag: 1.2
+      flareRadius: 4
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/1000
+  quantum-alloy/500
+  enhanced-phase-fabric/200
+  enhanced-kinetic-crystal/100
+]
+
+research: kinetic-resonance-chamber

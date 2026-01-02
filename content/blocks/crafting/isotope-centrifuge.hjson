@@ -1,0 +1,97 @@
+type: GenericCrafter
+name: "Isotope Centrifuge"
+description: "A high-risk enrichment chamber. Suspends Quantum Alloy in a high-velocity Plasma Flux vortex to strip away stable electrons, leaving behind highly Volatile Isotopes. Extremely explosive if damaged."
+size: 4
+health: 6000
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# The "Sensitive" Mechanic
+# Custom explosion effect for high-tier catastrophe
+breakage: 12000 
+deathExplosionEffect: massiveExplosion
+rebuildable: false
+
+# Crafting Stats
+craftTime: 240 
+itemCapacity: 150
+liquidCapacity: 150
+
+# VISUAL EFFECTS
+# updateEffect: Violet static arcs from the electron stripping process
+updateEffect: lightningCharge
+updateEffectChance: 0.1
+
+# craftEffect: A sharp, bright flash indicating successful isotope isolation
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: ffffff
+      colorTo: ff5555
+      sizeTo: 40
+      lifetime: 20
+    }
+  ]
+}
+
+consumes: {
+  power: 50.0
+  items: [
+    quantum-alloy/4
+  ]
+  liquids: [
+    plasma-flux/0.8
+  ]
+}
+
+outputItem: volatile-isotope/1
+
+# DRAWER SYSTEM: Layers for the vortex and the danger-warning
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the Plasma Flux being whipped into a vortex
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 4
+    }
+    # The Plasma Vortex: High-speed spinning with a violet blur
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 12
+      color: a488ff
+    }
+    # Danger Warning: A pulsing red glow that intensifies during work
+    {
+      type: DrawGlowRegion
+      color: ff5555
+      glowIntensity: 0.8
+      glowScale: 10
+    }
+    # A central white-hot 'needle' showing the isotope extraction
+    {
+      type: DrawFlame
+      color: ffffff
+      flareMag: 0.6
+      flareRadius: 3
+    }
+  ]
+}
+
+requirements: [
+  quantum-alloy/300
+  hardened-carbide/800
+  enhanced-phase-fabric/200
+  crystalline-silicon/600
+]
+
+research: plasma-flux-condenser

@@ -1,0 +1,76 @@
+type: GenericCrafter
+name: "Carbide Molecular Press"
+description: "A high-pressure industrial press. It compresses surge alloy into a plastanium matrix, creating ultra-dense hardened carbide plates for Giga-scale construction."
+size: 3
+health: 1600
+category: crafting
+hasPower: true
+hasItems: true
+
+# 1.5 seconds per press cycle
+craftTime: 90
+itemCapacity: 30
+
+# VISUAL EFFECTS
+# updateEffect: Shows the mechanical strain of the press
+updateEffect: smoke
+# craftEffect: A sharp compression burst with Surge-yellow sparks
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: faff7f
+      colorTo: ffffff
+      sizeTo: 25
+      lifetime: 20
+    }
+    {
+      type: ParticleEffect
+      particles: 10
+      length: 15
+      colorFrom: faff7f
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 10.0
+  items: [
+    surge-alloy/2
+    plastanium/2
+  ]
+}
+
+outputItem: hardened-carbide/3
+
+# DRAWER SYSTEM: Adds the physical "Slam" animation
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Animates the press head moving up and down
+    {
+      type: DrawPistons
+      sinMag: 2.5
+      sinScl: 5
+    }
+    # Adds a subtle glow representing the Surge-Plastanium fusion
+    {
+      type: DrawGlowRegion
+      color: faff7f
+      glowIntensity: 0.5
+    }
+  ]
+}
+
+requirements: [
+  titanium/200
+  silicon/150
+  thorium/120
+]
+
+research: multi-press

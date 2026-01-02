@@ -1,0 +1,104 @@
+type: Separator
+name: "Petroleum Synthesizer"
+description: "A complex molecular assembler. Uses high-frequency resonance to crack oil chains into high-tier Auraline materials."
+health: 2500
+size: 3
+category: crafting
+hasPower: true
+hasLiquids: true
+liquidCapacity: 60
+craftTime: 10
+
+# MECHANICAL EFFECTS: Replaces the 'magic' glow with physical reaction sparks
+updateEffect: {
+  type: ParticleEffect
+  particles: 5
+  length: 20
+  lifetime: 30
+  interp: circleOut
+  colorFrom: b892ff
+  colorTo: 5b507a
+  sizeFrom: 1.5
+  sizeTo: 0
+}
+
+# A heavy mechanical 'clunk' and a smoke puff when an item is finished
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      line: true
+      particles: 6
+      length: 15
+      lifetime: 20
+      colorFrom: ffffff
+      colorTo: b892ff
+    }
+    {
+      type: WaveEffect
+      sizeTo: 10
+      colorFrom: b892ff
+      colorTo: b892ff00
+      strokeFrom: 1
+      strokeTo: 0
+    }
+  ]
+}
+
+results: [
+  surge-alloy/1
+  metaglass/3
+  phase-fabric/2
+  plastanium/2
+]
+
+consumes: {
+  power: 5.0
+  liquid: {
+    liquid: oil
+    amount: 0.3
+  }
+}
+
+# DRAWER SYSTEM: Layered to look like internal machinery at work
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      # The base plate
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      # The oil swirls and changes color slightly as it is processed
+      type: DrawLiquidTile
+      drawLiquid: oil
+      padding: 3
+    }
+    {
+      # The main armored shell
+      type: DrawDefault
+    }
+    {
+      # Internal mechanical 'chatter' particles visible through the top opening
+      type: DrawParticles
+      color: b892ff
+      alpha: 0.5
+      particles: 10
+      particleSize: 1
+      particleLife: 20
+      range: 4
+    }
+  ]
+}
+
+requirements: [
+  lead/250
+  metaglass/150
+  hardened-carbide/100
+  kinetic-crystal/50
+]
+
+research: disassembler
+

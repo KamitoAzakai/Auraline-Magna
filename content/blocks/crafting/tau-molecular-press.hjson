@@ -1,0 +1,116 @@
+type: GenericCrafter
+name: "Tau-Molecular Press"
+description: "The heart of Auraline industry. Uses immense gravitational pressure and 120 units of localized heat to forge standard materials into their 'Tau' variants. Requires constant cooling to prevent a core collapse."
+size: 5
+health: 5000
+category: crafting
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Crafting Stats
+craftTime: 300 
+itemDuration: 300
+
+# Change ONLY this part in your tau-molecular-press.hjson
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: RadialEffect
+      rotationSpacing: 45
+      amount: 8
+      length: 6
+      # 'fluxExplosion' was the error. 'smeltsmoke' is safe.
+      effect: smeltsmoke 
+    }
+  ]
+}
+
+# Ground-shaking shockwave when the Tau-matter is forged
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: bf92ff
+      sizeTo: 50
+      lifetime: 40
+      strokeFrom: 4
+    }
+    {
+      type: ParticleEffect
+      particles: 25
+      length: 60
+      lifetime: 50
+      colorFrom: ffffff
+      colorTo: a488ff
+    }
+  ]
+}
+
+consumes: {
+  power: 45.0
+  items: [
+    thorium/10
+    surge-alloy/2
+  ]
+  liquids: [
+    # Cooling is mandatory to stabilize the '120 units' of internal heat
+    ionic-refrigerant/0.4
+  ]
+}
+
+outputItem: tau-forged-thorium/5
+
+# DRAWER SYSTEM: Layers the mechanical slam and thermal glow
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Visualizes the Ionic Refrigerant flowing through the base
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 3
+    }
+    # The 'Heat' Glow: Simulates the 120-unit thermal requirement
+    {
+      type: DrawGlowRegion
+      color: ff8855
+      glowIntensity: 0.6
+      glowScale: 8
+    }
+    # THE SLAM: Animates the heavy press moving vertically
+    {
+      type: DrawPistons
+      sinMag: 4.5
+      sinScl: 8
+      sideOffset: 0
+    }
+    # Central Auraline core glow
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.9
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/1000
+  crystalline-silicon/800
+  surge-alloy/500
+  thorium/1000
+]
+
+research: {
+  parent: resonance-crystallizer
+  requirements: [
+    thorium/20000
+    surge-alloy/10000
+    crystalline-silicon/15000
+  ]
+}

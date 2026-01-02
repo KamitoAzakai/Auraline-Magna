@@ -1,0 +1,39 @@
+name: Ionic Cryo-Fractionator
+type: GenericCrafter
+description: "Advanced refrigeration plant. Infuses standard cryofluid with microscopic, ionized titanium shards to vastly increase thermal conductivity."
+size: 3
+health: 1200
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# The speed of the conversion (1.5 seconds)
+craftTime: 90
+
+# Internal storage for high-volume throughput
+itemCapacity: 20
+liquidCapacity: 120
+
+consumes: {
+  power: 12.0
+  items: [
+    titanium/3
+  ]
+  liquids: [
+    # Consumes a large amount of base coolant
+    cryofluid/0.5
+  ]
+}
+
+# Outputs the superior Ionic Refrigerant
+outputLiquid: ionic-refrigerant/0.4
+
+requirements: [
+  lead/250
+  titanium/150
+  silicon/150
+  graphite/100
+]
+
+research: cryofluid-mixer

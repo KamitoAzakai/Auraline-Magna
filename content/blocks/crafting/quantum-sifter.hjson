@@ -1,0 +1,135 @@
+type: GenericCrafter
+name: "Quantum Sifter"
+description: "A massive multi-stage refinery. Uses ionic refrigerant to super-cool crystalline silicon during high-energy sifting. Produces stabilized quantum alloy and abyssal sludge byproduct."
+size: 4
+health: 2400
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+craftTime: 120
+itemCapacity: 40
+liquidCapacity: 120
+
+# VISUAL EFFECTS
+# updateEffect: Frosty cyan vapors clashing with dark abyssal bubbles
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 2
+      length: 20
+      lifetime: 50
+      colorFrom: adffef 
+      # Refrigerant Cyan
+      colorTo: adffef00
+      sizeFrom: 2
+      sizeTo: 0
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 10
+      lifetime: 80
+      colorFrom: 311e4d 
+      # Sludge Deep Purple
+      colorTo: 00000000
+      sizeFrom: 3
+      sizeTo: 1
+    }
+  ]
+}
+updateEffectChance: 0.12
+
+# craftEffect: A crystalline 'shatter' effect as the alloy stabilizes
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 40
+      lifetime: 30
+      colorFrom: ffffff
+      colorTo: adffef
+      strokeFrom: 4
+    }
+    {
+      type: ParticleEffect
+      particles: 15
+      length: 30
+      lifetime: 60
+      line: true
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: adffef
+      colorTo: 311e4d
+    }
+  ]
+}
+
+consumes: {
+  power: 15.0
+  items: [
+    crystalline-silicon/4
+    lead/5
+  ]
+  liquids: [
+    ionic-refrigerant/0.3
+  ]
+}
+
+outputItem: quantum-alloy/2
+outputLiquid: abyssal-sludge/0.15
+
+# DRAWER SYSTEM: Thermal Shock Visuals
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. The Sludge Layer (Bubbling in the outer pipes)
+    {
+      type: DrawLiquidTile
+      drawLiquid: abyssal-sludge
+      padding: 2
+    }
+    # 2. The Cooling Core (Frosty Cyan)
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 10
+    }
+    # 3. Sifting Mechanics: Counter-rotating quantum rings
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 6
+      color: adffef
+    }
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: -3
+      color: 311e4d
+    }
+    # 4. Stabilization Glow
+    {
+      type: DrawGlowRegion
+      color: adffef
+      glowIntensity: 0.8
+      glowScale: 15
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/200
+  crystalline-silicon/150
+  thorium/100
+  silicon/200
+]
+
+research: ionic-cryo-fractionator

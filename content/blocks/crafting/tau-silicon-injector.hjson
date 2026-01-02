@@ -1,0 +1,91 @@
+type: GenericCrafter
+name: "Tau-Silicon Injector"
+description: "A precision refinement facility. Injects Tau-isotopes into Crystalline Silicon using Plasma Flux as a molecular carrier. Produces Tau-forged Silicon."
+size: 3
+health: 2400
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Crafting Stats
+craftTime: 90 
+itemCapacity: 20
+
+# VISUAL EFFECTS
+# updateEffect: Soft violet pulses to simulate isotope stabilization
+updateEffect: lightningCharge
+updateEffectChance: 0.05
+
+# craftEffect: A focused needle-like flash when the injection completes
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: bf92ff
+      sizeTo: 20
+      lifetime: 15
+      strokeFrom: 2
+    }
+    {
+      type: ParticleEffect
+      particles: 5
+      length: 10
+      colorFrom: ffffff
+      colorTo: bf92ff
+    }
+  ]
+}
+
+consumes: {
+  power: 25.0
+  items: [
+    crystalline-silicon/2
+  ]
+  liquids: [
+    # Plasma flux acts as the 'needle' to inject the isotopes
+    plasma-flux/0.2
+  ]
+}
+
+outputItem: tau-forged-silicon/1
+
+# DRAWER SYSTEM: Layers for precision injection and carrier fluid
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the Plasma Flux 'carrier' liquid moving through the pipes
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 2
+    }
+    # The 'Injection Flame' - Now with a pulsing frequency
+    {
+      type: DrawFlame
+      color: bf92ff 
+      flareMag: 0.5
+      flareRadius: 1.5
+    }
+    # Center-focused precision glow
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.8
+      glowScale: 6
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/400
+  quantum-alloy/250
+  crystalline-silicon/200
+  thorium/500
+]
+
+research: plasma-flux-condenser

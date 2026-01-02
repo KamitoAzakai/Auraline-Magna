@@ -1,0 +1,136 @@
+type: GenericCrafter
+name: "Auraline Molecular Sifter"
+description: "A colossal industrial refinery. By injecting Ionic Refrigerant into a high-pressure stream of Slag and Plasma Flux, it 'sifts' the resulting elemental collapse to produce Tau-forged and Enhanced materials."
+size: 6
+health: 8500
+category: crafting
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+craftTime: 300
+itemCapacity: 40
+
+# VISUALS: AMBIENT & CRAFTING
+# updateEffect: Constant high-energy sparks and steam from the thermal clash
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 2
+      length: 20
+      lifetime: 40
+      colorFrom: ffa64d
+      # Slag Orange
+      colorTo: b892ff
+      # Tau Purple
+      sizeFrom: 2
+      sizeTo: 0
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 15
+      lifetime: 60
+      colorFrom: adffef
+      # Refrigerant Cyan
+      colorTo: ffffff00
+      sizeFrom: 1
+      sizeTo: 4
+    }
+  ]
+}
+updateEffectChance: 0.15
+
+# craftEffect: The 'Sifting' Event - A violent shockwave of violet light
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 60
+      lifetime: 40
+      colorFrom: ffffff
+      colorTo: b892ff
+      strokeFrom: 5
+    }
+    {
+      type: ParticleEffect
+      particles: 20
+      length: 45
+      lifetime: 80
+      line: true
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: b892ff
+      colorTo: 808080
+    }
+  ]
+}
+
+consumes: {
+  power: 60.0
+  liquids: [
+    slag/1.0
+    plasma-flux/0.5
+    ionic-refrigerant/0.3
+  ]
+}
+
+outputItems: [
+  tau-forged-quantum-alloy/2
+  tau-forged-thorium/3
+  tau-forged-silicon/3
+  enhanced-phase-fabric/2
+]
+
+# DRAWER SYSTEM: Layered Energy Dynamics
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. Thermal Conflict: Slag on the outside, cooling in the middle
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 1
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 12
+    }
+    # 2. Plasma Pulse: A shimmering glow that changes intensity
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.6
+      glowScale: 15
+    }
+    # 3. High-Speed Centrifuges
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.4
+      rotateSpeed: 8
+    }
+    # 4. The Core: A bright white 'Singularity' flame
+    {
+      type: DrawFlame
+      color: ffffff
+      flareMag: 1.5
+      flareRadius: 5
+    }
+  ]
+}
+
+requirements: [
+  tau-forged-quantum-alloy/200
+  hardened-carbide/1000
+  crystalline-silicon/800
+  enhanced-phase-fabric/150
+]
+
+research: tau-molecular-press

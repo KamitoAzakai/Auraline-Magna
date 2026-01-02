@@ -1,0 +1,59 @@
+type: GenericCrafter
+name: "Pyratite Arbiter"
+description: "A precision alchemical judge. Fuses Lead and Coal through Kinetic resonance."
+health: 7000
+category: crafting
+size: 2
+hasPower: true
+hasItems: true
+
+# Increase item capacity to handle the large output of 12
+itemCapacity: 30
+
+# 12 items per 1.6 seconds
+craftTime: 100
+
+consumes: {
+  power: 1.5
+  items: [
+    lead/2
+    coal/1
+    hardened-carbide/1
+  ]
+}
+
+outputItem: pyratite/10
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawPulseShape
+      color: b892ff
+      square: true
+      # This draws a glowing square in the center of the 2x2 block
+    }
+  ]
+}
+
+updateEffect: {
+  type: ParticleEffect
+  particles: 4
+  length: 15
+  lifetime: 60
+  colorFrom: b892ff
+  colorTo: 4b2d8500
+  sizeFrom: 2
+  sizeTo: 0
+}
+
+requirements: [
+  lead/250
+  hardened-carbide/150 
+  kinetic-crystal/50 
+]
+
+research: pyratite-mixer

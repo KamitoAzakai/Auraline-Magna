@@ -1,0 +1,99 @@
+type: GenericCrafter
+name: "Quantum Loom"
+description: "An ultra-high-tier weaving facility. Infuses standard alloys with plasma flux and crystalline silicon to weave the complex lattice of Quantum Alloys. Requires constant ionic cooling."
+size: 4
+health: 2800
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+craftTime: 180
+itemCapacity: 30
+liquidCapacity: 100
+
+# VISUAL EFFECTS
+# updateEffect: Constant electrical humming and violet sparks
+updateEffect: lightningCharge
+updateEffectChance: 0.1
+
+# craftEffect: A massive spatial distortion wave when the alloy is woven
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: a488ff
+      sizeTo: 40
+      lifetime: 30
+      strokeFrom: 3
+    }
+    {
+      type: ParticleEffect
+      particles: 15
+      length: 25
+      colorFrom: a488ff
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 20.0
+  items: [
+    kinetic-crystal/2
+    crystalline-silicon/3
+  ]
+  liquids: [
+    plasma-flux/0.4
+    # Mandatory cooling for the 4x4 footprint
+    ionic-refrigerant/0.2
+  ]
+}
+
+outputItem: quantum-alloy/1
+outputLiquid: abyssal-sludge/0.1
+
+# DRAWER SYSTEM: Advanced shimmering and liquid layers
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the Abyssal Sludge waste pooling in the outer vents
+    {
+      type: DrawLiquidTile
+      drawLiquid: abyssal-sludge
+      padding: 3
+    }
+    # Central Plasma core that pulses with a violet light
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 0.8
+      glowScale: 12
+    }
+    # Spinning weaver shuttles to show the 'weaving' action
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.5
+      rotateSpeed: 6
+    }
+    # Internal electrical arcing
+    {
+      type: DrawArcSmelt
+      color: a488ff
+      particles: 10
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/300
+  thorium/400
+  crystalline-silicon/200
+  phase-fabric/150
+]
+
+research: tau-molecular-press

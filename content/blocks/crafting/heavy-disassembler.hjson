@@ -1,0 +1,78 @@
+name: Heavy Disassembler
+type: Separator
+description: "Uses high-speed centrifugal force to extract trace minerals from molten slag. An industrial-grade refinery for late-game resource recovery."
+health: 2500
+size: 3
+category: crafting
+hasPower: true
+hasLiquids: true
+liquidCapacity: 50
+
+# High-speed processing
+craftTime: 0.1
+
+# VISUAL EFFECTS
+# Shows small red sparks to represent the 'redcircuits' and friction
+updateEffect: redcircuits
+updateEffectChance: 0.05
+
+# A subtle heat-shimmer effect since it handles molten slag
+craftEffect: turbinegenerate
+
+results: [
+  copper/5
+  lead/5
+  graphite/3
+  titanium/3
+  thorium/2
+  silicon/2
+  pyratite/1
+  blast-compound/1
+  surge-alloy/1
+]
+
+consumes: {
+  power: 3.0
+  liquid: {
+    liquid: slag
+    amount: 0.2
+  }
+}
+
+# DRAWER SYSTEM: Visualizes the centrifuge and molten heat
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the glowing orange slag inside the machine
+    {
+      type: DrawLiquidTile
+      drawLiquid: slag
+      padding: 2
+    }
+    # The Centrifuge: Spins very fast to match the 0.1 craftTime
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 18
+    }
+    # A dull orange glow for the internal heat
+    {
+      type: DrawGlowRegion
+      color: ff8e56
+      glowIntensity: 0.6
+    }
+  ]
+}
+
+requirements: [
+  copper/250
+  lead/200
+  thorium/100
+  silicon/150
+  surge-alloy/100
+]
+
+research: disassembler

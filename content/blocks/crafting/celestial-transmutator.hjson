@@ -1,0 +1,143 @@
+type: GenericCrafter
+name: "Celestial Transmutator"
+description: "The most complex industrial structure ever devised. It injects stabilized kinetic harmonics and Tau-radiation into quantum alloy at a sub-atomic level. Requires immense power and cooling to prevent a localized rift."
+size: 6
+health: 12500
+armor: 40
+category: crafting
+
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# 10 full seconds of processing
+craftTime: 600 
+itemCapacity: 60
+liquidCapacity: 300
+
+# VISUAL EFFECTS
+# updateEffect: Distorts the air with 'Tau-Radiation' waves
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 60
+      lifetime: 120
+      colorFrom: a488ff44
+      colorTo: a488ff00
+      strokeFrom: 4
+    }
+    {
+      type: ParticleEffect
+      particles: 1
+      length: 0
+      lifetime: 80
+      region: particle-plasma
+      colorFrom: ffffff
+      colorTo: a488ff00
+      sizeFrom: 5
+      sizeTo: 0
+    }
+  ]
+}
+updateEffectChance: 0.1
+
+# craftEffect: A 'Sub-Atomic Rift' - A black-hole center that flashes white
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      colorFrom: 000000
+      colorTo: a488ff
+      sizeTo: 80
+      lifetime: 60
+      strokeFrom: 10
+    }
+    {
+      type: ParticleEffect
+      particles: 50
+      length: 100
+      lifetime: 100
+      line: true
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: a488ff
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 120.0
+  items: [
+    enhanced-quantum-alloy/2
+    enhanced-kinetic-crystal/2
+    tau-forged-thorium/4
+  ]
+  liquids: [
+    plasma-flux/1.5
+    ionic-refrigerant/1.0
+  ]
+}
+
+outputItem: tau-forged-quantum-alloy/1
+outputLiquid: abyssal-sludge/0.5
+
+# DRAWER SYSTEM: Visualizes the struggle of 'Tau-Radiation' vs 'Ionic Cooling'
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # External vents flushing out Abyssal Sludge
+    {
+      type: DrawLiquidTile
+      drawLiquid: abyssal-sludge
+      padding: 2
+    }
+    # Inner ring of Ionic Refrigerant (Cooling Layer)
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 6
+    }
+    # The Plasma Flux core (Energy Layer)
+    {
+      type: DrawLiquidTile
+      drawLiquid: plasma-flux
+      padding: 10
+    }
+    # THE HARMONIC RESONATOR: Spins at variable speeds to simulate stabilization
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 1.5 # Slow, heavy rotation
+    }
+    # The Sub-Atomic Rift: Intense pulsing violet/white
+    {
+      type: DrawGlowRegion
+      color: a488ff
+      glowIntensity: 2.0
+      glowScale: 30
+    }
+    # High-energy electrical arcing
+    {
+      type: DrawArcSmelt
+      color: ffffff
+      particles: 30
+      size: 20
+    }
+  ]
+}
+
+requirements: [
+  enhanced-quantum-alloy/500
+  enhanced-phase-fabric/400
+  hardened-carbide/2000
+  crystalline-silicon/1000
+]
+
+research: singularity-forge

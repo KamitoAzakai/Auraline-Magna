@@ -1,0 +1,96 @@
+type: GenericCrafter
+name: "Silicon Ultra-forge"
+description: "A precision silicon crafting station. Uses high-frequency induction to fuse copper and sand into pure silicon with minimal energy loss. Features a reinforced frame for frontline industrial deployment."
+health: 5000
+category: crafting
+hasPower: true
+size: 2
+craftTime: 50
+
+# VISUAL & AUDIO EFFECTS
+# updateEffect: Constant low-level plasma hum and light motes
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 2
+      length: 8
+      lifetime: 25
+      colorFrom: 84f4ff # Auraline Cyan
+      colorTo: ffffff00
+      sizeFrom: 1.5
+      sizeTo: 0
+    }
+  ]
+}
+updateEffectChance: 0.15
+
+# craftEffect: A bright, clean flash of light upon completion
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 15
+      lifetime: 20
+      colorFrom: ffffff
+      colorTo: 84f4ff
+      strokeFrom: 2
+      strokeTo: 0
+    }
+    {
+       type: ParticleEffect
+       particles: 6
+       line: true
+       length: 20
+       lifetime: 25
+       colorFrom: 84f4ff
+       colorTo: ffffff
+       strokeFrom: 1.5
+       strokeTo: 0
+    }
+  ]
+}
+
+outputItem: silicon/10
+
+consumes: {
+    power: 0.1
+    items: [
+        copper/2
+        sand/1
+    ]
+}
+
+# DRAWER SYSTEM: The Induction Core
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault # The base structure
+    }
+    {
+      # The internal forge glow that pulses with energy
+      type: DrawGlowRegion
+      color: 84f4ff
+      glowIntensity: 0.6
+      glowScale: 5
+    }
+    {
+      # A spinning 'containment ring' over the forge
+      type: DrawBlurSpin
+      suffix: "-ring"
+      rotateSpeed: 4
+      blurThresh: 0.1
+      color: ffffff
+    }
+  ]
+}
+
+requirements: [
+    copper/100
+    lead/50
+]
+
+research: silicon-smelter

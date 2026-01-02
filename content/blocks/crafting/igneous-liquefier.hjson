@@ -1,0 +1,36 @@
+name: Igneous Liquefier
+type: GenericCrafter
+description: "A high-intensity thermal chamber. It uses concentrated plasma arcs to flash-melt scrap and mineral deposits into molten slag at extreme volumes."
+health: 1200
+size: 3
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Massive internal tank for slag
+liquidCapacity: 120
+itemCapacity: 30
+
+# Very fast melting cycle (0.5 seconds)
+craftTime: 30
+
+consumes: {
+  power: 6.5
+  items: [
+    # Can take Scrap or Sand
+    scrap/3
+  ]
+}
+
+# Produces a huge burst of slag per cycle
+outputLiquid: slag/1.0
+
+requirements: [
+  copper/200
+  lead/150
+  graphite/100
+  silicon/80
+]
+
+research: melter

@@ -1,0 +1,77 @@
+name: "Molecular Assembler-Smelter"
+type: Separator
+description: "A hybrid refinery that integrates liquid hydrocarbons with solid minerals to synthesize advanced construction materials. Produces Metaglass, Silicon, and Plastanium in sequence."
+health: 3500
+size: 4
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+liquidCapacity: 80
+
+# The speed at which it cycles through the three outputs
+craftTime: 0.10
+
+# VISUAL EFFECTS
+# Constant smoke from the high-speed refining
+updateEffect: smeltsmoke
+updateEffectChance: 0.08
+
+# Sharp sparks to indicate the molecular 'separation' and 'assembly'
+craftEffect: spark
+
+results: [
+  metaglass/2
+  silicon/3
+  plastanium/1
+]
+
+consumes: {
+  power: 10.0
+  items: [
+    crystalline-silicon/2
+    copper/3
+  ]
+  liquid: {
+    liquid: cryofluid
+    amount: 0.2
+  }
+}
+
+# DRAWER SYSTEM: Visualizes the internal chemical bath
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # Shows the Cryofluid swirling inside the central tank
+    {
+      type: DrawLiquidTile
+      drawLiquid: cryofluid
+      padding: 4
+    }
+    # A soft teal glow to represent the Cryofluid stabilization
+    {
+      type: DrawGlowRegion
+      color: 6ecdec
+      glowIntensity: 0.4
+      glowScale: 5
+    }
+    # High-speed internal spin to match the 0.10 craftTime
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 15
+    }
+  ]
+}
+
+requirements: [
+  surge-alloy/120
+  thorium/180
+  silicon/200
+  phase-fabric/50
+]
+
+research: surge-smelter

@@ -1,0 +1,40 @@
+name: Pressurized Carbon Synthesizer
+type: GenericCrafter
+description: "A heavy-duty carbon-fixing facility. It uses high-pressure liquid catalysts to compress oil and scrap into high-density coal at an industrial scale."
+health: 1400
+size: 3
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# How long one cycle takes (60 frames = 1 second)
+craftTime: 45
+
+# Massive internal storage to prevent input starvation
+itemCapacity: 40
+liquidCapacity: 100
+
+consumes: {
+  power: 8.0
+  items: [
+    # Uses scrap as a carbon base
+    scrap/2
+  ]
+  liquids: [
+    # Uses oil as a catalyst for faster synthesis
+    oil/0.3
+  ]
+}
+
+# Outputs a large stack of coal per cycle
+outputItem: coal/6
+
+requirements: [
+  lead/300
+  graphite/200
+  titanium/150
+  silicon/100
+]
+
+research: coal-centrifuge

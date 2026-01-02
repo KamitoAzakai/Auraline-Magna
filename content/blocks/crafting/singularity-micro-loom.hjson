@@ -1,0 +1,53 @@
+type: GenericCrafter
+name: "Singularity Micro-Loom"
+description: "A scaled-down version of the Quantum Loom. Uses high-frequency resonance from Kinetic Crystals to fuse alloys without the need for Plasma Flux. Slower and less efficient than the full-scale version."
+size: 2
+health: 1200
+category: crafting
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+# Crafting Stats: Slower than the big one (5 seconds vs 3 seconds)
+craftTime: 300
+itemCapacity: 20
+liquidCapacity: 60
+
+consumes: {
+  power: 12.0
+  items: [
+    surge-alloy/3
+    crystalline-silicon/5
+    kinetic-crystal/1
+  ]
+  liquids: [
+    # Uses water or coolant to manage the friction heat
+    water/0.2
+  ]
+}
+
+outputItem: quantum-alloy/1
+
+# Stable visual drawer to prevent loading errors
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawArcSmelt
+      color: a488ff
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/150
+  thorium/200
+  silicon/400
+  graphite/250
+]
+
+# Unlocks after the Resonance Crystallizer so you have the crystals needed
+research: resonance-crystallizer

@@ -1,0 +1,110 @@
+type: GenericCrafter
+name: "Tau-forger Accelerator"
+description: "A massive circular particle accelerator. Collides Enhanced Kinetic Crystals with raw Thorium at relativistic speeds, forcing the creation of the heavy Tau-isotope."
+size: 5
+health: 4500
+category: crafting
+hasPower: true
+hasItems: true
+
+# 25,000 power/sec
+consumes: {
+  power: 416.66
+  items: [
+    enhanced-kinetic-crystal/1
+    thorium/5
+  ]
+}
+
+craftTime: 300
+itemCapacity: 100
+outputItem: tau-forged-thorium/2
+
+# VISUAL EFFECTS: PARTICLE COLLISION
+# updateEffect: High-velocity violet tracers following the circular track
+updateEffect: {
+  type: ParticleEffect
+  particles: 4
+  length: 30
+  lifetime: 40
+  line: true
+  strokeFrom: 1.5
+  strokeTo: 0
+  colorFrom: b892ff
+  colorTo: ffffff00
+}
+updateEffectChance: 0.25
+
+# craftEffect: A blinding nuclear 'transmutation' event
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 60
+      lifetime: 50
+      colorFrom: ffffff
+      colorTo: b892ff
+      strokeFrom: 8
+    }
+    {
+      type: ParticleEffect
+      particles: 30
+      length: 50
+      lifetime: 90
+      interp: pow5Out
+      colorFrom: b892ff
+      colorTo: 808080
+      sizeFrom: 4
+      sizeTo: 0
+    }
+  ]
+}
+
+# DRAWER SYSTEM: The Synchrotron Ring
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault 
+      # The heavy lead-lined base
+    }
+    # 1. The Accelerator Track (Deep violet glow)
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.8
+      glowScale: 20
+    }
+    # 2. Relativistic Spin: Inner ring rotating at extreme speed
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.1
+      rotateSpeed: 30 # Relativistic velocity
+      color: ffffff
+    }
+    # 3. Outer Confinement: Counter-rotating magnetic stabilizers
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.4
+      rotateSpeed: -5
+      color: b892ff
+    }
+    # 4. Ionized Air: Arcing electricity across the center
+    {
+      type: DrawPlasma
+      plasmaSections: 12
+      plasmaRange: 15
+      color: b892ff
+    }
+  ]
+}
+
+requirements: [
+  hardened-carbide/800
+  enhanced-quantum-alloy/150
+  crystalline-silicon/400
+  surge-alloy/250
+]
+
+research: kinetic-resonance-chamber

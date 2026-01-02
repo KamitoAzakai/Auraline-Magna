@@ -1,0 +1,24 @@
+name: "Graphite Ultra-press"
+type: "GenericCrafter"
+description: "A graphite crafting station that can produce a variety of graphite while being power-efficient."
+health: 6000
+category: crafting
+hasPower: true
+size: 2
+craftTime: 40
+updateEffect: "smeltsmoke"
+outputItem: graphite/8
+consumes: {
+    power: 0.15
+    items: {
+        items: [
+            coal/3
+        ]
+    }
+}
+requirements: [
+    copper/120
+    lead/60
+]
+
+research: graphite-press

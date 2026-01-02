@@ -1,0 +1,87 @@
+name: Mincer
+type: GenericCrafter
+description: "A high-capacity crusher that can pulverize large quantities of materials into finer powders. Its reinforced chassis allows it to withstand heavy fire while operating."
+health: 8000
+category: crafting
+hasPower: true
+size: 2
+craftTime: 60
+
+# VISUAL & AUDIO EFFECTS
+# updateEffect: Occurs while crafting. We use a custom multi-effect for grit and sparks.
+updateEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      particles: 4
+      length: 12
+      lifetime: 30
+      colorFrom: 9e9e9e 
+      # Scrap Gray
+      colorTo: 616161
+      sizeFrom: 2
+      sizeTo: 0
+    }
+    {
+      type: ParticleEffect
+      particles: 2
+      line: true
+      length: 15
+      lifetime: 15
+      colorFrom: ffa64d 
+      # Iron Sparks
+      colorTo: ffffff
+      strokeFrom: 1
+      strokeTo: 0
+    }
+  ]
+}
+
+# craftEffect: The final 'crunch' when the items are finished
+craftEffect: pulverizeRed
+shootSound: drill
+
+# Screen shake when it finishes a cycle to show the power
+shake: 2
+
+outputItem: sand/5
+
+consumes: {
+  power: 0.25
+  items: [
+    scrap/2
+  ]
+}
+
+# DRAWER SYSTEM: Grinding Gears
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+      # Draws the base building
+    }
+    {
+      # The internal grinder that rotates while powered
+      type: DrawBlurSpin
+      suffix: "-grinder"
+      rotateSpeed: 8
+      blurThresh: 0.01
+    }
+    {
+      # A top-layer glow to show high-pressure operation
+      type: DrawGlowRegion
+      color: ff795e
+      glowIntensity: 0.3
+    }
+  ]
+}
+
+requirements: [
+  lead/150
+  copper/200
+  titanium/100
+]
+
+research: pulverizer

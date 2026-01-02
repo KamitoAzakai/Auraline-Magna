@@ -1,0 +1,48 @@
+type: HeatProducer
+name: Kinetic Friction-Igniter
+description: "A high-performance thermal generator. By subjecting Kinetic Crystals to high-frequency oscillation, it converts physical resonance into raw thermal energy. Generates 120 heat units."
+size: 3
+health: 3000
+category: production
+hasItems: true
+
+# Heat Production Stats
+heatOutput: 120
+# How fast the block reaches its 120 max
+warmupSpeed: 0.02
+
+consumes: {
+  power: 10.0
+  items: [
+    kinetic-crystal/2
+  ]
+}
+
+# This determines how long one crystal lasts (seconds * 60)
+itemDuration: 180
+
+requirements: [
+  tau-forged-thorium/150
+  hardened-carbide/250
+  kinetic-crystal/50
+  silicon/400
+]
+
+# Visual effect: A warm, pulsing orange/purple glow
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatOutput
+    }
+    {
+      type: DrawGlowRegion
+      color: ffa665
+    }
+  ]
+}
+
+research: kinetic-crystal

@@ -1,0 +1,102 @@
+type: GenericCrafter
+name: "Phase Fabric Collider"
+description: "A high-frequency harmonic weaver. It uses thorium resonance to 'spin' sand into spatiotemporal threads. Highly power-efficient due to its self-sustaining phase-vibrations."
+health: 7000
+category: crafting
+size: 3
+hasPower: true
+hasItems: true
+
+# 10 items per 1.6 seconds
+craftTime: 100
+
+# VISUAL EFFECTS
+# updateEffect: Subtle violet phase-particles drifting upward
+updateEffect: {
+  type: ParticleEffect
+  particles: 2
+  length: 12
+  lifetime: 50
+  colorFrom: b892ff
+  colorTo: b892ff00
+  sizeFrom: 1.5
+  sizeTo: 0
+}
+updateEffectChance: 0.15
+
+# craftEffect: A dimensional ripple when the fabric is 'phased' into reality
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: WaveEffect
+      sizeTo: 30
+      lifetime: 25
+      colorFrom: b892ff
+      colorTo: ffffff
+      strokeFrom: 2
+    }
+    {
+      type: ParticleEffect
+      particles: 12
+      length: 25
+      lifetime: 45
+      line: true
+      strokeFrom: 1
+      strokeTo: 0
+      colorFrom: b892ff
+      colorTo: ffffff
+    }
+  ]
+}
+
+consumes: {
+  power: 0.25
+  items: [
+    sand/10 
+    # Adjusted for 10-item output balance
+    thorium/5
+  ]
+}
+
+outputItem: phase-fabric/10
+
+# DRAWER SYSTEM: The Spatiotemporal Loom
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    # 1. Harmonic Resonance Glow (Violet)
+    {
+      type: DrawGlowRegion
+      color: b892ff
+      glowIntensity: 0.8
+      glowScale: 10
+    }
+    # 2. The Weaver Spin: High-speed violet rings
+    {
+      type: DrawBlurSpin
+      blurThresh: 0.2
+      rotateSpeed: 10
+      color: b892ff
+    }
+    # 3. Dimensional Core: A soft white pulse representing the 'phase'
+    {
+      type: DrawFlame
+      color: ffffff
+      flareColor: b892ff
+      flareMag: 0.4
+      flareRadius: 4
+    }
+  ]
+}
+
+requirements: [
+  titanium/200
+  thorium/150
+  silicon/100
+]
+
+research: phase-weaver

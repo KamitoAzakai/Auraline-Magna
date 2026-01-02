@@ -1,0 +1,56 @@
+name: Metaglass Furnace
+type: GenericCrafter
+description: "An advanced Aetheric kiln. Utilizes high-intensity Kinetic resonance to vitrify sand and lead into high-purity metaglass."
+health: 1400
+category: crafting
+size: 2
+hasPower: true
+hasItems: true
+itemCapacity: 20
+craftTime: 40
+
+outputItem: metaglass/10
+
+consumes: {
+  power: 1.5
+  items: [
+    sand/2
+    lead/1
+  ]
+}
+
+# DRAWER SYSTEM: Removing the "Oh No" by using shapes instead of regions
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+
+    {
+      # The central white-hot "Logic Eye" using a shape
+      type: DrawOrbitSun
+      color: ffffff
+      orbitRadius: 0
+      sunSize: 3.5
+    }
+  ]
+}
+
+updateEffect: {
+  type: ParticleEffect
+  particles: 3
+  length: 12
+  lifetime: 50
+  colorFrom: b892ff
+  colorTo: 4b2d8500
+  sizeFrom: 2
+  sizeTo: 0
+}
+
+requirements: [
+  lead/150
+  silicon/100
+]
+
+research: kiln
