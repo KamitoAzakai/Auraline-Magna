@@ -9,7 +9,7 @@ hasItems: true
 hasLiquids: true
 
 # Increased item capacity per individual item type
-itemCapacity: 5000
+itemCapacity: 3000
 liquidCapacity: 1200
 
 # We only put Power and Liquid here.
