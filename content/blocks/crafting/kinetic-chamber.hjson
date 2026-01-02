@@ -39,20 +39,13 @@ drawer: {
       # This serves as your floor/internal machinery
       type: DrawDefault
     }
-  {
+    {
       # Layer 5: The central white singularity pulse
       # This is drawn last so it glows on top of the armor
       type: DrawPulseShape
       color: ffffff
       radius: 12
       sides: 8
-    }
-    {
-      # Layer 3: High-speed rotation effect in the center
-      type: DrawBlurSpin
-      color: ffffff
-      blurThresh: 0.5
-      rotateSpeed: 10
     }
     {
       # Layer 4: The top armored shell (kinetic-resonance-chamber-top.png)
