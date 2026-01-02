@@ -1,7 +1,7 @@
 name: Tectonic Bore
 type: Drill
 description: "A massive, high-efficiency excavation unit. Utilizes a crystalline silicon logic array to identify structural weaknesses in ore veins, allowing for near-instantaneous extraction."
-size: 3
+size: 2
 health: 1200
 category: production
 

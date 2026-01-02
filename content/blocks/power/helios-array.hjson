@@ -7,7 +7,7 @@ category: power
 
 # Power generation per frame (0.1 is roughly 6 power per second)
 # 1.0 is a massive amount of power for a solar panel
-powerProduction: 5.0
+powerProduction: 12.5
 
 requirements: [
   lead/300

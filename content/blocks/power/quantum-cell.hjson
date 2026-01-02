@@ -34,8 +34,7 @@ requirements: [
   silicon/150
   lead/200
   surge-alloy/100
-  # Ensure this item exists in your mod
-  quantum-alloy/10 
+  quantum-alloy/10
 ]
 
 research: battery

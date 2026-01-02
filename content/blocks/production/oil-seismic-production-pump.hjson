@@ -10,7 +10,7 @@ liquidCapacity: 100
 
 craftTime: 30
 
-# This is what makes it "produce" oil
+
 outputLiquid: oil/1.0
 
 consumes: {
@@ -22,6 +22,7 @@ requirements: [
   metaglass/150
   silicon/100
   titanium/80
+  crystalline-silicon/50
 ]
 
 research: rotary-pump
