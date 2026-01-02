@@ -1,7 +1,7 @@
 type: GenericCrafter
 name: "Tau-Molecular Press"
 description: "The heart of Auraline industry. Uses immense gravitational pressure and 120 units of localized heat to forge standard materials into their 'Tau' variants. Requires constant cooling to prevent a core collapse."
-size: 5
+size: 4
 health: 50000
 category: crafting
 hasItems: true
