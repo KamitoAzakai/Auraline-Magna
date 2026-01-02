@@ -6,7 +6,7 @@ armor: 95
 hitSize: 58
 speed: 0.28
 rotateSpeed: 1.2
-# Large footprint for a 6x6-sized unit
+
 legCount: 8
 legLength: 55
 legTrns: 4
@@ -33,7 +33,6 @@ weapons: [
       updateEffect: railTrail
       shootEffect: railShoot
       smokeEffect: shootBigSmoke2
-      # Tau-Purple palette
       colors: [b892ff, d9e1ff, ffffff]
     }
   }
@@ -115,14 +114,12 @@ weapons: [
 abilities: [
   {
     type: ForceFieldAbility
-    # Total shield health
     radius: 60
     regen: 8
     max: 15000
     cooldown: 600
   }
   {
-    # This adds a "Tau-Pulse" that damages enemies who get too close to the shield
     type: EnergyFieldAbility
     damage: 50
     reload: 30

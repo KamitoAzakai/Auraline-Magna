@@ -45,7 +45,7 @@ weapons: [
     shootSound: railgun
     bullet: {
       type: RailBulletType
-      damage: 2200
+      damage: 22000
       length: 700
       colors: [98ffd9, b892ff, ffffff]
     }

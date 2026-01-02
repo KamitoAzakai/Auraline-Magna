@@ -37,10 +37,8 @@ weapons: [
       damage: 45
       speed: 6
       lifetime: 40
-      # Teal/Purple Tau Palette
       frontColor: b892ff
       backColor: 98ffd9
-      # Heals your own buildings while shooting
       healPercent: 8
       collidesTeam: true
     }
