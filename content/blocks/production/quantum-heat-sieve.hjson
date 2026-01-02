@@ -1,0 +1,41 @@
+type: HeatConductor
+name: Quantum Heat-Sleeve
+description: "A 1x1 ultra-conductive heat bridge. Utilizing a Tau-forged Quantum vacuum, it transports thermal energy with zero loss, ensuring maximum output reaches the destination."
+size: 1
+health: 500
+category: production
+
+# Heat Stats
+# This ensures that even at 120+ units, the pipe doesn't melt
+maxHeat: 1000 
+
+# This determines how much heat can pass through per tick
+# Setting it high prevents the pipe from being a 'bottleneck'
+heatConfig: 120
+
+requirements: [
+  tau-forged-quantum-alloy/5
+  hardened-carbide/10
+  metaglass/15
+]
+
+# Visual: A sleek pipe with a purple glowing core
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawHeatInput
+    }
+    {
+      # This makes the pipe glow more intensely the hotter it gets
+      type: DrawGlowRegion
+      color: ffa665
+      suffix: -glow
+    }
+  ]
+}
+
+research: tau-forged-quantum-alloy
