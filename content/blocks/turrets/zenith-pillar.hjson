@@ -27,21 +27,31 @@ consumes: {
 ammoTypes: {
   # THE BEAM AMMO
   volatile-isotope: {
-    type: RailgunBulletType
-    damage: 85000
-    length: 650
-    updateEffect: railTrail
-    hitEffect: massiveExplosion
-    smokeEffect: shootBigSmoke2
-    pierce: true
+    type: ContinuousLaserBulletType
+    damage: 150 
+    # Damage is per tick, so this is extremely high
+    length: 660
+    width: 12
+    lifetime: 160 
+    # How long the beam stays on screen
+    drawSize: 660
+    
     # Visuals to make it look like a 'Pillar' of light
     colors: [ff6b38, ffffff, b892ff]
+    lightColor: b892ff
+    
+    # These effects make the beam 'hiss' and spark
+    incendAmount: 5
+    incendSpread: 20
+    oscMag: 1   
+    # Slight vibration to the beam
+    oscScl: 5
   }
   
   # THE RAILGUN AMMO (Alternate)
   tau-forged-quantum-alloy: {
     type: RailgunBulletType
-    damage: 85000
+    damage: 8500
     length: 650
     updateEffect: railTrail
     hitEffect: massiveExplosion
