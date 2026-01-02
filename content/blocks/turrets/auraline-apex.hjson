@@ -1,0 +1,61 @@
+name: Auraline Apex
+type: ItemTurret
+description: "The pinnacle of Auraline engineering. A massive rail-cannon that utilizes ionic refrigerant to stabilize its firing magnets. Fires devastating quantum-shattering slugs."
+size: 5
+health: 9500
+armor: 25
+category: turret
+
+# Speed and Power
+reload: 30
+range: 480
+recoil: 4
+shake: 8
+shootSound: railgun
+
+# Liquid cooling is mandatory for a gun this size
+consumes: {
+  liquid: {
+    liquid: ionic-refrigerant
+    amount: 0.5
+    boil: true
+  }
+}
+
+ammoTypes: {
+  quantum-alloy: {
+    type: BasicBulletType
+    damage: 1200
+    speed: 12
+    width: 14
+    height: 30
+    shrinkY: 0
+    lifetime: 40
+    # Visuals
+    frontColor: 98ffd9
+    backColor: 5ebda3
+    trailColor: 98ffd9
+    trailWidth: 4
+    trailLength: 20
+    # Effect on hit
+    hitEffect: massiveExplosion
+    despawnEffect: massiveExplosion
+    pierce: true
+    pierceCap: 5
+    fragBullets: 50
+    fragBullet: {
+      type: LiquidBulletType
+      liquid: ionic-refrigerant
+      damage: 9000
+    }
+  }
+}
+
+requirements: [
+  hardened-carbide/800
+  quantum-alloy/400
+  crystalline-silicon/500
+  kinetic-crystal/250
+]
+
+research: quantum-sifter

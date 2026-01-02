@@ -1,0 +1,72 @@
+name: Natalokh
+type: ItemTurret
+description: "A heavy saturation artillery system. Launches pressurized canisters of Hardened Carbide that shatter upon impact, creating a deadly field of kinetic shrapnel."
+size: 4
+health: 3200
+armor: 12
+category: turret
+
+reload: 80
+range: 360
+recoil: 6
+shake: 3
+inaccuracy: 12
+shootSound: artillery
+
+# Advanced cooling for sustained fire
+consumes: {
+  liquid: {
+    liquid: cryofluid
+    amount: 0.3
+    optional: true
+    boil: true
+  }
+}
+
+ammoTypes: {
+  hardened-carbide: {
+    type: ArtillaryBulletType
+    damage: 180
+    speed: 2
+    hitSize: 12
+    lifetime: 90
+    ammoMultiplier: 20
+    
+    # Visuals
+    frontColor: b0bac0
+    backColor: 6e7880
+    width: 16
+    height: 16
+    
+    # The "Ripple" effect: Bursting into fragments
+    hitEffect: blastExplosion
+    knockback: 2
+    splashDamage: 800
+    splashDamageRadius: 80
+    
+    # Shrapnel logic
+    fragBullets: 12
+    fragBullet: {
+      type: BasicBulletType
+      damage: 45
+      speed: 6
+      lifetime: 15
+      width: 4
+      height: 10
+      shrinkY: 1
+      frontColor: d1d9df
+      backColor: 98a4ac
+      pierce: true
+      pierceCap: 2
+    }
+  }
+}
+
+requirements: [
+  lead/500
+  hardened-carbide/200
+  silicon/250
+  titanium/300
+]
+
+research: ripple

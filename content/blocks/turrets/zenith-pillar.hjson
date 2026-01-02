@@ -1,0 +1,88 @@
+name: Zenith-Pillar
+type: ItemTurret
+description: "The ultimate expression of Auraline dominance. Fires stabilized phase-beams that pierce entire enemy battalions."
+size: 5
+health: 12000
+category: turret
+
+reload: 120
+range: 650
+recoil: 8
+shake: 10
+shootSound: beam
+
+# We use ShootContinuous to tell the turret this ammo is a beam
+shoot: {
+  type: ShootContinuous
+}
+
+consumes: {
+  power: 25
+  liquid: {
+    liquid: cryofluid
+    amount: 0.5
+  }
+}
+
+ammoTypes: {
+  # THE BEAM AMMO
+  volatile-isotope: {
+    type: ContinuousLaserBulletType
+    damage: 150 
+    # Damage is per tick, so this is extremely high
+    length: 660
+    width: 12
+    lifetime: 160 
+    # How long the beam stays on screen
+    drawSize: 660
+    
+    # Visuals to make it look like a 'Pillar' of light
+    colors: [ff6b38, ffffff, b892ff]
+    lightColor: b892ff
+    
+    # These effects make the beam 'hiss' and spark
+    incendAmount: 5
+    incendSpread: 20
+    oscMag: 1   
+    # Slight vibration to the beam
+    oscScl: 5
+  }
+  
+  # THE RAILGUN AMMO (Alternate)
+  tau-forged-quantum-alloy: {
+    type: RailgunBulletType
+    damage: 8500
+    length: 650
+    updateEffect: railTrail
+    hitEffect: massiveExplosion
+    smokeEffect: shootBigSmoke2
+    pierce: true
+  }
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+        type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: "-orb"
+      y: 8
+      bounce: true
+      mag: 1.5
+      scl: 5
+    }
+    {
+      type: DrawHeatRegion
+      color: ff6b38
+    }
+  ]
+}
+
+requirements: [
+  copper/1000
+  lead/500
+  silicon/500
+]

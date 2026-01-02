@@ -1,0 +1,49 @@
+name: Ionized Igniter
+type: LaserTurret
+description: "A compact high-energy beam turret. While smaller than the Meltdown, it utilizes Crystalline Silicon lenses to focus energy into a singular, devastating point."
+size: 2
+health: 1200
+category: turret
+
+shootEffect: shootBigSmoke2
+shootCone: 40
+recoil: 3
+shake: 2
+range: 160
+shootDuration: 180
+firingMoveFract: 0.5
+reload: 240
+
+# It needs high power and cryofluid to maintain the beam
+consumes: {
+  power: 8.0
+  liquid: {
+    liquid: cryofluid
+    amount: 0.2
+  }
+}
+
+# The Laser Beam
+shootType: {
+  type: ContinuousLaserBulletType
+  damage: 85
+  length: 165
+  width: 6
+  
+  # A bright cyan/blue beam to match the Crystalline Silicon theme
+  colors: [83f3ff, b2f9ff, ffffff]
+  
+  # Added "Meltdown" traits: Incendiary and status effects
+  incendiary: true
+  status: blasted
+  statusDuration: 60
+}
+
+requirements: [
+  lead/200
+  titanium/150
+  crystalline-silicon/80
+  metaglass/100
+]
+
+research: meltdown

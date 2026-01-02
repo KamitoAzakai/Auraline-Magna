@@ -1,0 +1,108 @@
+name: Void-Render Cannon
+type: ItemTurret
+description: "A triple-nozzle siege platform with adaptive firing modes. Processes Quantum Alloy for armor-piercing, Tau-forged Alloy for wide-area carpet bombardment, and Volatile Isotopes for total annihilation."
+size: 4
+health: 4200
+armor: 15
+category: turret
+
+reload: 1 # Base reload adjusted for high-frequency modes
+range: 470
+recoil: 4
+shake: 5
+inaccuracy: 0
+shootSound: shootBig
+
+shoot: {
+  type: ShootBarrel
+  barrels: [
+    -12, 4, 0
+    0, 6, 0
+    12, 4, 0
+  ]
+}
+
+consumes: {
+  liquid: {
+    liquid: plasma-flux
+    amount: 0.2
+  }
+}
+
+ammoTypes: {
+  quantum-alloy: {
+    type: BasicBulletType
+    damage: 1500
+    speed: 15
+    width: 12
+    height: 18
+    lifetime: 900
+    pierce: true
+    pierceCap: 8
+    armorPiercing: 50
+    frontColor: 98ffd9
+    backColor: 5ebda3
+    trailColor: 98ffd9
+    trailWidth: 4
+    trailLength: 15
+    hitEffect: blastExplosion
+    despawnEffect: flakExplosion
+  }
+
+  tau-forged-quantum-alloy: {
+    type: BasicBulletType
+    damage: 15000
+    speed: 12
+    width: 14
+    height: 20
+    lifetime: 300
+    # To handle multiple shots properly within ammoTypes:
+    shoot: {
+      shots: 6
+      shotDelay: 2
+    }
+    splashDamage: 5000
+    splashDamageRadius: 60
+    frontColor: b892ff
+    backColor: 311e4d
+    trailColor: b892ff
+    trailWidth: 5
+    trailLength: 20
+    # FIXED: scudExplosion -> scatheExplosion
+    hitEffect: {
+      type: MultiEffect
+      effects: [massiveExplosion, scatheExplosion]
+    }
+  }
+
+  volatile-isotope: {
+    type: BasicBulletType
+    damage: 50000
+    speed: 30
+    width: 18
+    height: 30
+    lifetime: 26
+    splashDamage: 30000
+    splashDamageRadius: 60
+    frontColor: ffffff
+    backColor: ff6b38
+    trailColor: ff6b38
+    trailWidth: 6
+    trailLength: 30
+    # FIXED: nuclearExplosion -> reactorExplosion
+    hitEffect: {
+      type: MultiEffect
+      effects: [instBomb, reactorExplosion]
+    }
+    despawnEffect: sapExplosion
+  }
+}
+
+requirements: [
+  hardened-carbide/300
+  quantum-alloy/150
+  thorium/250
+  silicon/200
+]
+
+research: spectre
