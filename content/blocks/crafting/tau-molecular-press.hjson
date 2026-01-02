@@ -53,7 +53,7 @@ craftEffect: {
 consumes: {
   power: 45.0
   # Updated to match the 120 units requirement in the lore
-  heat: 120.0 
+  heat: 20.0
   items: [
     thorium/10
     surge-alloy/2
