@@ -7,6 +7,7 @@ category: crafting
 hasItems: true
 hasLiquids: true
 hasPower: true
+hasHeat: true
 
 # Crafting Stats
 craftTime: 300 
@@ -90,6 +91,11 @@ drawer: {
       type: DrawGlowRegion
       color: a488ff
       glowIntensity: 0.9
+    }
+    {
+      # This draws a glowing orange heat-sync overlay
+      type: DrawHeatOutput
+      color: ff8855
     }
   ]
 }
