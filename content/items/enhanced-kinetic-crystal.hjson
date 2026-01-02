@@ -1,7 +1,7 @@
 {
 name: Enhanced Kinetic Crystal
 description: "An upgraded form of Kinetic Crystal, engineered to vibrate at even higher frequencies. This enhancement significantly boosts its energy absorption and release capabilities, making it ideal for advanced energy storage and high-speed transport applications."
-color: "aabbee" // A lighter, more vibrant blue
+color: "aabbee" 
 explosiveness: 2.0
 flammability: 2.0
 radioactivity: 3.0

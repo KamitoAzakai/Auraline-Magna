@@ -1,7 +1,7 @@
 {
 name: Crystalline Silicon
 description: "Perfectly aligned silicon atoms. Extremely efficient for high-end computation and sensors."
-color: "b2c6d6" // A light, glassy blue-gray
+color: "b2c6d6" 
 flammability: 0
 cost: 2.0
 research: silicon
