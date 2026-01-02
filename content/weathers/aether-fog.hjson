@@ -1,25 +1,23 @@
 type: ParticleWeather
 name: "Aether Fog"
 description: "A dense, low-hanging mist of unrefined particles. Drastically reduces visibility and muffles sound, creating an eerie silence across the sector."
-color: d1b1ff # Very pale lavender
-noiseColor: 8a73c6 # Deeper purple shadows
+color: d1b1ff 
+noiseColor: 8a73c6
 particleRegion: "particle"
 sizeMin: 4
-sizeMax: 12 # Large, soft particles to look like fog banks
+sizeMax: 12
 density: 3000
 opacity: 0.6
 
 # Gameplay Effects:
 attrs: {
   light: -0.5
-  # Makes the map significantly darker
   water: 0.2
-  # Adds a 'damp' feel to the atmosphere
 }
 
 useWindVector: false
-# Fog should drift slowly, not blow like rain
+
 drawNoise: true
 noiseLayers: 2
 noiseScale: 500
-noiseSpeed: 0.2 # Very slow movement
+noiseSpeed: 0.2 
