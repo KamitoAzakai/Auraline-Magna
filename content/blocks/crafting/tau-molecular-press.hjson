@@ -73,6 +73,7 @@ drawer: {
     {
       # Thermal requirement visualization
       type: DrawGlowRegion
+      square: true
       color: ff8855
       glowIntensity: 0.6
       glowScale: 8
