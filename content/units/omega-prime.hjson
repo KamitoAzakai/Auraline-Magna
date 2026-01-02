@@ -1,0 +1,48 @@
+type: mech
+name: Omega-Prime
+description: "The supreme core unit of the Giga-Core. Features hyper-advanced construction beams and a dual-purpose plasma pulse weapon. Its quantum-shielded hull allows it to maintain structural integrity under extreme fire."
+
+# Physicals - Much beefier than Gamma
+speed: 3.5
+accel: 0.1
+drag: 0.05
+health: 10000
+armor:100
+hitSize: 12
+engineSize: 4
+engineOffset: 8
+itemCapacity: 500
+
+# The "Giga" Stats
+buildSpeed: 4.5       # Gamma is 1.5. This is 3x faster.
+mineSpeed: 12.0       # Gamma is 1.5. This clears ores instantly.
+mineTier: 5           # Can mine anything, including Tau-tier ores.
+buildRange: 280       # Can build from a safe distance.
+
+# Capabilities
+mineItems: [hardened-carbide, quantum-alloy, lead, copper, coal]
+flying: true
+isCounted: false      # Doesn't take up unit cap
+
+weapons: [
+  {
+    name: omega-pulse
+    x: 5
+    y: 2
+    reload: 15
+    alternate: true
+    shootSound: lasershoot
+    bullet: {
+      type: LaserBoltType
+      damage: 45
+      speed: 6
+      lifetime: 40
+      # Teal/Purple Tau Palette
+      frontColor: b892ff
+      backColor: 98ffd9
+      # Heals your own buildings while shooting
+      healPercent: 8
+      collidesTeam: true
+    }
+  }
+]

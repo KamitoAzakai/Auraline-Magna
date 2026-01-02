@@ -1,0 +1,132 @@
+type: legs
+name: Arch-Titan
+description: "The pinnacle of Auraline engineering. A Tier 6 mobile fortress equipped with a devastating array of kinetic and plasma weaponry. Its presence on the battlefield warps reality itself."
+health: 1650000
+armor: 95
+hitSize: 58
+speed: 0.28
+rotateSpeed: 1.2
+# Large footprint for a 6x6-sized unit
+legCount: 8
+legLength: 55
+legTrns: 4
+legMoveShift: 0.8
+hovering: true
+shadowElevation: 0.9
+
+weapons: [
+  # 1. THE HUGE RAIL GUN (Central Spine)
+  {
+    name: singularity-railgun
+    x: 0
+    y: 12
+    reload: 150
+    mirror: false
+    shake: 15
+    shootSound: railgun
+    bullet: {
+      type: RailBulletType
+      damage: 250000
+      length: 700
+      hitEffect: massiveExplosion
+      pierceEffect: railHit
+      updateEffect: railTrail
+      shootEffect: railShoot
+      smokeEffect: shootBigSmoke2
+      # Tau-Purple palette
+      colors: [b892ff, d9e1ff, ffffff]
+    }
+  }
+
+  # 2. TWO HEAVY LASERS (Shoulder Mounts)
+  {
+    name: tau-laser
+    x: 22
+    y: 5
+    reload: 40
+    mirror: true
+    continuous: true
+    shootSound: beam
+    bullet: {
+      type: ContinuousLaserType
+      damage: 250
+      length: 300
+      width: 12
+      colors: [b892ff, d9e1ff, ffffff]
+    }
+  }
+
+  # 3. FIVE KINETIC CANNONS (Distributed across the hull)
+  # Central Cannon
+  {
+    name: kinetic-obliterant
+    x: 0
+    y: -5
+    reload: 60
+    mirror: false
+    shootSound: bang
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 600
+      splashDamage: 400
+      splashDamageRadius: 60
+      speed: 5
+      lifetime: 80
+      frontColor: 98ffd9
+      backColor: 5ebda3
+    }
+  }
+  # Outer Cannons (Mirrored pair 1)
+  {
+    name: kinetic-obliterant-secondary
+    x: 30
+    y: -15
+    reload: 80
+    mirror: true
+    shootSound: bang
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 400
+      splashDamage: 200
+      splashDamageRadius: 40
+      speed: 4
+      lifetime: 90
+    }
+  }
+  # Inner Cannons (Mirrored pair 2)
+  {
+    name: kinetic-obliterant-tertiary
+    x: 15
+    y: -20
+    reload: 50
+    mirror: true
+    shootSound: bang
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 350
+      splashDamage: 150
+      splashDamageRadius: 30
+      speed: 6
+      lifetime: 70
+    }
+  }
+]
+
+abilities: [
+  {
+    type: ForceFieldAbility
+    # Total shield health
+    radius: 60
+    regen: 8
+    max: 15000
+    cooldown: 600
+  }
+  {
+    # This adds a "Tau-Pulse" that damages enemies who get too close to the shield
+    type: EnergyFieldAbility
+    damage: 50
+    reload: 30
+    range: 60
+    color: b892ff
+  }
+]

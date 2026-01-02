@@ -1,0 +1,55 @@
+type: mech
+name: Tectonic Bore
+description: "A specialized Tier 3 industrial miner. Programmed with 'Autonomous Extraction Logic' to begin mining operations immediately upon deployment."
+
+# This is the "Magic" line for automation
+# MinerAI tells the unit to find ores and return them to the core automatically.
+controller: MinerAI
+defaultController: MinerAI
+
+health: 12000
+armor: 12
+hitSize: 14
+speed: 0.65
+
+# Ensure these stats are high for maximum efficiency
+mineSpeed: 10.5
+mineTier: 6
+itemCapacity: 1500
+
+# The unit will prioritize these items in order
+mineItems: [
+  tau-forged-thorium
+  quantum-alloy
+  hardened-carbide
+  thorium
+  titanium
+  copper
+  lead
+  sand
+  copper
+  coal
+  scrap
+]
+
+# Adding a small light so you can see them working in the dark
+lightRadius: 40
+lightColor: 98ffd9
+
+weapons: [
+  {
+    name: bore-stabilizer
+    x: 0
+    y: 0
+    reload: 30
+    mirror: false
+    bullet: {
+      type: ShrapnelBulletType
+      damage: 15
+      length: 40
+      width: 15
+      knockback: 10
+      color: 98ffd9
+    }
+  }
+]

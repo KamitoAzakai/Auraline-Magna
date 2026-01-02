@@ -1,0 +1,68 @@
+type: flying
+name: Phase-Mender
+description: "A specialized Tier 3 support unit. Emits a high-frequency phase-aura that reconstructs damaged hulls and stabilizes overheating weapon systems. Guided by an autonomous triage AI."
+health: 5000
+armor: 8
+hitSize: 12
+speed: 2.8
+accel: 0.15
+drag: 0.05
+flying: true
+
+# THE AUTOMATIC FEATURE:
+# RepairAI makes the unit search for damaged teammates/blocks
+controller: RepairAI
+
+# Logic to ensure it can effectively target allies
+targetAir: false
+targetGround: false
+# This ensures it prioritizes helping friends over attacking enemies
+commandLimit: 6
+
+# Advanced Support Abilities
+abilities: [
+  {
+    # Constant passive repair to everything in range
+    type: RepairFieldAbility
+    amount: 65
+    reload: 60
+    range: 100
+  },
+  {
+    # A status effect field that speeds up nearby allies
+    type: StatusFieldAbility
+    effect: overclock
+    duration: 120
+    reload: 240
+    range: 80
+  }
+]
+
+weapons: [
+  {
+    name: mender-beam
+    x: 0
+    y: 4
+    reload: 20
+    mirror: false
+    shootSound: beam
+    
+    # Targeting logic for the weapon
+    predictTarget: false
+    # High heal priority
+    healPercent: 12
+    
+    bullet: {
+      type: LaserBoltType
+      damage: -100 # Negative damage acts as an extra layer of healing in some versions
+      healPercent: 12
+      collidesTeam: true
+      # Visuals for a 'Phase' beam
+      recoil: 0
+      speed: 5
+      lifetime: 30
+      backColor: b892ff
+      frontColor: ffffff
+    }
+  }
+]

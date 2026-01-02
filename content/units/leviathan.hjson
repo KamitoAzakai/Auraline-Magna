@@ -1,0 +1,99 @@
+type: naval
+name: Leviathan
+description: "The absolute pinnacle of naval warfare. A Tier 7 fortress-ship that utilizes Tau-forged hulls to withstand crushing depths and orbital-level fire. Equipped with rapid-fire railgun batteries and a devastating 'Tidal' Singularity Cannon."
+health: 1200000
+armor: 140
+hitSize: 80
+speed: 0.35
+rotateSpeed: 0.6
+accel: 0.05
+drag: 0.02
+trailLength: 70
+waveTrailX: 25
+waveTrailY: -10
+
+# The Leviathan's Fortress Modules
+abilities: [
+  {
+    # Heavy Naval Shield
+    type: ForceFieldAbility
+    radius: 130
+    regen: 30
+    max: 55000
+    cooldown: 350
+  },
+  {
+    # Deep-Sea Repair Field (Heals self and nearby naval/land units)
+    type: RepairFieldAbility
+    amount: 800
+    reload: 45
+    range: 160
+  }
+]
+
+weapons: [
+  # 1. THE "TIDAL" RAILGUN ARRAY (12 Side-Mounted Cannons)
+  # Ultra-fast reload to shred coastal defenses.
+  {
+    name: tidal-railgun
+    x: 35
+    y: 20
+    reload: 8
+    mirror: true
+    alternate: true
+    shake: 2
+    shootSound: railgun
+    bullet: {
+      type: RailBulletType
+      damage: 2200
+      length: 700
+      colors: [98ffd9, b892ff, ffffff]
+    }
+  }
+  
+  # 2. TRIPLE SUPREME CANNONS (Front Deck)
+  # Five cannons per turret to meet your requirement.
+  {
+    name: pent-cannon
+    x: 0
+    y: 40
+    reload: 100
+    mirror: false
+    rotate: true
+    shoot: {
+      type: ShootSpread
+      shots: 5
+      spread: 10
+    }
+    shootSound: bang
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 1200
+      splashDamage: 800
+      splashDamageRadius: 80
+      speed: 6
+      lifetime: 120
+      frontColor: b892ff
+      backColor: 5ebda3
+    }
+  }
+
+  # 3. THE ABYSSAL RAIL-OBLITERATOR (Central Spinal Weapon)
+  {
+    name: abyssal-spine
+    x: 0
+    y: -10
+    reload: 120
+    mirror: false
+    shake: 20
+    shootSound: railgun
+    bullet: {
+      type: RailBulletType
+      damage: 25000
+      length: 1000
+      hitEffect: massiveExplosion
+      pierce: true
+      colors: [ffffff, 98ffd9, b892ff]
+    }
+  }
+]

@@ -1,0 +1,138 @@
+type: flying
+name: Void-Sovereign
+description: "The ultimate Auraline Tier 7 Mothership. Its railgun arrays have been replaced with integrated Void-Render manifolds. It fires synchronized volleys of quantum-stabilized kinetic shells that ignore 40% of target armor, leaving trails of ionized gas in their wake."
+health: 3200000
+armor: 120
+hitSize: 72
+speed: 0.25
+rotateSpeed: 0.8
+accel: 0.04
+drag: 0.01
+lowAltitude: true
+flying: true
+
+abilities: [
+  {
+    type: ForceFieldAbility
+    radius: 110
+    regen: 25
+    max: 450000
+    cooldown: 400
+  }
+  {
+    type: RepairFieldAbility
+    amount: 500
+    reload: 60
+    range: 140
+  }
+  {
+    type: RepairFieldAbility
+    amount: 300
+    reload: 60
+    range: 80 
+  }
+]
+
+# WEAPONRY: VOID-RENDER INHERITANCE
+weapons: [
+  # 1. WING-MOUNTED TRIPLE RENDER BATTERIES (6 Nozzles Total)
+  {
+    name: sovereign-render-wing
+    x: 28
+    y: 12
+    reload: 6
+    mirror: true
+    alternate: true
+    rotate: true
+    shootSound: shootBig
+    
+    # Inherited Triple-Nozzle Logic
+    shoot: {
+      type: ShootBarrel
+      barrels: [
+        -4, 2, 0  # Left Nozzle
+        0, 4, 0   # Center Nozzle
+        4, 2, 0   # Right Nozzle
+      ]
+    }
+    
+    bullet: {
+      type: BasicBulletType
+      # Inherited from Void-Render Cannon
+      damage: 1500
+      speed: 15
+      width: 12
+      height: 18
+      lifetime: 900
+      
+      # Quantum Traits
+      pierce: true
+      pierceCap: 5
+      armorPiercing: 45 
+      
+      # Visuals: Thick Mint/Cyan Trails
+      frontColor: 98ffd9
+      backColor: 5ebda3
+      trailColor: 98ffd9
+      trailWidth: 4
+      trailLength: 15
+      
+      hitEffect: blastExplosion
+      despawnEffect: flakExplosion
+    }
+  }
+
+  # 2. THE OMEGA RENDER CORE (Integrated 6-Barrel Array)
+  {
+    name: sovereign-omega-render
+    x: 0
+    y: 25
+    reload: 6
+    mirror: false
+    rotate: false
+    shootSound: shootBig
+    
+    # Inherits the Dual-Stage feel (3 Front, 3 Back)
+    shoot: {
+      type: ShootBarrel
+      shots: 6
+      shotDelay: 3
+      barrels: [
+        # Frontal Trident
+        -8, 4, 0
+        0, 8, 0
+        8, 4, 0
+        # Rear Injection Stage
+        -5, -2, 0
+        0, -4, 0
+        5, -2, 0
+      ]
+    }
+    
+    bullet: {
+      type: BasicBulletType
+      damage: 2500
+      speed: 18
+      width: 16
+      height: 24
+      lifetime: 900
+      
+      # Supreme Quantum Traits
+      pierce: true
+      pierceCap: 12
+      armorPiercing: 60 
+      
+      # Visuals: Blinding White-Cyan
+      frontColor: ffffff
+      backColor: 98ffd9
+      trailColor: 98ffd9
+      trailWidth: 6
+      trailLength: 25
+      
+      hitEffect: {
+        type: MultiEffect
+        effects: [blastExplosion, greenLaserChargeSmall]
+      }
+    }
+  }
+]
