@@ -12,10 +12,12 @@ consumes: {
 
 # Cost to build one instance
 requirements: [
-  tau-forged-quantum-alloy/1000
-  tau-forged-thorium/1500
-  tau-forged-silicon/2000
-  hardened-carbide/5000
+  tau-forged-quantum-alloy/10000
+  tau-forged-thorium/15000
+  tau-forged-silicon/20000
+  hardened-carbide/50000
+  genesis-alloy/10000
+  enhanced-phase-fabric/20000
 ]
 
 # The Research Requirements: The ultimate gatekeeper
