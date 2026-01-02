@@ -1,7 +1,7 @@
 name: Igneous Liquefier
 type: GenericCrafter
 description: "A high-intensity thermal chamber. It uses concentrated plasma arcs to flash-melt scrap and mineral deposits into molten slag at extreme volumes."
-health: 1200
+health: 12000
 size: 3
 category: crafting
 hasPower: true

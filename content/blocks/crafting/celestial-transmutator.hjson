@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Celestial Transmutator"
 description: "The most complex industrial structure ever devised. It injects stabilized kinetic harmonics and Tau-radiation into quantum alloy at a sub-atomic level. Requires immense power and cooling to prevent a localized rift."
 size: 6
-health: 12500
+health: 125000
 armor: 40
 category: crafting
 

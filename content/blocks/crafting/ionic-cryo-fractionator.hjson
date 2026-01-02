@@ -2,7 +2,7 @@ name: Ionic Cryo-Fractionator
 type: GenericCrafter
 description: "Advanced refrigeration plant. Infuses standard cryofluid with microscopic, ionized titanium shards to vastly increase thermal conductivity."
 size: 3
-health: 1200
+health: 12000
 category: crafting
 hasPower: true
 hasItems: true

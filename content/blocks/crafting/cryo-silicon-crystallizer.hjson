@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Cryo-Silicon Crystallizer"
 description: "A precision alignment chamber. It uses metaglass and titanium to re-structure silicon atoms into a perfect crystalline lattice, stabilized by constant cryofluid immersion."
 size: 3
-health: 1400
+health: 14000
 category: crafting
 hasPower: true
 hasItems: true

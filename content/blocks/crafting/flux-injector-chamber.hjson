@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Flux-Injection Chamber"
 description: "Injects high-frequency kinetic energy into silicon lattices. This process aligns the atoms into a Tau-state for supreme logic processing. Generates Plasma Flux as a thermal byproduct."
 size: 4
-health: 2200
+health: 22000
 category: crafting
 hasPower: true
 hasItems: true

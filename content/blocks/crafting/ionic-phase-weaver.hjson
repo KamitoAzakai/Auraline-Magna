@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Ionic Phase-Weaver"
 description: "An advanced molecular loom. Utilizes Ionic Refrigerant to cryo-stabilize Phase Fabric while Thorium isotopes are woven into the lattice, creating a hyper-dense, warp-stable material."
 size: 4
-health: 2200
+health: 22000
 category: crafting
 hasItems: true
 hasLiquids: true

@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Carbide Molecular Press"
 description: "A high-pressure industrial press. It compresses surge alloy into a plastanium matrix, creating ultra-dense hardened carbide plates for Giga-scale construction."
 size: 3
-health: 1600
+health: 16000
 category: crafting
 hasPower: true
 hasItems: true

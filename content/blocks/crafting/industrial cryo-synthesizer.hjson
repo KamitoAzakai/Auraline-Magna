@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Industrial Cryo-Synthesizer"
 description: "A heavy-duty refrigeration plant. Uses high-pressure compression to synthesize cryofluid at four times the speed of a standard mixer."
 size: 3
-health: 1200
+health: 12000
 category: crafting
 hasPower: true
 hasItems: true

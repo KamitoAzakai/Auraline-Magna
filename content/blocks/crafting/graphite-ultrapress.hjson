@@ -1,7 +1,7 @@
 name: "Graphite Ultra-press"
 type: "GenericCrafter"
 description: "A graphite crafting station that can produce a variety of graphite while being power-efficient."
-health: 6000
+health: 15000
 category: crafting
 hasPower: true
 size: 2

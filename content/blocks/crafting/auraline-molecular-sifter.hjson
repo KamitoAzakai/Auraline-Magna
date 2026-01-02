@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Auraline Molecular Sifter"
 description: "A colossal industrial refinery. By injecting Ionic Refrigerant into a high-pressure stream of Slag and Plasma Flux, it 'sifts' the resulting elemental collapse to produce Tau-forged and Enhanced materials."
 size: 6
-health: 8500
+health: 85000
 category: crafting
 hasItems: true
 hasLiquids: true

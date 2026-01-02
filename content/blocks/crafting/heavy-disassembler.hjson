@@ -1,7 +1,7 @@
 name: Heavy Disassembler
 type: Separator
 description: "Uses high-speed centrifugal force to extract trace minerals from molten slag. An industrial-grade refinery for late-game resource recovery."
-health: 2500
+health: 25000
 size: 3
 category: crafting
 hasPower: true

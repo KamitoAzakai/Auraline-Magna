@@ -1,8 +1,8 @@
 type: MendProjector
 name: "Phase-Resonance Projector"
 description: "A high-tier mending station. Projects a high-frequency resonance field that vibrates atoms back into their original structural lattice. Highly effective when boosted with Phase Fabric."
-size: 3
-health: 2500
+size: 2
+health: 25000
 category: effect
 
 # Mending Stats

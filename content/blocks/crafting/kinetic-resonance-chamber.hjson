@@ -2,7 +2,7 @@ name: Kinetic Resonance Chamber
 type: GenericCrafter
 description: "Utilizes high-frequency plasma flux to overcharge the internal structure of kinetic crystals. The process requires surge alloy to act as a stabilizing conductor, resulting in crystals with infinite kinetic potential."
 size: 4
-health: 3000
+health: 30000
 hasPower: true
 hasItems: true
 hasLiquids: true

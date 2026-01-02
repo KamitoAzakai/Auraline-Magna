@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Isotope Centrifuge"
 description: "A high-risk enrichment chamber. Suspends Quantum Alloy in a high-velocity Plasma Flux vortex to strip away stable electrons, leaving behind highly Volatile Isotopes. Extremely explosive if damaged."
 size: 4
-health: 6000
+health: 60000
 category: crafting
 hasPower: true
 hasItems: true

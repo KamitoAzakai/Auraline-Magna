@@ -2,7 +2,7 @@ type: HeatProducer
 name: Kinetic Friction-Igniter
 description: "A high-performance thermal generator. By subjecting Kinetic Crystals to high-frequency oscillation, it converts physical resonance into raw thermal energy. Generates 120 heat units."
 size: 3
-health: 3000
+health: 30000
 category: production
 hasItems: true
 
