@@ -1,73 +1,80 @@
-name: Kinetic Resonance Chamber
 type: GenericCrafter
-description: "Utilizes high-frequency plasma flux to overcharge the internal structure of kinetic crystals. The process requires surge alloy to act as a stabilizing conductor, resulting in crystals with infinite kinetic potential."
-size: 4
-health: 30000
+name: "Kinetic Resonance Chamber"
+description: "A massive 4x4 molecular forge. Utilizes high-frequency plasma flux to overcharge kinetic crystals within a stabilized gravity well."
+# Scaled to 4x4
+size: 4 
+health: 45000
 hasPower: true
 hasItems: true
 hasLiquids: true
+category: crafting
 
-craftTime: 200
-itemCapacity: 40
-liquidCapacity: 120
+# Longer craft time reflects the massive scale of 4x4 production
+craftTime: 300
+itemCapacity: 60
+liquidCapacity: 200
 
-# VISUAL EFFECTS
-# updateEffect: Shows the humming resonance while working
+# VISUAL EFFECTS: More intense for a 4x4 structure
 updateEffect: lightningCharge
-# craftEffect: A massive violet shockwave when a crystal is finished
+updateEffectChance: 0.1
 craftEffect: instBomb
-updateEffectChance: 0.05
 
 consumes: {
-  power: 25.0
+  power: 40.0 // Massive power draw for a 4x4 forge
   items: [
-    kinetic-crystal/2
-    surge-alloy/1
+    kinetic-crystal/5
+    surge-alloy/2
   ]
   liquids: [
-    plasma-flux/0.5
+    plasma-flux/0.8
   ]
 }
 
-outputItem: enhanced-kinetic-crystal/1
-outputLiquid: abyssal-sludge/0.12
+outputItem: enhanced-kinetic-crystal/2
+outputLiquid: abyssal-sludge/0.25
 
-# DRAWER SYSTEM: Layers the visuals for a "deep" look
 drawer: {
   type: DrawMulti
   drawers: [
     {
+      # Your sprite (Should be 128x128 for 4x4)
       type: DrawDefault
     }
-    # Draws the Plasma Flux pooling inside
     {
+      # Internal liquid churning
       type: DrawLiquidTile
       drawLiquid: plasma-flux
-      padding: 4
+      padding: 8
     }
-    # A glowing violet 'eye' in the center that pulses
     {
-      type: DrawPistons
-      sinMag: 2
-      sinScl: 5
-      sideOffset: 1
+      # High-speed rotation in the 4x4 center
+      type: DrawBlurSpin
+      color: ffffff
+      blurThresh: 0.5
+      rotateSpeed: 10
     }
-    # The 'Resonance' glow
     {
+      # A larger pulse for the 4x4 singularity
+      type: DrawPulseShape
+      color: ffffff
+      radius: 12
+      sides: 8
+    }
+    {
+      # The 'Resonance' glow covering the wide 4x4 frame
       type: DrawGlowRegion
       color: a488ff
-      glowIntensity: 0.8
-      glowScale: 10
+      glowIntensity: 0.7
+      glowScale: 15
     }
   ]
 }
 
-category: crafting
 requirements: [
-  hardened-carbide/400
-  quantum-alloy/250
-  enhanced-phase-fabric/50
-  silicon/500
+  hardened-carbide/800
+  quantum-alloy/450
+  enhanced-phase-fabric/100
+  silicon/1000
 ]
 
 research: quantum-loom
