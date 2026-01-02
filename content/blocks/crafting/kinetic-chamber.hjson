@@ -1,7 +1,6 @@
 type: GenericCrafter
 name: "Kinetic Resonance Chamber"
 description: "A massive 4x4 molecular forge. Utilizes high-frequency plasma flux to overcharge kinetic crystals within a stabilized gravity well."
-# Scaled to 4x4
 size: 4 
 health: 45000
 hasPower: true
@@ -9,18 +8,17 @@ hasItems: true
 hasLiquids: true
 category: crafting
 
-# Longer craft time reflects the massive scale of 4x4 production
 craftTime: 300
 itemCapacity: 60
 liquidCapacity: 200
 
-# VISUAL EFFECTS: More intense for a 4x4 structure
+# VISUAL EFFECTS
 updateEffect: lightningCharge
 updateEffectChance: 0.1
 craftEffect: instBomb
 
 consumes: {
-  power: 40.0 // Massive power draw for a 4x4 forge
+  power: 40.0
   items: [
     kinetic-crystal/5
     surge-alloy/2
@@ -37,35 +35,36 @@ drawer: {
   type: DrawMulti
   drawers: [
     {
-      # Your sprite (Should be 128x128 for 4x4)
+      # Layer 1: The main sprite (kinetic-resonance-chamber.png)
+      # This serves as your floor/internal machinery
       type: DrawDefault
     }
     {
-      # Internal liquid churning
+      # Layer 2: Plasma Flux pooling inside the chamber floor
       type: DrawLiquidTile
       drawLiquid: plasma-flux
       padding: 8
     }
     {
-      # High-speed rotation in the 4x4 center
+      # Layer 3: High-speed rotation effect in the center
       type: DrawBlurSpin
       color: ffffff
       blurThresh: 0.5
       rotateSpeed: 10
     }
     {
-      # A larger pulse for the 4x4 singularity
+      # Layer 4: The top armored shell (kinetic-resonance-chamber-top.png)
+      # This layer will appear 'above' the liquids and spinning effects
+      type: DrawRegion
+      suffix: "-top"
+    }
+    {
+      # Layer 5: The central white singularity pulse
+      # This is drawn last so it glows on top of the armor
       type: DrawPulseShape
       color: ffffff
       radius: 12
       sides: 8
-    }
-    {
-      # The 'Resonance' glow covering the wide 4x4 frame
-      type: DrawGlowRegion
-      color: a488ff
-      glowIntensity: 0.7
-      glowScale: 15
     }
   ]
 }
