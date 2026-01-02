@@ -71,11 +71,6 @@ drawer: {
       type: DrawDefault
     }
     # Visualizes the Ionic Refrigerant flowing through the base
-    {
-      type: DrawLiquidTile
-      drawLiquid: ionic-refrigerant
-      padding: 3
-    }
     # The 'Heat' Glow: Simulates the 120-unit thermal requirement
     {
       type: DrawGlowRegion
@@ -85,10 +80,9 @@ drawer: {
     }
     # THE SLAM: Animates the heavy press moving vertically
     {
-      type: DrawPistons
-      sinMag: 4.5
-      sinScl: 8
-      sideOffset: 0
+      type: DrawPulseShape
+      square: true
+      color: ff8855
     }
     # Central Auraline core glow
     {
