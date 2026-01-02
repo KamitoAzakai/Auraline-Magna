@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Quantum Loom"
 description: "An ultra-high-tier weaving facility. Infuses standard alloys with plasma flux and crystalline silicon to weave the complex lattice of Quantum Alloys. Requires constant ionic cooling."
 size: 4
-health: 2800
+health: 28000
 category: crafting
 hasPower: true
 hasItems: true

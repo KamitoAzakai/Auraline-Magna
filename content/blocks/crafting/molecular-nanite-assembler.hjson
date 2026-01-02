@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Molecular Nanite-Assembler"
 description: "A high-precision bio-mechanical foundry. It uses an Enhanced Kinetic Crystal to project a harmonic field that 'wakes up' microscopic assemblers within a metallic broth. The resulting Nanite Slurry is capable of autonomous structural repair."
 size: 4
-health: 3500
+health: 35000
 armor: 15
 category: crafting
 

@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Singularity Forge"
 description: "The ultimate Auraline refinement facility. Uses a focused plasma stream to bond Enhanced Kinetic Crystals into the molecular lattice of Quantum Alloy. The resulting material is practically indestructible and dimensionally unstable."
 size: 5
-health: 6400
+health: 100000
 armor: 20
 category: crafting
 

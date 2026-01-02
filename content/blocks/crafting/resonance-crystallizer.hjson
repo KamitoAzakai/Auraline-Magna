@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Resonance Crystallizer"
 description: "Compresses Surge Alloy and Crystalline Silicon using ultrasonic resonance to forge raw Kinetic Crystals. Operates at a frequency that causes the surrounding air to shimmer."
 size: 3
-health: 1800
+health: 18000
 category: crafting
 hasItems: true
 hasPower: true

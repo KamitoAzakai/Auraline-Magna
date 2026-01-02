@@ -1,7 +1,7 @@
 type: GenericCrafter
 name: "Supercritical Fusion Forge"
 description: "A pinnacle of metallurgical engineering. Utilizing high-frequency magnetic containment, it fuses lead, copper, titanium, and silicon into high-purity surge alloy at unprecedented speeds."
-health: 3200
+health: 80000
 size: 4
 category: crafting
 hasPower: true

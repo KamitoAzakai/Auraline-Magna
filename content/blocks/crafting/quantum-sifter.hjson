@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Quantum Sifter"
 description: "A massive multi-stage refinery. Uses ionic refrigerant to super-cool crystalline silicon during high-energy sifting. Produces stabilized quantum alloy and abyssal sludge byproduct."
 size: 4
-health: 2400
+health: 24000
 category: crafting
 hasPower: true
 hasItems: true

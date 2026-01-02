@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Singularity Micro-Loom"
 description: "A scaled-down version of the Quantum Loom. Uses high-frequency resonance from Kinetic Crystals to fuse alloys without the need for Plasma Flux. Slower and less efficient than the full-scale version."
 size: 2
-health: 1200
+health: 50000
 category: crafting
 hasPower: true
 hasItems: true

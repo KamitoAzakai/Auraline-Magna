@@ -1,7 +1,7 @@
 type: Separator
 name: "Petroleum Synthesizer"
 description: "A complex molecular assembler. Uses high-frequency resonance to crack oil chains into high-tier Auraline materials."
-health: 2500
+health: 25000
 size: 3
 category: crafting
 hasPower: true

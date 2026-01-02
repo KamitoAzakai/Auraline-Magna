@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Plasma-Flux Condenser"
 description: "A heavy-duty atmospheric processor. Uses high-energy pulses to break down Crystalline Silicon, condensing the resulting vapor into raw Liquid Plasma Flux with the aid of Ionic Refrigerant."
 size: 4
-health: 3200
+health: 32000
 category: crafting
 hasPower: true
 hasItems: true

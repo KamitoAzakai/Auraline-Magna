@@ -2,7 +2,7 @@ type: GenericCrafter
 name: "Tau-Silicon Injector"
 description: "A precision refinement facility. Injects Tau-isotopes into Crystalline Silicon using Plasma Flux as a molecular carrier. Produces Tau-forged Silicon."
 size: 3
-health: 2400
+health: 24000
 category: crafting
 hasPower: true
 hasItems: true

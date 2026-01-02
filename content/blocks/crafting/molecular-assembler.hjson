@@ -1,7 +1,7 @@
 name: "Molecular Assembler-Smelter"
 type: Separator
 description: "A hybrid refinery that integrates liquid hydrocarbons with solid minerals to synthesize advanced construction materials. Produces Metaglass, Silicon, and Plastanium in sequence."
-health: 3500
+health: 15000
 size: 4
 category: crafting
 hasPower: true
