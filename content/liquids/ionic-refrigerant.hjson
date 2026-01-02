@@ -1,0 +1,6 @@
+name: Ionic Refrigerant
+description: "A super-cooled ionic liquid."
+color: a1e9ff
+heatCapacity: 1.5
+viscosity: 0.3
+research: cryofluid

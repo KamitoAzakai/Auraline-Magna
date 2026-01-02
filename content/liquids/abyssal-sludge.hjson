@@ -1,0 +1,14 @@
+{
+name: Abyssal Sludge
+description: "A catastrophic byproduct of thermal shock. This thick, semi-solid tar is highly corrosive and has zero industrial utility. It must be disposed of or filtered to prevent pipe blockages."
+gas: false
+# A sickly, dark oily purple with a hint of frozen blue
+color: 3e2858
+# It's thick and moves slowly
+viscosity: 0.9
+temperature: 0.1
+flammability: 0.1
+explosiveness: 0.0
+# It's essentially waste
+hidden: false
+}

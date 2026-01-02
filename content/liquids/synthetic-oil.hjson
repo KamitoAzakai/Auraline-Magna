@@ -1,0 +1,7 @@
+name: Synthetic Oil
+description: "Chemically perfect lubricant. Increases the efficiency of mechanical parts and serves as a high-density fuel."
+color: "313131" // Deep black with a slight shine
+flammability: 1.8
+viscosity: 0.1 // Very "thin," flows faster than vanilla oil
+explosiveness: 0.2
+research: oil

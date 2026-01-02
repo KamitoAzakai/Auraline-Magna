@@ -1,0 +1,7 @@
+name: Plasma Flux
+description: "A liquid state of pure thermal energy. Extremely corrosive and incredibly hot."
+color: "ffa665" // Glowing orange-white
+temperature: 2.0 // Twice as hot as slag
+viscosity: 0.5
+effect: melting
+research: slag
