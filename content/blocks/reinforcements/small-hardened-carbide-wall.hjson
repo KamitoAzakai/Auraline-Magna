@@ -1,0 +1,11 @@
+name: Small Hardened Carbide Wall
+type: Wall
+description: "An incredibly dense defensive block. Provides superior protection against all forms of projectile fire."
+size: 1
+health: 3500
+armor: 15
+category: defense
+requirements: [
+  hardened-carbide/6
+]
+research: hardened-carbide

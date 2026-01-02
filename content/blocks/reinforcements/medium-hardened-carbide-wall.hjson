@@ -1,0 +1,11 @@
+name: Medium Hardened Carbide Wall
+type: Wall
+description: "An incredibly dense defensive block. Provides superior protection against all forms of projectile fire."
+size: 2
+health: 7500
+armor: 20
+category: defense
+requirements: [
+  hardened-carbide/20
+]
+research: hardened-carbide

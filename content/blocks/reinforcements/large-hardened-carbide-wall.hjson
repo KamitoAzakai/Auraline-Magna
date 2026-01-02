@@ -1,0 +1,11 @@
+name: Large Hardened Carbide Wall
+type: Wall
+description: "An incredibly dense defensive block. Provides superior protection against all forms of projectile fire."
+size: 3
+health: 12500
+armor: 30
+category: defense
+requirements: [
+  hardened-carbide/50
+]
+research: hardened-carbide

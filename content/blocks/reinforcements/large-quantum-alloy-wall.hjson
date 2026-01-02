@@ -1,0 +1,20 @@
+name: Large Quantum Alloy Wall
+type: Wall
+description: "A defensive powerhouse. Utilizing quantum fluctuations, it has a chance to phase-shift incoming projectiles and provides localized electrical discharge upon being hit."
+size: 3
+health: 15000
+armor: 30
+
+# Quantum Attributes
+chanceDeflect: 15
+flashHit: true
+lightningChance: 0.1
+lightningDamage: 25
+lightningLength: 10
+
+category: defense
+requirements: [
+  quantum-alloy/24
+  crystalline-silicon/12
+]
+research: quantum-alloy

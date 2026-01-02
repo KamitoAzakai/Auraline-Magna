@@ -1,0 +1,20 @@
+name: Small Quantum Alloy Wall
+type: Wall
+description: "A defensive powerhouse. Utilizing quantum fluctuations, it has a chance to phase-shift incoming projectiles and provides localized electrical discharge upon being hit."
+size: 1
+health: 7500
+armor: 25
+
+# Quantum Attributes
+chanceDeflect: 10
+flashHit: true
+lightningChance: 0.1
+lightningDamage: 15
+lightningLength: 5
+
+category: defense
+requirements: [
+  quantum-alloy/24
+  crystalline-silicon/12
+]
+research: quantum-alloy
