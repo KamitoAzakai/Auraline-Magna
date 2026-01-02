@@ -25,23 +25,23 @@ consumes: {
 plans: [
   {
     unit: phase-mender
-    time: 5400
+    time: 2500
     requirements: [ enhanced-phase-fabric/150, tau-forged-silicon/100 ]
   }
   {
     unit: tectonic-bore
-    time: 10800
+    time: 5000
     requirements: [ hardened-carbide/800, thorium/1200, crystalline-silicon/400 ]
   }
   {
     unit: phase-architect
-    time: 10800
+    time: 7600
     requirements: [ hardened-carbide/800, thorium/1200, crystalline-silicon/400, enhanced-phase-fabric/100 ]
   }
   {
     unit: leviathan
-    time: 21600
-    requirements: [ quantum-alloy/1500, enhanced-kinetic-crystal/20 ]
+    time: 43200
+    requirements: [ quantum-alloy/1500, enhanced-kinetic-crystal/200, tau-forged-thorium/1000 ]
   }
   {
     unit: auraline-arch-titan
