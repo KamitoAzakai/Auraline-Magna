@@ -3,7 +3,7 @@
   name: kinetic-crystal
   description: "A crystal that vibrates at a frequency which negates a portion of its own mass. Essential for high-speed sub-space transport and anti-gravity manifolds."
   
-  # Updated color to match your new purple kitbash
+  
   color: b892ff
   
   explosiveness: 0.0
