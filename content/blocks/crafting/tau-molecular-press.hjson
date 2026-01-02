@@ -51,6 +51,7 @@ craftEffect: {
 
 consumes: {
   power: 45.0
+  heat: 20.0
   items: [
     thorium/10
     surge-alloy/2
@@ -82,7 +83,7 @@ drawer: {
     {
       type: DrawPulseShape
       square: true
-      color: ff8855
+      color: 5a5ebc
     }
     # Central Auraline core glow
     {
