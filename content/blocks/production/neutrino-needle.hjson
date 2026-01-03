@@ -9,6 +9,7 @@ category: production
 tier: 10
 drillTime: 1
 itemCapacity: 20000
+hardnessDrillMultiplier: 0
 # At 60FPS, this produces ~52 items per second on a single tile.
 
 hasPower: true
