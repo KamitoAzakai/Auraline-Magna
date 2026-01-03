@@ -6,8 +6,9 @@ health: 40000
 category: production
 
 # High-tier capabilities - Target: 50+ items/sec
-tier: 200
+tier: 5
 drillTime: 1
+itemCapacity: 20000
 # At 60FPS, this produces ~52 items per second on a single tile.
 
 hasPower: true
