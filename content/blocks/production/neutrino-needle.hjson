@@ -6,7 +6,7 @@ health: 40000
 category: production
 
 # High-tier capabilities - Target: 50+ items/sec
-tier: 10
+tier: 90
 drillTime: 1
 itemCapacity: 20000
 hardnessDrillMultiplier: 0
