@@ -1,7 +1,7 @@
 type: GenericCrafter
 name: "Tau-forger Accelerator"
 description: "A massive circular particle accelerator. Collides Enhanced Kinetic Crystals with raw Thorium at relativistic speeds, forcing the creation of the heavy Tau-isotope."
-size: 5
+size: 4
 health: 45000
 category: crafting
 hasPower: true
