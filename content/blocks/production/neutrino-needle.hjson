@@ -2,11 +2,11 @@ name: Neutrino Needle
 type: Drill
 description: "A specialized 1x1 extraction unit. Uses ultrasonic pulses to destabilize ore molecular bonds, allowing for near-instant harvesting of any material."
 size: 1
-health: 400
+health: 40000
 category: production
 
 # High-tier capabilities - Target: 50+ items/sec
-tier: 10
+tier: 5
 drillTime: 1.15
 # At 60FPS, this produces ~52 items per second on a single tile.
 
@@ -17,14 +17,6 @@ drillEffect: mineHuge
 # Standardized HJSON formatting for consumption
 consumes: {
   power: 4.5
-  liquids: [
-    {
-      liquid: water
-      amount: 0.1
-      optional: true
-      booster: true
-    }
-  ]
 }
 
 requirements: [
