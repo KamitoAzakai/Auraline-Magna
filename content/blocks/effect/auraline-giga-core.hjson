@@ -1,7 +1,7 @@
 name: Auraline Giga-Core
 type: CoreBlock
 description: "The ultimate command center. Utilizing Tau-forged materials, this core features near-infinite storage capacity and a localized repair field. It is the heart of a Giga-Factory."
-size: 6
+size: 5
 health: 1500000
 armor: 500
 category: effect
