@@ -17,6 +17,9 @@ solarMultiplier: 0.5 // Dimmer sun due to thick Aether atmosphere
 cloudDensity: 0.6
 hasAtmosphere: true
 
+accessible: true
+visible: true
+
 mesh: [
   {
     type: NoiseMesh
@@ -29,6 +32,20 @@ mesh: [
     persistence: 0.8
     scale: 0.75
     mag: 1.2
+  }
+]
+cloudMesh: [
+  {
+    type: HexSkyMesh
+    planet: magna
+    seed: 12
+    speed: 0.8
+    radius: 0.08
+    divisions: 4
+    color: b892ff77 // Transparent Violet
+    octaves: 3
+    persistence: 0.7
+    scale: 0.6
   }
 ]
 # The icon used in the planet selector
