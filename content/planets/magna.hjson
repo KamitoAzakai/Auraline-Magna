@@ -1,0 +1,47 @@
+# The internal name of your planet
+name: "magna"
+# The generator used for the terrain
+generator: "PlanetGenerator"
+# The parent planet it orbits (usually 'sun')
+parent: "sun"
+# Visual radius of the planet in the menu
+radius: 1.2
+# Distance from the parent
+orbitRadius: 25
+# Atmosphere color (Genesis Violet)
+atmosphereColor: b892ff
+# The color of the planet's surface from space
+
+# Add this to magna.hjson
+solarMultiplier: 0.5 // Dimmer sun due to thick Aether atmosphere
+cloudDensity: 0.6
+hasAtmosphere: true
+
+mesh: [
+  {
+    type: NoiseMesh
+    seed: 69
+    divisions: 4
+    color1: 1a1626 // Royal Void (Dark)
+    color2: 2d2445 // Aether Dirt (Mid)
+    radius: 1.2
+    octaves: 3
+    persistence: 0.8
+    scale: 0.75
+    mag: 1.2
+  }
+]
+# The icon used in the planet selector
+iconColor: b892ff
+# Which items/tech are allowed on this planet
+itemWhitelist: [
+  "hardened-carbide",
+  "lead",
+  "graphite",
+  "thorium",
+  "copper",
+    "silicon",
+    "titanium",
+    "surge-alloy",
+    "phase-fabric",
+]
