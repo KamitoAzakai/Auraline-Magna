@@ -4,6 +4,7 @@ name: "magna"
 generator: "PlanetGenerator"
 # The parent planet it orbits (usually 'sun')
 parent: "sun"
+icon: planet
 # Visual radius of the planet in the menu
 radius: 1.2
 # Distance from the parent
