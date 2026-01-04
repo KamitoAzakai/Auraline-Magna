@@ -43,11 +43,6 @@ drawer: {
       drawLiquid: ionic-refrigerant
     }
     {
-      type: DrawPistons
-      sinMag: 2
-      sinScl: 5
-    }
-    {
       type: DrawGlowRegion
       color: ff9166
     }
