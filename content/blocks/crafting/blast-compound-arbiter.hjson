@@ -4,7 +4,7 @@ description: "Compresses Aetheric Powder into unstable Blast Compounds. Requires
 size: 2
 hasItems: true
 hasLiquids: true
-updateEffect: blastExplosive
+updateEffect: blastExplosiveFlak
 craftTime: 80
 
 consumes: {
