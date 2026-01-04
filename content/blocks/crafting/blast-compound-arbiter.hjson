@@ -1,11 +1,13 @@
 type: GenericCrafter
 name: "Blast Compound Arbiter"
-description: "Compresses Aetheric Powder into unstable Blast Compounds. Requires constant cooling via Ionic Refrigerant to prevent catastrophic failure."
+description: "Compresses Crystalline Silicon into unstable Blast Compounds. Requires constant cooling via Ionic Refrigerant to prevent catastrophic failure."
 size: 2
 hasItems: true
 hasLiquids: true
 craftTime: 80
 category: crafting
+
+buildVisibility: shown
 
 
 consumes: {
@@ -19,7 +21,7 @@ consumes: {
   }
 }
 
-outputItem: blast-compound/1
+outputItem: blast-compound/7
 
 # Visuals
 drawer: {
