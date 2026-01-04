@@ -1,0 +1,22 @@
+type: Floor
+name: "Crystal Silt"
+description: "High-friction crystalline fragments. Its jagged composition slows down mechanical movement."
+
+# Visuals
+variants: 4
+# Using Harmonic Lavender (#e3b3ff) for the map color
+mapColor: e3b3ff
+
+# Gameplay Stats
+# A value below 1.0 creates a 'sand' effect, slowing units down.
+speedMultiplier: 0.7
+
+# Environmental Attributes
+# Crystals are highly conductive and hold a charge.
+attributes: {
+  heat: 0.2
+  charge: 0.4
+}
+
+# Effect when units move over it
+walkEffect: plasticExplosiveFlak

@@ -1,0 +1,19 @@
+type: StaticWall
+name: "Carbide Wall"
+description: "An immovable monolith of raw Carbide. Its dense molecular structure is impenetrable by standard weaponry."
+
+# Visuals
+# Tells the game to look for carbide-wall1, carbide-wall2, etc.
+variants: 3
+
+# High-density minerals often contain traces of core elements
+attributes: {
+  heat: 0.3
+}
+
+# The color on the minimap (using Cold Carbide #3e3852)
+mapColor: 3e3852
+
+# Determines the thickness of the shadow cast on the ground
+shadowAlpha: 0.6
+shadowOffset: 2.0

@@ -1,0 +1,24 @@
+type: Floor
+name: "Aether Dirt"
+description: "Fine silicate dust infused with Aetheric residue. Provides stable footing for Auraline constructs."
+
+# Visuals
+# Tells the game to look for aether-dirt1.png, aether-dirt2.png, etc.
+variants: 3
+
+# Gameplay Stats
+# 1.0 is standard. 1.1 makes units move slightly faster on home turf.
+speedMultiplier: 1.1
+
+# How difficult it is to remove this floor in the editor
+breakage: 0.5
+
+# Environmental Attributes
+# Useful if you want this floor to power specific machines or provide heat
+attributes: {
+  heat: 0.1
+}
+
+# The color of the 'dust' particles when units walk over it
+# Using 'Shadow Lavender' from our palette
+mapColor: 2d2445
