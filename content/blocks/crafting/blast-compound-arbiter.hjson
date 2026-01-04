@@ -31,22 +31,4 @@ requirements: [
 ]
 outputItem: blast-compound/7
 
-# Visuals
-drawer: {
-  type: DrawMulti
-  drawers: [
-    {
-      type: DrawDefault
-    }
-    {
-      type: DrawLiquidRegion
-      drawLiquid: ionic-refrigerant
-    }
-    {
-      type: DrawGlowRegion
-      color: ff9166
-    }
-  ]
-}
-
 research: blast-mixer
