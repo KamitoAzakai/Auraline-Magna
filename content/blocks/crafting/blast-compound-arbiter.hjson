@@ -1,120 +1,44 @@
 type: GenericCrafter
 name: "Blast Compound Arbiter"
-description: "An advanced explosive refinery. Uses Metaglass-reinforced chambers and Silicon micro-processors to stabilize hyper-volatile reactions, producing mass-quantities of Blast Compound with extreme efficiency."
-health: 7000
-category: crafting
-size: 3
-hasPower: true
+description: "Compresses Aetheric Powder into unstable Blast Compounds. Requires constant cooling via Ionic Refrigerant to prevent catastrophic failure."
+size: 2
 hasItems: true
-
-# 10 items per 1.6 seconds
-craftTime: 100
-
-# VISUAL EFFECTS: UNSTABLE ATMOSPHERE
-# updateEffect: Dark, heavy smoke and occasional orange sparks
-updateEffect: {
-  type: MultiEffect
-  effects: [
-    {
-      type: ParticleEffect
-      particles: 2
-      length: 15
-      lifetime: 40
-      colorFrom: 808080 # Dark Smoke
-      colorTo: 45454500
-      sizeFrom: 3
-      sizeTo: 1
-    }
-    {
-      type: ParticleEffect
-      particles: 1
-      length: 20
-      lifetime: 30
-      colorFrom: ffa64d # Explosive Orange
-      colorTo: ffffff00
-      sizeFrom: 2
-      sizeTo: 0
-    }
-  ]
-}
-updateEffectChance: 0.15
-
-# craftEffect: A sharp, bright flash indicating successful stabilization
-craftEffect: {
-  type: MultiEffect
-  effects: [
-    {
-      type: WaveEffect
-      sizeTo: 35
-      lifetime: 15
-      colorFrom: ff6b38
-      colorTo: ffffff
-      strokeFrom: 4
-    }
-    {
-      type: ParticleEffect
-      particles: 15
-      length: 30
-      lifetime: 50
-      line: true
-      strokeFrom: 2
-      strokeTo: 0
-      colorFrom: ff6b38
-      colorTo: ffa64d
-    }
-  ]
-}
+hasLiquids: true
+updateEffect: blastExplosive
+craftTime: 80
 
 consumes: {
-  power: 0.25
   items: [
-    pyratite/1
-    silicon/2
-    metaglass/1
+    spore-pod/2
+    crystalline-silicon/2
   ]
+  liquid: {
+    liquid: ionic-refrigerant
+    amount: 0.2
+  }
 }
 
-outputItem: blast-compound/10
+outputItem: blast-compound/1
 
-# DRAWER SYSTEM: Pressure-Containment Visuals
+# Visuals
 drawer: {
   type: DrawMulti
   drawers: [
     {
       type: DrawDefault
     }
-    # 1. The Sludge/Compound Reservoir (Deep Red-Orange)
+    {
+      type: DrawLiquidRegion
+      drawLiquid: ionic-refrigerant
+    }
+    {
+      type: DrawPistons
+      sinMag: 2
+      sinScl: 5
+    }
     {
       type: DrawGlowRegion
-      color: ff6b38
-      glowIntensity: 0.5
-      glowScale: 12
-    }
-    # 2. Centrifugal Pressure Rings (Metaglass Silver-Blue)
-    {
-      type: DrawBlurSpin
-      blurThresh: 0.4
-      rotateSpeed: 15 # High speed to signify pressure
-      color: b0bac0
-    }
-    # 3. The Core 'Blast' Pulse
-    {
-      type: DrawFlame
-      color: ffffff
-      flareColor: ff6b38
-      flareMag: 1.2
-      flareRadius: 5
+      color: ff9166
     }
   ]
 }
-
-requirements: [
-  titanium/200
-  thorium/150
-  silicon/100
-  lead/100
-  copper/100
-  phase-fabric/100
-]
-
-research: blast-mixer
