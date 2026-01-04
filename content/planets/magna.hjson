@@ -1,5 +1,7 @@
 # The internal name of your planet
 name: "magna"
+localizedName: "Magna"
+description: "A distant planet shrouded in a thick atmosphere of Darkened Aether. Its surface is a mix of crystalline formations and silicate silt, creating a challenging environment for exploration and resource extraction."
 # The generator used for the terrain
 generator: "PlanetGenerator"
 # The parent planet it orbits (usually 'sun')
@@ -18,6 +20,7 @@ solarMultiplier: 0.5 // Dimmer sun due to thick Aether atmosphere
 cloudDensity: 0.6
 hasAtmosphere: true
 
+alwaysUnlocked: true
 accessible: true
 visible: true
 
