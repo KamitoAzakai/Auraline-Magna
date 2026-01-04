@@ -1,0 +1,27 @@
+type: Floor
+name: "Darkened Aether Liquid"
+description: "A highly compressed, deep-layer variant of Aether Liquid. Its density makes it impassable for most ground units."
+isLiquid: true
+
+# Still drops Ionic Refrigerant, but perhaps at a higher concentration
+liquidDrop: ionic-refrigerant
+liquidMultiplier: 2.0
+
+# Visuals
+variants: 0
+cacheLayer: water
+# Map color (Deepest Teal/Grey #2c626a)
+mapColor: 2c626a
+
+# Gameplay Hazards
+# 0.1 makes it nearly impossible to walk through without drowning quickly
+speedMultiplier: 0.1
+drownTime: 80 
+status: blasted // Represents the crushing pressure
+statusDuration: 100
+
+# Attributes
+attributes: {
+  heat: -1.5 // Even colder than the surface liquid
+  depth: 1.0
+}
