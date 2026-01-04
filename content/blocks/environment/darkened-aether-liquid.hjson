@@ -17,11 +17,11 @@ mapColor: 2c626a
 # 0.1 makes it nearly impossible to walk through without drowning quickly
 speedMultiplier: 0.1
 drownTime: 80 
-status: blasted // Represents the crushing pressure
+status: aetheric-pressure
 statusDuration: 100
 
-# Attributes
+# Attributes    
 attributes: {
-  heat: -1.5 // Even colder than the surface liquid
+  heat: -1.5
   depth: 1.0
 }

@@ -1,0 +1,27 @@
+name: "Aetheric Pressure"
+description: "The unit's chassis is being crushed by the extreme density of Darkened Aether."
+
+# Visuals
+# Use a custom sprite or a vanilla one like 'blasted'
+color: 2c626a
+outline: true
+
+# Gameplay Stats
+# 1.0 is normal. 0.4 makes units move like they are in deep mud.
+speedMultiplier: 0.4
+# Reduces the unit's ability to rotate or aim quickly
+reloadMultiplier: 0.6
+
+# Damage over time (per tick)
+# 0.2 damage per tick = ~12 damage per second
+damage: 0.2
+
+# Visual effect shown on the unit while active
+effect: {
+  type: ParticleEffect
+  particles: 3
+  length: 8
+  lifetime: 40
+  colorFrom: 60c4cf
+  colorTo: 2c626a
+}

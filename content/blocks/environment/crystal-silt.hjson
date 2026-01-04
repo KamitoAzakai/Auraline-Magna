@@ -17,6 +17,3 @@ attributes: {
   heat: 0.2
   charge: 0.4
 }
-
-# Effect when units move over it
-walkEffect: plasticExplosiveFlak
