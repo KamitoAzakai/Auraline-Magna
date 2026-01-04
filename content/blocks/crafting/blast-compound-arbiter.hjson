@@ -4,6 +4,7 @@ description: "Compresses Crystalline Silicon into unstable Blast Compounds. Requ
 size: 2
 hasItems: true
 hasLiquids: true
+hasPower: true
 craftTime: 80
 category: crafting
 
@@ -11,6 +12,7 @@ buildVisibility: shown
 
 
 consumes: {
+  power: 1.5
   items: [
     spore-pod/2
     crystalline-silicon/2
