@@ -1,7 +1,7 @@
 name: Tau-Geothermal Extractor
 type: ThermalGenerator
 description: "An advanced geothermal harvester. Utilizing the hyper-conductive properties of Tau-forged materials, it extracts thermal energy directly from the lithosphere. Generates massive power when placed on hot terrain."
-size: 5
+size: 2
 health: 5500
 category: power
 
