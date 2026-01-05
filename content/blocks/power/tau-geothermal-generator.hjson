@@ -4,19 +4,11 @@ description: "An advanced geothermal harvester. Utilizing the hyper-conductive p
 size: 2
 health: 5500
 category: power
-hasLiquids: true
 
 # Base power generation is massive compared to standard thermal
 # On standard "Hot" floor, this will produce around 8,000 power/sec
 # On lava or volcanic floors, this scales up significantly.
 powerProduction: 133.33 # This is the "per tick" value (approx 8k/sec base)
-
-# It requires a cooling liquid to prevent the Tau-alloys from melting
-consumes: {
-  liquids: [
-    ionic-refrigerant/0.2
-  ]
-}
 
 # Floating point attribute for heat scaling
 attribute: heat
@@ -24,14 +16,6 @@ attribute: heat
 drawer: {
   type: drawMulti
   drawers: [
-      {
-      # Draws the cooling liquid inside the vents
-      type: DrawLiquidRegion
-      drawLiquid: ionic-refrigerant
-    }
-    {
-      type: DrawDefault
-    }
     {
       # This creates the "Aether Light" on the ground
       type: DrawLight
