@@ -49,17 +49,18 @@ drawer: {
       type: DrawDefault # The heavy lead/alloy base
     }
     # 1. The Liquid Containment Ring (Glowing Plasma Flux)
-    {
-      type: DrawLiquidTile
-      drawLiquid: ionic-refrigerant
-      padding: 4
-    }
+    
     # 2. Rotating Containment Magnets (The outer shell)
     {
       type: DrawBlurSpin
       blurThresh: 0.1
       rotateSpeed: 1.5
-      suffix: "-plasma"
+      suffix: "-plasma-0"
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 4
     }
     # 3. The Singularity Field (Dark center with a violet corona)
     {
@@ -67,6 +68,7 @@ drawer: {
       color: b892ff
       glowIntensity: 1.2
       glowScale: 30
+      suffix: "-plasma-1"
     }
     # 4. The 'Void' Core: A pulsing black-to-white center
     {
@@ -77,11 +79,11 @@ drawer: {
       flareMag: 2.0
       flareRadius: 8
       flareRotSpeed: 5
-      suffix: "-plasma"
+      suffix: "-plasma-2"
     }
     # 5. Plasma 'Tendrils' that arc across the structure
     {
-      suffix: "-plasma"
+      suffix: "-plasma-3"
       type: DrawPlasma
       plasmaSections: 10
       plasmaRange: 15
