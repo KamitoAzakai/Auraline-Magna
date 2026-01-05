@@ -46,49 +46,19 @@ drawer: {
   type: DrawMulti
   drawers: [
     {
-      type: DrawDefault # The heavy lead/alloy base
+      type: DrawRegion
+      suffix: "-bottom"
     }
-    # 1. The Liquid Containment Ring (Glowing Plasma Flux)
-    
-    # 2. Rotating Containment Magnets (The outer shell)
     {
-      type: DrawBlurSpin
-      blurThresh: 0.1
-      rotateSpeed: 1.5
-      suffix: "-plasma-0"
-    }
-    
-    # 3. The Singularity Field (Dark center with a violet corona)
-    {
-      type: DrawGlowRegion
-      color: b892ff
-      glowIntensity: 1.2
-      glowScale: 30
-      suffix: "-plasma-1"
-    }
-    # 4. The 'Void' Core: A pulsing black-to-white center
-    {
-      type: DrawFlame
-      color: 000000 # Black hole center
-      flareColor: b892ff
-      lightColor: ffffff
-      flareMag: 2.0
-      flareRadius: 8
-      flareRotSpeed: 5
-      suffix: "-plasma-2"
-    }
-    # 5. Plasma 'Tendrils' that arc across the structure
-    {
-      suffix: "-plasma-3"
       type: DrawPlasma
-      plasmaSections: 10
-      plasmaRange: 15
-      color: b892ff
+      # This looks for your c-axin-collider-plasma-0.png sequence
+      suffix: "-plasma-"
+      # Updated colors to match Ionic Teal and Genesis Violet
+      plasma1: 60c4cf
+      plasma2: b892ff
     }
     {
-      type: DrawLiquidTile
-      drawLiquid: ionic-refrigerant
-      padding: 4
+      type: DrawDefault
     }
   ]
 }
