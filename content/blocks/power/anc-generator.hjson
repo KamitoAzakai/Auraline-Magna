@@ -9,11 +9,12 @@ hasItems: true
 hasLiquids: true
 
 # Balanced for Mid-Game: 3,000 Power/sec (50 per tick)
-powerProduction: 100
+powerProduction: 500
 
 # Efficiency & Timing
 itemDuration: 600
 liquidCapacity: 60
+itemCapacity: 100
 
 consumes: {
   items: [
