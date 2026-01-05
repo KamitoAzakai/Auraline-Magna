@@ -33,13 +33,13 @@ drawer: {
       drawLiquid: water
     }
     {
-      # The spinning turbine animation
-      type: DrawBlurSpin
-      suffix: "-turbine"
-      # Higher value = faster spin at full power
-      rotateSpeed: 4.5 
-      # Matches the blur effect of the original generator
-      blurThresh: 0.01
+      type: DrawPulseShape
+      # Only pulses when it has enough items/liquids to function
+      square: false
+      color: b9f3f9
+      # How fast and large the pulse is
+      timeScl: 40
+      mag: 1.5
     }
     {
       # The main generator body
