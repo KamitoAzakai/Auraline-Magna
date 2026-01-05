@@ -20,6 +20,35 @@ consumes: {
 # Floating point attribute for heat scaling
 attribute: heat
 
+drawer: {
+  type: drawMulti
+  drawers: [
+      {
+      # Draws the cooling liquid inside the vents
+      type: DrawLiquidRegion
+      drawLiquid: ionic-refrigerant
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      # This creates the "Aether Light" on the ground
+      type: DrawLight
+      # Sampled from the Quantum Alloy seafoam
+      color: d0fff4
+      radius: 60
+      brightness: 0.8
+    }
+    {
+      # The glowing core that pulses based on heat intensity
+      type: DrawGlowRegion
+      color: 60c4cf
+      glowIntensity: 0.5
+      glowScale: 2
+    }
+  ]
+}
+
 requirements: [
   tau-forged-thorium/200
   tau-forged-quantum-alloy/150
