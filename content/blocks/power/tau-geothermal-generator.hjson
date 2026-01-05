@@ -24,13 +24,6 @@ drawer: {
       radius: 60
       brightness: 0.8
     }
-    {
-      # The glowing core that pulses based on heat intensity
-      type: DrawGlowRegion
-      color: 60c4cf
-      glowIntensity: 0.5
-      glowScale: 2
-    }
   ]
 }
 
