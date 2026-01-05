@@ -4,6 +4,7 @@ description: "An advanced geothermal harvester. Utilizing the hyper-conductive p
 size: 2
 health: 5500
 category: power
+hasLiquids: true
 
 # Base power generation is massive compared to standard thermal
 # On standard "Hot" floor, this will produce around 8,000 power/sec
