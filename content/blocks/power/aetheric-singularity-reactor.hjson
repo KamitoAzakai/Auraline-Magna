@@ -1,8 +1,8 @@
 type: ImpactReactor
 name: "Aetheric Singularity Reactor"
 description: "The apex of Auraline energy science. Compresses Plasma Flux within a Tau-forged Quantum lattice to trigger a localized gravitational collapse. Generates vast amounts of power but requires constant material 'fuel' to prevent the singularity from evaporating."
-size: 7
-health: 50000
+size: 8
+health: 500000
 category: power
 hasItems: true
 hasLiquids: true
