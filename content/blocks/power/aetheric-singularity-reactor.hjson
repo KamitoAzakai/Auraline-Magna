@@ -81,11 +81,12 @@ drawer: {
     }
     # 5. Plasma 'Tendrils' that arc across the structure
     {
+      suffix: "-plasma"
       type: DrawPlasma
       plasmaSections: 10
       plasmaRange: 15
       color: b892ff
-      suffix "-plasma"
+      
     }
   ]
 }
