@@ -14,14 +14,31 @@ powerProduction: 133.33 # This is the "per tick" value (approx 8k/sec base)
 attribute: heat
 
 drawer: {
-  type: drawMulti
+  type: DrawMulti
   drawers: [
+    # 1. Draws the base floor/ground
     {
-      # This creates the "Aether Light" on the ground
-      type: DrawLight
-      # Sampled from the Quantum Alloy seafoam
+      type: DrawDefault
+    }
+    # 2. This creates the "Aether Heat Glow" on the ground
+    # It only appears if the floor has a 'heat' attribute.
+    {
+      type: DrawHeatOutput
+      # Using our Seafoam color for the floor glow
       color: d0fff4
-      radius: 60
+    }
+    # 3. Internal glow of the machine itself
+    {
+      type: DrawGlowRegion
+      color: 60c4cf
+      glowIntensity: 0.8
+      glowScale: 1.5
+    }
+    # 4. The dynamic light emitted into the fog/environment
+    {
+      type: DrawLight
+      color: d0fff4
+      radius: 80
       brightness: 0.8
     }
   ]
