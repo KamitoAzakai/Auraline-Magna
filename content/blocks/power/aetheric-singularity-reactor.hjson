@@ -20,7 +20,7 @@ consumes: {
     tau-forged-quantum-alloy/1
   ]
   liquids: [
-    plasma-flux/2.0
+    ionic-refrigerant/5.0
   ]
 }
 
@@ -51,7 +51,7 @@ drawer: {
     # 1. The Liquid Containment Ring (Glowing Plasma Flux)
     {
       type: DrawLiquidTile
-      drawLiquid: plasma-flux
+      drawLiquid: ionic-refrigerant
       padding: 4
     }
     # 2. Rotating Containment Magnets (The outer shell)
@@ -59,6 +59,7 @@ drawer: {
       type: DrawBlurSpin
       blurThresh: 0.1
       rotateSpeed: 1.5
+      suffix: "-plasma"
     }
     # 3. The Singularity Field (Dark center with a violet corona)
     {
@@ -76,6 +77,7 @@ drawer: {
       flareMag: 2.0
       flareRadius: 8
       flareRotSpeed: 5
+      suffix: "-plasma"
     }
     # 5. Plasma 'Tendrils' that arc across the structure
     {
@@ -83,6 +85,7 @@ drawer: {
       plasmaSections: 10
       plasmaRange: 15
       color: b892ff
+      suffix "-plasma"
     }
   ]
 }
