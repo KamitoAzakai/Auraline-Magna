@@ -6,7 +6,7 @@ health: 500000
 category: power
 hasItems: true
 hasLiquids: true
-
+itemCapacity: 500
 # Massive power output (scaled for Giga-Factories)
 powerProduction: 50000.0
 
