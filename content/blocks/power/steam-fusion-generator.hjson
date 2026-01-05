@@ -28,11 +28,6 @@ drawer: {
       suffix: "-bottom"
     }
     {
-      # Draws the water/liquid level inside the generator
-      type: DrawLiquidRegion
-      drawLiquid: water
-    }
-    {
       type: DrawPulseShape
       # Only pulses when it has enough items/liquids to function
       square: false
@@ -40,6 +35,11 @@ drawer: {
       # How fast and large the pulse is
       timeScl: 40
       mag: 1.5
+    }
+    {
+      # Draws the water/liquid level inside the generator
+      type: DrawLiquidRegion
+      drawLiquid: water
     }
     {
       # The main generator body
