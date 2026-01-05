@@ -51,11 +51,11 @@ drawer: {
     }
     {
       type: DrawPlasma
-      # This looks for your c-axin-collider-plasma-0.png sequence
       suffix: "-plasma-"
-      # Updated colors to match Ionic Teal and Genesis Violet
-      plasma1: 60c4cf
-      plasma2: b892ff
+      # Primary: The bright, "hot" Seafoam highlight from the Alloy center
+      plasma1: d0fff4
+      # Secondary: The rich, deep Teal from the Refrigerant body
+      plasma2: 60c4cf
     }
     {
       type: DrawDefault
