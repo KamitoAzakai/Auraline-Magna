@@ -58,6 +58,15 @@ drawer: {
       plasma2: 60c4cf
     }
     {
+      type: DrawPulseShape
+      # Only pulses when it has enough items/liquids to function
+      square: false
+      color: b9f3f9
+      # How fast and large the pulse is
+      timeScl: 40
+      mag: 1.5
+    }
+    {
       type: DrawDefault
     }
   ]
