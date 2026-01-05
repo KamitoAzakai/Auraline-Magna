@@ -57,11 +57,7 @@ drawer: {
       rotateSpeed: 1.5
       suffix: "-plasma-0"
     }
-    {
-      type: DrawLiquidTile
-      drawLiquid: ionic-refrigerant
-      padding: 4
-    }
+    
     # 3. The Singularity Field (Dark center with a violet corona)
     {
       type: DrawGlowRegion
@@ -88,7 +84,11 @@ drawer: {
       plasmaSections: 10
       plasmaRange: 15
       color: b892ff
-      
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: ionic-refrigerant
+      padding: 4
     }
   ]
 }
