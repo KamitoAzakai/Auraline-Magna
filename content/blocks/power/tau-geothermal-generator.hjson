@@ -4,6 +4,7 @@ description: "An advanced geothermal harvester. Utilizing the hyper-conductive p
 size: 2
 health: 5500
 category: power
+floating: true
 
 # Base power generation is massive compared to standard thermal
 # On standard "Hot" floor, this will produce around 8,000 power/sec
@@ -13,36 +14,10 @@ powerProduction: 133.33 # This is the "per tick" value (approx 8k/sec base)
 # Floating point attribute for heat scaling
 attribute: heat
 
-drawer: {
-  type: DrawMulti
-  drawers: [
-    # 1. Draws the base floor/ground
-    {
-      type: DrawDefault
-    }
-    # 2. This creates the "Aether Heat Glow" on the ground
-    # It only appears if the floor has a 'heat' attribute.
-    {
-      type: DrawHeatOutput
-      # Using our Seafoam color for the floor glow
-      color: d0fff4
-    }
-    # 3. Internal glow of the machine itself
-    {
-      type: DrawGlowRegion
-      color: 60c4cf
-      glowIntensity: 0.8
-      glowScale: 1.5
-    }
-    # 4. The dynamic light emitted into the fog/environment
-    {
-      type: DrawLight
-      color: d0fff4
-      radius: 80
-      brightness: 0.8
-    }
-  ]
-}
+generateEffect: redgeneratespark
+effectChance: 0.011
+ambientSound: loopHum
+ambientSoundVolume: 0.06
 
 requirements: [
   tau-forged-thorium/200
