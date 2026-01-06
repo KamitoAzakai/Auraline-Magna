@@ -2,8 +2,8 @@ name: "Tectonic Drill"
 type: Drill
 description: "A heavy-duty industrial drill. Uses Tau-forged resonators to induce localized tectonic shifts, shattering ore veins instantly. Requires constant cooling."
 size: 3
-tier: 6
-drillTime: 180
+tier: 90
+drillTime: 1
 health: 3200
 
 consumes: {
