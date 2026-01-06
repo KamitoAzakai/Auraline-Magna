@@ -2,7 +2,7 @@ type: ItemSource
 name: "Auraline Matter-Synthesizer"
 description: "The peak of Auraline achievement. Synthesizes any material from pure energy. Unlocking this requires a total commitment of the Empire's endgame reserves."
 size: 1
-health: 5000
+health: 50000
 category: production
 buildVisibility: shown
 
