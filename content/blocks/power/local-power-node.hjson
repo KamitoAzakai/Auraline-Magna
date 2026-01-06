@@ -6,6 +6,7 @@ size: 1
 requirements: [
     copper/30
     lead/20
+    crystalline-silicon/1
 ]
 laserRange: 50
 maxNodes: 20
