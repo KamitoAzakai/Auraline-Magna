@@ -17,6 +17,58 @@ consumes: {
   power: 3.0
 }
 
+drawer: {
+  type: DrawMulti
+  drawers: [
+    # LAYER 1: The Foundation
+    {
+      type: DrawRegion
+      suffix: "-bottom" // Uses 'oil-seismic-production-pump-bottom.png'
+    }
+
+    # LAYER 2: The Liquid Reservoir
+    {
+      type: DrawLiquidRegion
+      drawLiquid: oil
+      suffix: "-liquid" // Masks the 'oil-extractor-liquid.png' area with the 'oil' color
+    }
+
+    # LAYER 3: The Seismic Piston (The "Thumper")
+    {
+      type: DrawPistons
+      sinMag: 2.2      // How far the pistons move
+      sinScl: 4        // Speed of the "thump"
+      sideOffset: 0.5  // Offsets the pistons for a staggered look
+    }
+
+    # LAYER 4: The Rotating Drill Head
+    {
+      type: DrawBlurSpin
+      suffix: "-rotator" // Uses 'oil-extractor-rotator.png'
+      rotateSpeed: 8    // Fast rotation to simulate high-frequency vibration
+      blurThresh: 0.01  // Creates a motion blur effect at high speeds
+    }
+
+    # LAYER 5: The Main Structural Frame
+    {
+      type: DrawDefault // Draws the main 'oil-seismic-production-pump.png'
+    }
+
+    # LAYER 6: The Energy Cap & Aether Glow
+    {
+      type: DrawRegion
+      suffix: "-top" // Uses 'oil-extractor-top.png'
+    }
+    {
+      type: DrawGlowRegion
+      suffix: "-top"
+      color: d0fff4 // Makes the 'top' sprite pulse with seafoam light
+      glowIntensity: 0.6
+      glowScale: 2
+    }
+  ]
+}
+
 requirements: [
   copper/200
   metaglass/150
