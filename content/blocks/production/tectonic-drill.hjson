@@ -24,6 +24,17 @@ drawer: {
       suffix: "-bottom"
     }
     {
+      # The Modern Pulse Effect
+      type: DrawPulseShape
+      # Square shape to match the 3x3 drill footprint
+      square: true
+      # Sampled from the Quantum Alloy's glowing core
+      color: d0fff4
+      # Speed and intensity of the pulse
+      timeScl: 40
+      mag: 1.2
+    }
+    {
       # The main tectonic thumper animation
       type: DrawPistons
       sinMag: 1.5
