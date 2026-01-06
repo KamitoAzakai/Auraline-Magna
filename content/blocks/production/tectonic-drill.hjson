@@ -6,6 +6,7 @@ tier: 90
 drillTime: 1
 health: 3200
 itemCapacity: 1000
+hardnessDrillMultiplier: 0
 
 consumes: {
   power: 8.5
