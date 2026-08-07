@@ -6,18 +6,20 @@ size: 1
 category: distribution
 
 # Vanilla bridge is 4, this is a massive jump.
-range: 30
+range: 18
 
 # Speed at which items travel through the bridge
-transportTime: 0.01
+transportTime: 0.08
 
 # High capacity to prevent clogging your Collective Transporters
-itemCapacity: 40
+itemCapacity: 24
 
 requirements: [
-  titanium/15
-  silicon/20
-  phase-fabric/5
+  titanium/80
+  silicon/120
+  phase-fabric/35
+  enhanced-phase-fabric/20
+  quantum-alloy/15
 ]
 
-research: bridge-conveyor
+research: phase-link-conduit

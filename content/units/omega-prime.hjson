@@ -6,18 +6,18 @@ description: "The supreme core unit of the Giga-Core. Features hyper-advanced co
 speed: 3.5
 accel: 0.1
 drag: 0.05
-health: 10000
-armor:100
+health: 8500
+armor:60
 hitSize: 12
 engineSize: 4
 engineOffset: 8
-itemCapacity: 500
+itemCapacity: 300
 
 # The "Giga" Stats
-buildSpeed: 4.5       # Gamma is 1.5. This is 3x faster.
-mineSpeed: 12.0       # Gamma is 1.5. This clears ores instantly.
-mineTier: 5           # Can mine anything, including Tau-tier ores.
-buildRange: 280       # Can build from a safe distance.
+buildSpeed: 3.5       # Still far above Gamma, but no longer replaces all builder pressure.
+mineSpeed: 4.0        # Fast enough to feel elite without collapsing ore progression.
+mineTier: 4           # Leaves Tau-tier extraction to dedicated late-game infrastructure.
+buildRange: 220       # Safe, but not map-dominating.
 
 # Capabilities
 mineItems: [hardened-carbide, quantum-alloy, lead, copper, coal]

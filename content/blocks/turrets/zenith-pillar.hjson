@@ -18,21 +18,21 @@ shoot: {
 
 consumes: {
   power: 25
-  liquid: {
-    liquid: cryofluid
-    amount: 0.5
-  }
+  liquids: [
+    ionic-refrigerant/0.8
+    plasma-flux/0.25
+  ]
 }
 
 ammoTypes: {
   # THE BEAM AMMO
   volatile-isotope: {
     type: ContinuousLaserBulletType
-    damage: 15000
+    damage: 4200
     # Damage is per tick, so this is extremely high
     length: 660
     width: 12
-    lifetime: 160 
+    lifetime: 95
     # How long the beam stays on screen
     drawSize: 660
     
@@ -51,7 +51,7 @@ ammoTypes: {
   # THE RAILGUN AMMO (Alternate)
   tau-forged-quantum-alloy: {
     type: RailgunBulletType
-    damage: 8500
+    damage: 5200
     length: 650
     updateEffect: railTrail
     hitEffect: massiveExplosion
@@ -67,12 +67,11 @@ drawer: {
         type: DrawDefault
     }
     {
-      type: DrawRegion
-      suffix: "-orb"
-      y: 8
-      bounce: true
+      type: DrawPulseShape
+      square: false
+      color: b892ff
+      timeScl: 45
       mag: 1.5
-      scl: 5
     }
     {
       type: DrawHeatRegion
@@ -82,7 +81,11 @@ drawer: {
 }
 
 requirements: [
-  copper/1000
-  lead/500
-  silicon/500
+  tau-forged-quantum-alloy/850
+  enhanced-quantum-alloy/1200
+  volatile-isotope/250
+  kinetic-crystal/900
+  crystalline-silicon/1200
 ]
+
+research: void-render-cannon

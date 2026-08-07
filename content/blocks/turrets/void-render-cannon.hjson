@@ -6,8 +6,8 @@ health: 4200
 armor: 15
 category: turret
 
-reload: 1 # Base reload adjusted for high-frequency modes
-range: 470
+reload: 24
+range: 430
 recoil: 4
 shake: 5
 inaccuracy: 0
@@ -25,21 +25,21 @@ shoot: {
 consumes: {
   liquid: {
     liquid: plasma-flux
-    amount: 0.2
+    amount: 0.35
   }
 }
 
 ammoTypes: {
   quantum-alloy: {
     type: BasicBulletType
-    damage: 1500
+    damage: 900
     speed: 15
     width: 12
     height: 18
-    lifetime: 900
+    lifetime: 29
     pierce: true
-    pierceCap: 8
-    armorPiercing: 50
+    pierceCap: 5
+    armorPiercing: 35
     frontColor: 98ffd9
     backColor: 5ebda3
     trailColor: 98ffd9
@@ -51,18 +51,18 @@ ammoTypes: {
 
   tau-forged-quantum-alloy: {
     type: BasicBulletType
-    damage: 15000
+    damage: 4200
     speed: 12
     width: 14
     height: 20
-    lifetime: 300
+    lifetime: 36
     # To handle multiple shots properly within ammoTypes:
     shoot: {
-      shots: 6
+      shots: 3
       shotDelay: 2
     }
-    splashDamage: 5000
-    splashDamageRadius: 60
+    splashDamage: 1200
+    splashDamageRadius: 48
     frontColor: b892ff
     backColor: 311e4d
     trailColor: b892ff
@@ -77,13 +77,13 @@ ammoTypes: {
 
   volatile-isotope: {
     type: BasicBulletType
-    damage: 50000
-    speed: 30
+    damage: 12000
+    speed: 18
     width: 18
     height: 30
-    lifetime: 26
-    splashDamage: 30000
-    splashDamageRadius: 60
+    lifetime: 24
+    splashDamage: 8500
+    splashDamageRadius: 56
     frontColor: ffffff
     backColor: ff6b38
     trailColor: ff6b38
@@ -99,10 +99,11 @@ ammoTypes: {
 }
 
 requirements: [
-  hardened-carbide/300
-  quantum-alloy/150
-  thorium/250
-  silicon/200
+  hardened-carbide/900
+  quantum-alloy/500
+  enhanced-quantum-alloy/250
+  tau-forged-thorium/350
+  crystalline-silicon/450
 ]
 
-research: spectre
+research: auraline-apex

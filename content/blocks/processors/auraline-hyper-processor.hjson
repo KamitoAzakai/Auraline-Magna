@@ -25,12 +25,12 @@ drawer: {
       glowScale: 12
     }
     {
-      # Spinning data rings representing high-speed calculation
-      type: DrawBlurSpin
-      suffix: "-rings"
-      rotateSpeed: 10
-      blurThresh: 0.05
+      # Procedural data-ring pulse representing high-speed calculation.
+      type: DrawPulseShape
+      square: false
       color: b892ff
+      timeScl: 24
+      mag: 1.4
     }
   ]
 }

@@ -2,27 +2,26 @@ name: "Tectonic Drill"
 type: Drill
 description: "A heavy-duty industrial drill. Uses Tau-forged resonators to induce localized tectonic shifts, shattering ore veins instantly. Requires constant cooling."
 size: 3
-tier: 90
-drillTime: 1
+tier: 8
+drillTime: 16
 health: 3200
-itemCapacity: 1000
-hardnessDrillMultiplier: 0
+itemCapacity: 120
+hardnessDrillMultiplier: 8
 
 consumes: {
   power: 8.5
   liquids: [
-    # Uses your custom refrigerant for high-tier cooling
-    water/1.0
+    # High-tier cooling keeps the resonators from self-welding.
+    ionic-refrigerant/0.35
+  ]
+  items: [
+    kinetic-crystal/1
   ]
 }
 
 drawer: {
   type: DrawMulti
   drawers: [
-    {
-      type: DrawRegion
-      suffix: "-bottom"
-    }
     {
       # The main tectonic thumper animation
       type: DrawPistons
@@ -59,11 +58,13 @@ drawer: {
 }
 
 requirements: [
-  titanium/300
-  crystalline-silicon/10
-  hardened-carbide/250
-  thorium/300
+  titanium/500
+  crystalline-silicon/350
+  hardened-carbide/650
+  kinetic-crystal/180
+  quantum-alloy/120
+  thorium/450
 ]
 
 category: production
-research: laser-drill
+research: kinetic-crystal

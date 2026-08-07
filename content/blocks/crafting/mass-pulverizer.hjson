@@ -63,13 +63,6 @@ drawer: {
       # Draws the base building
     }
     {
-      # The internal grinder that rotates while powered
-      type: DrawBlurSpin
-      suffix: "-grinder"
-      rotateSpeed: 8
-      blurThresh: 0.01
-    }
-    {
       # A top-layer glow to show high-pressure operation
       type: DrawGlowRegion
       color: ff795e
