@@ -24,7 +24,7 @@ consumes: {
   ]
 }
 
-outputItem: enhanced-phase-fabric/1
+outputItem: enhanced-phase-fabric/3
 
 requirements: [
   tau-forged-thorium/250

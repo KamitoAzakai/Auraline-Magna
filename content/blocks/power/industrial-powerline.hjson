@@ -7,6 +7,7 @@ requirements: [
     copper/40
     titanium/20
     lead/30
+    crystalline-silicon/2
 ]
 
 laserRange: 200

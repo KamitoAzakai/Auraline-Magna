@@ -1,12 +1,12 @@
 type: ImpactReactor
 name: "Aetheric Singularity Reactor"
 description: "The apex of Auraline energy science. Compresses Plasma Flux within a Tau-forged Quantum lattice to trigger a localized gravitational collapse. Generates vast amounts of power but requires constant material 'fuel' to prevent the singularity from evaporating."
-size: 7
-health: 50000
+size: 9
+health: 500000
 category: power
 hasItems: true
 hasLiquids: true
-
+itemCapacity: 500
 # Massive power output (scaled for Giga-Factories)
 powerProduction: 50000.0
 
@@ -20,7 +20,7 @@ consumes: {
     tau-forged-quantum-alloy/1
   ]
   liquids: [
-    plasma-flux/2.0
+    ionic-refrigerant/5.0
   ]
 }
 
@@ -46,43 +46,28 @@ drawer: {
   type: DrawMulti
   drawers: [
     {
-      type: DrawDefault # The heavy lead/alloy base
+      type: DrawRegion
+      suffix: "-bottom"
     }
-    # 1. The Liquid Containment Ring (Glowing Plasma Flux)
-    {
-      type: DrawLiquidTile
-      drawLiquid: plasma-flux
-      padding: 4
-    }
-    # 2. Rotating Containment Magnets (The outer shell)
-    {
-      type: DrawBlurSpin
-      blurThresh: 0.1
-      rotateSpeed: 1.5
-    }
-    # 3. The Singularity Field (Dark center with a violet corona)
-    {
-      type: DrawGlowRegion
-      color: b892ff
-      glowIntensity: 1.2
-      glowScale: 30
-    }
-    # 4. The 'Void' Core: A pulsing black-to-white center
-    {
-      type: DrawFlame
-      color: 000000 # Black hole center
-      flareColor: b892ff
-      lightColor: ffffff
-      flareMag: 2.0
-      flareRadius: 8
-      flareRotSpeed: 5
-    }
-    # 5. Plasma 'Tendrils' that arc across the structure
     {
       type: DrawPlasma
-      plasmaSections: 10
-      plasmaRange: 15
-      color: b892ff
+      suffix: "-plasma-"
+      # Primary: The bright, "hot" Seafoam highlight from the Alloy center
+      plasma1: d0fff4
+      # Secondary: The rich, deep Teal from the Refrigerant body
+      plasma2: 60c4cf
+    }
+    {
+      type: DrawPulseShape
+      # Only pulses when it has enough items/liquids to function
+      square: false
+      color: b9f3f9
+      # How fast and large the pulse is
+      timeScl: 40
+      mag: 1.5
+    }
+    {
+      type: DrawDefault
     }
   ]
 }

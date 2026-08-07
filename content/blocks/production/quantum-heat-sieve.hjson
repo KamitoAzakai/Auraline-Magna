@@ -7,7 +7,7 @@ category: production
 
 # Heat Stats
 # This ensures that even at 120+ units, the pipe doesn't melt
-maxHeat: 1000 
+maxHeat: 1000
 
 # This determines how much heat can pass through per tick
 # Setting it high prevents the pipe from being a 'bottleneck'

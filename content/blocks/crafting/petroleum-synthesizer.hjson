@@ -97,7 +97,7 @@ requirements: [
   lead/250
   metaglass/150
   hardened-carbide/100
-  kinetic-crystal/50
+  crystalline-silicon/100
 ]
 
 research: disassembler

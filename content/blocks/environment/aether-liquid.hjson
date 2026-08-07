@@ -1,0 +1,23 @@
+type: Floor
+name: "Aether Liquid"
+description: "Natural pools of raw, super-cooled Aether. Extremely hazardous to unshielded units."
+isLiquid: true
+
+# This links the environment tile to your liquid resource
+liquidDrop: ionic-refrigerant
+
+# Visuals
+variants: 0
+cacheLayer: water 
+# Map color (Warp Violet #6e45ff)
+mapColor: 6e45ff
+
+# Attributes for the Tau-Molecular Press
+attributes: {
+  heat: -1.2
+}
+
+# Gameplay Hazards
+speedMultiplier: 0.2
+status: electrified
+statusDuration: 150

@@ -2,7 +2,7 @@ name: Dense Containment Vault
 type: StorageBlock
 description: "Entry-level gravitational compression storage unit. Efficiently stores large quantities of materials in a stabilized 3x3 footprint."
 health: 6000
-size: 3
+size: 2
 category: effect
 
 # Vanilla Vault is 1000. This is 'Giga' scale.

@@ -1,0 +1,68 @@
+# The internal name of your planet
+name: "magna"
+localizedName: "Magna"
+description: "A distant planet shrouded in a thick atmosphere of Darkened Aether. Its surface is a mix of crystalline formations and silicate silt, creating a challenging environment for exploration and resource extraction."
+# The generator used for the terrain
+generator: "PlanetGenerator"
+# The parent planet it orbits (usually 'sun')
+parent: "sun"
+icon: planet
+# Visual radius of the planet in the menu
+radius: 1.2
+# Distance from the parent
+orbitRadius: 25
+# Atmosphere color (Genesis Violet)
+atmosphereColor: b892ff
+# The color of the planet's surface from space
+
+# Add this to magna.hjson
+solarMultiplier: 0.5 // Dimmer sun due to thick Aether atmosphere
+cloudDensity: 0.6
+hasAtmosphere: true
+
+alwaysUnlocked: true
+accessible: true
+visible: true
+
+mesh: [
+  {
+    type: NoiseMesh
+    seed: 69
+    divisions: 4
+    color1: 1a1626 // Royal Void (Dark)
+    color2: 2d2445 // Aether Dirt (Mid)
+    radius: 1.2
+    octaves: 3
+    persistence: 0.8
+    scale: 0.75
+    mag: 1.2
+  }
+]
+cloudMesh: [
+  {
+    type: HexSkyMesh
+    planet: magna
+    seed: 12
+    speed: 0.8
+    radius: 0.08
+    divisions: 4
+    color: b892ff77 // Transparent Violet
+    octaves: 3
+    persistence: 0.7
+    scale: 0.6
+  }
+]
+# The icon used in the planet selector
+iconColor: b892ff
+# Which items/tech are allowed on this planet
+itemWhitelist: [
+  "hardened-carbide",
+  "lead",
+  "graphite",
+  "thorium",
+  "copper",
+    "silicon",
+    "titanium",
+    "surge-alloy",
+    "phase-fabric",
+]

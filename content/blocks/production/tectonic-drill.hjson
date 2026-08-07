@@ -1,0 +1,69 @@
+name: "Tectonic Drill"
+type: Drill
+description: "A heavy-duty industrial drill. Uses Tau-forged resonators to induce localized tectonic shifts, shattering ore veins instantly. Requires constant cooling."
+size: 3
+tier: 90
+drillTime: 1
+health: 3200
+itemCapacity: 1000
+hardnessDrillMultiplier: 0
+
+consumes: {
+  power: 8.5
+  liquids: [
+    # Uses your custom refrigerant for high-tier cooling
+    water/1.0
+  ]
+}
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      # The main tectonic thumper animation
+      type: DrawPistons
+      sinMag: 1.5
+      sinScl: 5
+    }
+    {
+      # High-speed rotation for the drill head
+      type: DrawBlurSpin
+      suffix: "-rotator"
+      rotateSpeed: 12
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      # Seafoam glow that pulses with the drilling speed
+      type: DrawGlowRegion
+      suffix: "-top"
+      color: d0fff4
+    }
+    {
+      # The Modern Pulse Effect
+      type: DrawPulseShape
+      # Square shape to match the 3x3 drill footprint
+      square: true
+      # Sampled from the Quantum Alloy's glowing core
+      color: d0fff4
+      # Speed and intensity of the pulse
+      timeScl: 40
+      mag: 1.2
+    }
+  ]
+}
+
+requirements: [
+  titanium/300
+  crystalline-silicon/10
+  hardened-carbide/250
+  thorium/300
+]
+
+category: production
+research: laser-drill

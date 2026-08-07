@@ -1,0 +1,21 @@
+type: StaticWall
+name: "Veridian Aether Wall"
+description: "A jagged formation of oxidized Carbide. The teal coloration indicates a high concentration of volatile atmospheric gases trapped within the stone."
+
+# Visuals
+variants: 3
+
+# This wall is 'softer' than pure Carbide due to oxidation
+# Attributes can be used to make certain drills mine faster here
+attributes: {
+  heat: -0.2 // It feels cold to the touch due to gas evaporation
+  gas-concentration: 0.8
+}
+
+# The color on the minimap (using Veridian #2e5a5e)
+mapColor: 2e5a5e
+
+# Visual glow effect - makes it look like gas is leaking
+emitLight: true
+lightRadius: 35
+lightColor: 4ef0d033 // Low alpha teal glow
