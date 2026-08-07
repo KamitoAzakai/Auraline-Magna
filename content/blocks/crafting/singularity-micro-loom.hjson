@@ -48,6 +48,3 @@ requirements: [
   silicon/400
   graphite/250
 ]
-
-# Unlocks after the Resonance Crystallizer so you have the crystals needed
-research: resonance-crystallizer
