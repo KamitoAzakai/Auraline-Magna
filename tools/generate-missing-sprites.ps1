@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 function New-Canvas {
   param([int]$Width, [int]$Height)
-  return [byte[]]::new($Width * $Height * 4)
+  return ,([byte[]]::new($Width * $Height * 4))
 }
 
 function Blend-Pixel {
@@ -313,6 +313,33 @@ function New-BottomPlates {
   Draw-Ring $o 96 96 48 48 27 20 @(83, 69, 46, 180)
   Draw-Line $o 96 96 18 74 78 74 2 @(15, 12, 10, 170)
   Save-Png "sprites\blocks\production\oil-seismic-production-pump-bottom.png" 96 96 $o
+
+  $p = New-Canvas 96 96
+  Draw-Rect $p 96 96 10 10 76 76 @(31, 29, 26, 255)
+  Draw-Rect $p 96 96 20 20 56 56 @(52, 47, 38, 255)
+  Draw-Ring $p 96 96 48 48 20 14 @(96, 112, 128, 160)
+  Draw-Line $p 96 96 24 24 72 24 1 @(255, 255, 255, 80)
+  Draw-Line $p 96 96 24 72 72 72 1 @(255, 255, 255, 80)
+  Draw-Line $p 96 96 24 24 24 72 1 @(255, 255, 255, 80)
+  Draw-Line $p 96 96 72 24 72 72 1 @(255, 255, 255, 80)
+  Save-Png "sprites\blocks\crafting\petroleum-synthesizer-bottom.png" 96 96 $p
+}
+
+function New-PhaseLinkBottoms {
+  $p = New-Canvas 32 32
+  Draw-Rect $p 32 32 0 14 32 4 @(184, 146, 255, 210)
+  Draw-Rect $p 32 32 14 0 4 32 @(184, 146, 255, 210)
+  Save-Png "sprites\blocks\liquid-routing\phase-link-conduit-bottom-2.png" 32 32 $p
+
+  $p = New-Canvas 32 32
+  Draw-Ring $p 32 32 16 16 12 12 @(184, 146, 255, 190)
+  Draw-Circle $p 32 32 16 16 4 @(255, 255, 255, 175)
+  Save-Png "sprites\blocks\liquid-routing\phase-link-conduit-bottom-3.png" 32 32 $p
+
+  $p = New-Canvas 32 32
+  Draw-Ring $p 32 32 16 16 14 10 @(152, 255, 217, 160)
+  Draw-Circle $p 32 32 16 16 3 @(255, 255, 255, 210)
+  Save-Png "sprites\blocks\liquid-routing\phase-link-conduit-bottom-4.png" 32 32 $p
 }
 
 New-ZenithPillar
@@ -323,5 +350,6 @@ New-SiliconUltraForge
 New-HeatSleeve
 New-HyperProcessor
 New-BottomPlates
+New-PhaseLinkBottoms
 
 Write-Host "Generated missing Auraline-Magna sprite bases and overlays."
