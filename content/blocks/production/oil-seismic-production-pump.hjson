@@ -20,14 +20,20 @@ consumes: {
 drawer: {
   type: DrawMulti
   drawers: [
-    # LAYER 1: The Liquid Reservoir
+    # LAYER 1: The Foundation
+    {
+      type: DrawRegion
+      suffix: "-bottom" // Uses 'oil-seismic-production-pump-bottom.png'
+    }
+
+    # LAYER 2: The Liquid Reservoir
     {
       type: DrawLiquidRegion
       drawLiquid: oil
       suffix: "-liquid" // Masks the 'oil-extractor-liquid.png' area with the 'oil' color
     }
 
-    # LAYER 2: The Seismic Piston (The "Thumper")
+    # LAYER 3: The Seismic Piston (The "Thumper")
     {
       type: DrawPistons
       sinMag: 2.2      // How far the pistons move
@@ -35,7 +41,7 @@ drawer: {
       sideOffset: 0.5  // Offsets the pistons for a staggered look
     }
 
-    # LAYER 3: The Rotating Drill Head
+    # LAYER 4: The Rotating Drill Head
     {
       type: DrawBlurSpin
       suffix: "-rotator" // Uses 'oil-extractor-rotator.png'
@@ -43,12 +49,12 @@ drawer: {
       blurThresh: 0.01  // Creates a motion blur effect at high speeds
     }
 
-    # LAYER 4: The Main Structural Frame
+    # LAYER 5: The Main Structural Frame
     {
       type: DrawDefault // Draws the main 'oil-seismic-production-pump.png'
     }
 
-    # LAYER 5: The Energy Cap & Aether Glow
+    # LAYER 6: The Energy Cap & Aether Glow
     {
       type: DrawRegion
       suffix: "-top" // Uses 'oil-extractor-top.png'

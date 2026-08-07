@@ -78,12 +78,12 @@ drawer: {
       glowScale: 5
     }
     {
-      # A procedural containment shimmer over the forge.
-      type: DrawPulseShape
-      square: false
+      # A spinning 'containment ring' over the forge
+      type: DrawBlurSpin
+      suffix: "-ring"
+      rotateSpeed: 4
+      blurThresh: 0.1
       color: ffffff
-      timeScl: 30
-      mag: 0.7
     }
   ]
 }

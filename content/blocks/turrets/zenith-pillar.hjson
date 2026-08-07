@@ -67,11 +67,12 @@ drawer: {
         type: DrawDefault
     }
     {
-      type: DrawPulseShape
-      square: false
-      color: b892ff
-      timeScl: 45
+      type: DrawRegion
+      suffix: "-orb"
+      y: 8
+      bounce: true
       mag: 1.5
+      scl: 5
     }
     {
       type: DrawHeatRegion

@@ -67,13 +67,12 @@ drawer: {
     {
       type: DrawDefault
     }
-    # 1. The Core: a procedural resonance pulse that does not need an extra region.
+    # 1. The Core: A rotating violet crystal
     {
-      type: DrawPulseShape
-      square: false
-      color: b892ff
-      timeScl: 35
-      mag: 1.2
+      type: DrawRegion
+      suffix: "-crystal"
+      spinSprite: true
+      rotateSpeed: 2
     }
     # 2. The Glow: A pulsing aura
     {

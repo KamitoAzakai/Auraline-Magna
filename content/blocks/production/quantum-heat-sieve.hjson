@@ -33,6 +33,7 @@ drawer: {
       # This makes the pipe glow more intensely the hotter it gets
       type: DrawGlowRegion
       color: ffa665
+      suffix: -glow
     }
   ]
 }
