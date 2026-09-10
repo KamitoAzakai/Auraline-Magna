@@ -40,7 +40,7 @@
             },
             {
                 "type": "DrawGlowRegion",
-                "color": "ecdec",
+                "color": "9ecdec",
                 "glowIntensity": 0.4,
                 "glowScale": 5
             },

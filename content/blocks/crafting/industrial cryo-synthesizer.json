@@ -23,7 +23,7 @@
     "updateEffectChance": 0.15,
     "craftEffect": {
         "type": "WaveEffect",
-        "colorFrom": "ecdec",
+        "colorFrom": "9ecdec",
         "sizeTo": 25,
         "lifetime": 20,
         "strokeFrom": 3
@@ -55,7 +55,7 @@
             },
             {
                 "type": "DrawGlowRegion",
-                "color": "ecdec",
+                "color": "9ecdec",
                 "glowIntensity": 0.5,
                 "glowScale": 8
             },
