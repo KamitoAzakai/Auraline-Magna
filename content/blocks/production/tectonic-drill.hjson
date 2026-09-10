@@ -14,9 +14,6 @@ consumes: {
     # High-tier cooling keeps the resonators from self-welding.
     ionic-refrigerant/0.35
   ]
-  items: [
-    kinetic-crystal/1
-  ]
 }
 
 drawer: {
