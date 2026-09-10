@@ -1,0 +1,16 @@
+{
+    "name": "Kinetic Manifold",
+    "type": "Router",
+    "description": "A heavy-duty distribution hub. Utilizing internal high-speed buffers, it can split high-density material streams into all directions with zero throughput loss.",
+    "health": 500,
+    "size": 2,
+    "category": "distribution",
+    "speed": 25,
+    "itemCapacity": 40,
+    "requirements": [
+        "lead/50",
+        "thorium/30",
+        "silicon/40"
+    ],
+    "research": "distributor"
+}

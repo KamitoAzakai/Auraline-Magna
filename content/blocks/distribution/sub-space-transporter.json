@@ -1,0 +1,19 @@
+{
+    "name": "Sub-Space Transporter",
+    "type": "ItemBridge",
+    "description": "Utilizes localized folding of space to transport items across vast distances. Essential for navigating dense Giga-factory layouts.",
+    "health": 300,
+    "size": 1,
+    "category": "distribution",
+    "range": 18,
+    "transportTime": 0.08,
+    "itemCapacity": 24,
+    "requirements": [
+        "titanium/80",
+        "silicon/120",
+        "phase-fabric/35",
+        "enhanced-phase-fabric/20",
+        "quantum-alloy/15"
+    ],
+    "research": "phase-link-conduit"
+}

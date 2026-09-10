@@ -1,0 +1,80 @@
+{
+    "type": "MendProjector",
+    "description": "A high-tier mending station. Projects a high-frequency resonance field that vibrates atoms back into their original structural lattice. Highly effective when boosted with Phase Fabric.",
+    "size": 2,
+    "health": 25000,
+    "category": "effect",
+    "reload": 40,
+    "range": 120,
+    "healPercent": 8.0,
+    "phaseRangeBoost": 80,
+    "phaseBoost": 2.5,
+    "consumes": {
+        "power": 5.5,
+        "items": {
+            "items": [
+                "enhanced-phase-fabric/1"
+            ],
+            "boost": true,
+            "optional": true
+        }
+    },
+    "updateEffect": {
+        "type": "WaveEffect",
+        "sizeTo": 120,
+        "lifetime": 60,
+        "colorFrom": "b892ff",
+        "colorTo": "b892ff00",
+        "strokeFrom": 2,
+        "strokeTo": 0
+    },
+    "healEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "WaveEffect",
+                "sizeTo": 120,
+                "lifetime": 25,
+                "colorFrom": "ffffff",
+                "colorTo": "b892ff",
+                "strokeFrom": 4
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 10,
+                "length": 120,
+                "lifetime": 30,
+                "line": true,
+                "colorFrom": "ffffff",
+                "colorTo": "b892ff"
+            }
+        ]
+    },
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-crystal",
+                "spinSprite": true,
+                "rotateSpeed": 2
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "b892ff",
+                "glowIntensity": 0.8,
+                "glowScale": 10
+            }
+        ]
+    },
+    "requirements": [
+        "hardened-carbide/150",
+        "crystalline-silicon/100",
+        "phase-fabric/50",
+        "silicon/200"
+    ],
+    "research": "violet-horizon-projector",
+    "localizedName": "Phase-Resonance Projector",
+    "name": "phase-resonance-projector"
+}

@@ -148,7 +148,47 @@ cryoSiliconCrystallizer.consumeItems(ItemStack.with(
     Items.titanium, 2,
     Items.metaglass, 1
 ));
+// Define the updateEffect in JavaScript
+const fluxRouterUpdateEffect = new ParticleEffect({
+    particles: 1,
+    length: 0,
+    lifetime: 15,
+    colorFrom: Color.valueOf("a488ff"),
+    colorTo: Color.valueOf("a488ff00"),
+    sizeFrom: 2,
+    sizeTo: 0
+});
 
+// Block registration/configuration
+const fluxRouter = Extend(Router, "flux-router", {
+    // Custom block logic can be extended here if necessary
+});
+
+fluxRouter.description = "A high-capacity quantum distribution node. Uses localized spatial folding to route items to three outputs simultaneously without throughput loss.";
+fluxRouter.health = 450;
+fluxRouter.armor = 10;
+fluxRouter.category = Category.distribution;
+fluxRouter.speed = 0;
+fluxRouter.itemCapacity = 20;
+
+fluxRouter.updateEffect = fluxRouterUpdateEffect;
+fluxRouter.updateEffectChance = 0.05;
+
+// Drawer construction using DrawMulti
+fluxRouter.drawer = new DrawMulti(
+    new DrawDefault(),
+    new DrawGlowRegion({
+        color: Color.valueOf("a488ff"),
+        glowIntensity: 0.8,
+        glowScale: 4
+    })
+);
+
+fluxRouter.requirements = ItemStack.with(
+    Items.thorium, 10,
+    Items.silicon, 15,
+    Vars.content.get(ContentType.item, "your-mod-prefix-crystalline-silicon"), 5
+);
 cryoSiliconCrystallizer.consumeLiquid(Liquids.cryofluid, 0.2);
 cryoSiliconCrystallizer.consumePower(9.0 / 60.0);
 
