@@ -1,0 +1,19 @@
+{
+    "type": "ParticleWeather",
+    "name": "Crystalline Fallout",
+    "description": "A secondary effect of hyper-dense industrialization. Micro-shards of crystalline silicon condense in the upper atmosphere and rain down as razor-sharp needles.",
+    "color": "8ca9e8",
+    "particleRegion": "particle",
+    "sizeMin": 1,
+    "sizeMax": 3,
+    "density": 4000,
+    "opacity": 0.7,
+    "attrs": {
+        "light": 0.2,
+        "water": -0.5
+    },
+    "useWindVector": true,
+    "force": 0.1,
+    "sound": "rain",
+    "soundVol": 0.5
+}

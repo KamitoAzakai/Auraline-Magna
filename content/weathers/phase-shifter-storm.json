@@ -1,0 +1,21 @@
+{
+    "type": "ParticleWeather",
+    "name": "Phase-Shimmer Storm",
+    "description": "A violent atmospheric disturbance where the border between dimensions becomes thin. Distorts vision and interferes with standard electrical systems.",
+    "color": "ffd37f",
+    "noiseColor": "b892ff",
+    "particleRegion": "particle",
+    "sizeMin": 2,
+    "sizeMax": 6,
+    "density": 2000,
+    "opacity": 0.4,
+    "attrs": {
+        "heat": 0.2,
+        "light": -0.3
+    },
+    "useWindVector": true,
+    "drawNoise": true,
+    "noiseLayers": 3,
+    "noiseScale": 1100,
+    "noiseSpeed": 0.8
+}

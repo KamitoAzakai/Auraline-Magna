@@ -1,0 +1,17 @@
+{
+    "name": "Aetheric Pressure",
+    "description": "The unit's chassis is being crushed by the extreme density of Darkened Aether.",
+    "color": "2c626a",
+    "outline": true,
+    "speedMultiplier": 0.4,
+    "reloadMultiplier": 0.6,
+    "damage": 0.2,
+    "effect": {
+        "type": "ParticleEffect",
+        "particles": 3,
+        "length": 8,
+        "lifetime": 40,
+        "colorFrom": "60c4cf",
+        "colorTo": "2c626a"
+    }
+}

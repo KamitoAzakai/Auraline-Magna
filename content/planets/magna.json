@@ -1,0 +1,53 @@
+{
+    "name": "magna",
+    "localizedName": "Magna",
+    "description": "A distant planet shrouded in a thick atmosphere of Darkened Aether. Its surface is a mix of crystalline formations and silicate silt, creating a challenging environment for exploration and resource extraction.",
+    "generator": "PlanetGenerator",
+    "parent": "sun",
+    "icon": "planet",
+    "radius": 1.2,
+    "orbitRadius": 25,
+    "atmosphereColor": "b892ff",
+    "solarMultiplier": 0.5,
+    "cloudDensity": 0.6,
+    "hasAtmosphere": true,
+    "alwaysUnlocked": true,
+    "accessible": true,
+    "visible": true,
+    "mesh": [{
+        "type": "NoiseMesh",
+        "seed": 69,
+        "divisions": 4,
+        "color1": "1a1626",
+        "color2": "2d2445",
+        "radius": 1.2,
+        "octaves": 3,
+        "persistence": 0.8,
+        "scale": 0.75,
+        "mag": 1.2
+    }],
+    "cloudMesh": [{
+        "type": "HexSkyMesh",
+        "planet": "magna",
+        "seed": 12,
+        "speed": 0.8,
+        "radius": 0.08,
+        "divisions": 4,
+        "color": "b892ff77",
+        "octaves": 3,
+        "persistence": 0.7,
+        "scale": 0.6
+    }],
+    "iconColor": "b892ff",
+    "itemWhitelist": [
+        "hardened-carbide",
+        "lead",
+        "graphite",
+        "thorium",
+        "copper",
+        "silicon",
+        "titanium",
+        "surge-alloy",
+        "phase-fabric"
+    ]
+}
