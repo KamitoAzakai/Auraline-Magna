@@ -1,0 +1,63 @@
+{
+    "type": "Separator",
+    "description": "A hybrid refinery that integrates liquid hydrocarbons with solid minerals to synthesize advanced construction materials. Produces Metaglass, Silicon, and Plastanium in sequence.",
+    "health": 15000,
+    "size": 4,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 80,
+    "craftTime": 0.10,
+    "updateEffect": "smeltsmoke",
+    "updateEffectChance": 0.08,
+    "craftEffect": "spark",
+    "results": [
+        "metaglass/2",
+        "silicon/3",
+        "plastanium/1"
+    ],
+    "consumes": {
+        "power": 10.0,
+        "items": [
+            "crystalline-silicon/2",
+            "copper/3"
+        ],
+        "liquid": {
+            "liquid": "cryofluid",
+            "amount": 0.2
+        }
+    },
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "cryofluid",
+                "padding": 4
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "ecdec",
+                "glowIntensity": 0.4,
+                "glowScale": 5
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.2,
+                "rotateSpeed": 15
+            }
+        ]
+    },
+    "requirements": [
+        "surge-alloy/120",
+        "thorium/180",
+        "silicon/200",
+        "phase-fabric/50"
+    ],
+    "research": "surge-smelter",
+    "localizedName": "Molecular Assembler-Smelter",
+    "name": "molecular-assembler-smelter"
+}

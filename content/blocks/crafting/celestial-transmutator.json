@@ -1,0 +1,74 @@
+{
+    "type": "GenericCrafter",
+    "name": "celestial-transmutator",
+    "localizedName": "Celestial Transmutator",
+    "description": "The most complex industrial structure ever devised. It injects stabilized kinetic harmonics and Tau-radiation into quantum alloy at a sub-atomic level. Requires immense power and cooling to prevent a localized rift.",
+    "size": 6,
+    "health": 125000,
+    "armor": 40,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 600,
+    "itemCapacity": 60,
+    "liquidCapacity": 300,
+    "updateEffectChance": 0.1,
+    "consumes": {
+        "power": 120.0,
+        "items": [
+            "enhanced-quantum-alloy/2",
+            "enhanced-kinetic-crystal/2",
+            "tau-forged-thorium/4"
+        ],
+        "liquids": [
+            "plasma-flux/1.5",
+            "ionic-refrigerant/1.0"
+        ]
+    },
+    "outputItem": "tau-forged-quantum-alloy/1",
+    "outputLiquid": "abyssal-sludge/0.5",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "abyssal-sludge",
+                "padding": 2
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "ionic-refrigerant",
+                "padding": 6
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "plasma-flux",
+                "padding": 10
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.2,
+                "rotateSpeed": 1.5
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 2.0,
+                "glowScale": 30
+            },
+            {
+                "type": "DrawArcSmelt"
+            }
+        ]
+    },
+    "requirements": [
+        "enhanced-quantum-alloy/500",
+        "enhanced-phase-fabric/400",
+        "hardened-carbide/2000",
+        "crystalline-silicon/1000"
+    ],
+    "research": "singularity-forge"
+}

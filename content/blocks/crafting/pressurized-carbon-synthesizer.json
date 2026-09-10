@@ -1,0 +1,32 @@
+{
+    "type": "GenericCrafter",
+    "description": "A heavy-duty carbon-fixing facility. It uses high-pressure liquid catalysts to compress oil and scrap into high-density coal at an industrial scale.",
+    "health": 5000,
+    "size": 3,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 45,
+    "itemCapacity": 40,
+    "liquidCapacity": 100,
+    "consumes": {
+        "power": 8.0,
+        "items": [
+            "scrap/2"
+        ],
+        "liquids": [
+            "oil/0.3"
+        ]
+    },
+    "outputItem": "coal/6",
+    "requirements": [
+        "lead/300",
+        "graphite/200",
+        "titanium/150",
+        "silicon/100"
+    ],
+    "research": "coal-centrifuge",
+    "localizedName": "Pressurized Carbon Synthesizer",
+    "name": "pressurized-carbon-synthesizer"
+}

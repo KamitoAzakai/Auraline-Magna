@@ -1,0 +1,44 @@
+{
+    "type": "GenericCrafter",
+    "name": "carbide-molecular-press",
+    "localizedName": "Carbide Molecular Press",
+    "description": "A high-pressure industrial press. It compresses surge alloy into a plastanium matrix, creating ultra-dense hardened carbide plates for Giga-scale construction.",
+    "size": 3,
+    "health": 16000,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "craftTime": 90,
+    "itemCapacity": 30,
+    "consumes": {
+        "power": 10.0,
+        "items": [
+            "surge-alloy/2",
+            "plastanium/2"
+        ]
+    },
+    "outputItem": "hardened-carbide/3",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawPistons",
+                "sinMag": 2.5,
+                "sinScl": 5
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "faff7f",
+                "glowIntensity": 0.5
+            }
+        ]
+    },
+    "requirements": [
+        "titanium/200",
+        "silicon/150",
+        "thorium/120"
+    ],
+    "research": "multi-press"
+}

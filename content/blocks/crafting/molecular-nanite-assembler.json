@@ -1,0 +1,85 @@
+{
+    "type": "GenericCrafter",
+    "description": "A high-precision bio-mechanical foundry. It uses an Enhanced Kinetic Crystal to project a harmonic field that 'wakes up' microscopic assemblers within a metallic broth. The resulting Nanite Slurry is capable of autonomous structural repair.",
+    "size": 4,
+    "health": 35000,
+    "armor": 15,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 180,
+    "itemCapacity": 20,
+    "liquidCapacity": 120,
+    "updateEffect": {
+        "type": "ParticleEffect",
+        "particles": 2,
+        "length": 15,
+        "lifetime": 60,
+        "colorFrom": "a488ff",
+        "colorTo": "80808000",
+        "sizeFrom": 2,
+        "sizeTo": 0
+    },
+    "updateEffectChance": 0.1,
+    "craftEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+            "type": "WaveEffect",
+            "colorFrom": "ffffff",
+            "colorTo": "a488ff",
+            "sizeTo": 40,
+            "lifetime": 30,
+            "strokeFrom": 4
+        }]
+    },
+    "consumes": {
+        "power": 18.0,
+        "items": [
+            "tau-forged-silicon/2",
+            "hardened-carbide/3",
+            "enhanced-kinetic-crystal/1"
+        ],
+        "liquids": [
+            "water/0.5"
+        ]
+    },
+    "outputLiquid": "nanite-slurry/0.4",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "nanite-slurry",
+                "padding": 3
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 1.2,
+                "glowScale": 12
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.4,
+                "rotateSpeed": 3
+            },
+            {
+                "type": "DrawFlame",
+                "color": "a488ff",
+                "flareMag": 0.5,
+                "flareRadius": 3
+            }
+        ]
+    },
+    "requirements": [
+        "tau-forged-quantum-alloy/150",
+        "tau-forged-silicon/200",
+        "hardened-carbide/500",
+        "thorium/800"
+    ],
+    "localizedName": "Molecular Nanite-Assembler",
+    "name": "molecular-nanite-assembler"
+}

@@ -1,0 +1,82 @@
+{
+    "type": "GenericCrafter",
+    "description": "An ultra-high-tier weaving facility. Infuses standard alloys with plasma flux and crystalline silicon to weave the complex lattice of Quantum Alloys. Requires constant ionic cooling.",
+    "size": 4,
+    "health": 28000,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 180,
+    "itemCapacity": 30,
+    "liquidCapacity": 100,
+    "updateEffect": "lightningCharge",
+    "updateEffectChance": 0.1,
+    "craftEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "WaveEffect",
+                "colorFrom": "a488ff",
+                "sizeTo": 40,
+                "lifetime": 30,
+                "strokeFrom": 3
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 15,
+                "length": 25,
+                "colorFrom": "a488ff",
+                "colorTo": "ffffff"
+            }
+        ]
+    },
+    "consumes": {
+        "power": 20.0,
+        "items": [
+            "kinetic-crystal/2",
+            "crystalline-silicon/3"
+        ],
+        "liquids": [
+            "plasma-flux/0.4",
+            "ionic-refrigerant/0.2"
+        ]
+    },
+    "outputItem": "quantum-alloy/1",
+    "outputLiquid": "abyssal-sludge/0.1",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "abyssal-sludge",
+                "padding": 3
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 0.8,
+                "glowScale": 12
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.5,
+                "rotateSpeed": 6
+            },
+            {
+                "type": "DrawArcSmelt",
+                "color": "a488ff",
+                "particles": 10
+            }
+        ]
+    },
+    "requirements": [
+        "hardened-carbide/300",
+        "thorium/400",
+        "crystalline-silicon/200",
+        "phase-fabric/150"
+    ],
+    "localizedName": "Quantum Loom",
+    "name": "quantum-loom"
+}

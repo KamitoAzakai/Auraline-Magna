@@ -1,0 +1,70 @@
+{
+    "type": "GenericCrafter",
+    "name": "auraline-molecular-sifter",
+    "localizedName": "Auraline Molecular Sifter",
+    "description": "A colossal industrial refinery. By injecting Ionic Refrigerant into a high-pressure stream of Slag and Plasma Flux, it 'sifts' the resulting elemental collapse to produce Tau-forged and Enhanced materials.",
+    "size": 5,
+    "health": 85000,
+    "category": "crafting",
+    "hasItems": true,
+    "hasLiquids": true,
+    "hasPower": true,
+    "craftTime": 300,
+    "itemCapacity": 40,
+    "updateEffectChance": 0.15,
+    "consumes": {
+        "power": 60.0,
+        "liquids": [
+            "slag/1.0",
+            "plasma-flux/0.5",
+            "ionic-refrigerant/0.3"
+        ]
+    },
+    "outputItems": [
+        "tau-forged-quantum-alloy/2",
+        "tau-forged-thorium/3",
+        "tau-forged-silicon/3",
+        "enhanced-phase-fabric/2"
+    ],
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "slag",
+                "padding": 1
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "ionic-refrigerant",
+                "padding": 12
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "b892ff",
+                "glowIntensity": 0.6,
+                "glowScale": 15
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.4,
+                "rotateSpeed": 8
+            },
+            {
+                "type": "DrawFlame",
+                "flameColor": "ffffff",
+                "flameRadius": 5,
+                "flameRadiusMag": 1.5
+            }
+        ]
+    },
+    "requirements": [
+        "tau-forged-quantum-alloy/200",
+        "hardened-carbide/1000",
+        "crystalline-silicon/800",
+        "enhanced-phase-fabric/150"
+    ],
+    "research": "tau-molecular-press"
+}

@@ -1,0 +1,109 @@
+{
+    "type": "GenericCrafter",
+    "description": "Injects high-frequency kinetic energy into silicon lattices. This process aligns the atoms into a Tau-state for supreme logic processing. Generates Plasma Flux as a thermal byproduct.",
+    "size": 4,
+    "health": 22000,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 180,
+    "itemCapacity": 40,
+    "liquidCapacity": 200,
+    "updateEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "ParticleEffect",
+                "particles": 1,
+                "length": 20,
+                "lifetime": 30,
+                "line": true,
+                "strokeFrom": 1,
+                "strokeTo": 0,
+                "colorFrom": "b892ff",
+                "colorTo": "b892ff00"
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 2,
+                "length": 15,
+                "lifetime": 60,
+                "colorFrom": "adffef",
+                "colorTo": "ffffff00",
+                "sizeFrom": 2,
+                "sizeTo": 0
+            }
+        ]
+    },
+    "updateEffectChance": 0.2,
+    "craftEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "WaveEffect",
+                "sizeTo": 50,
+                "lifetime": 40,
+                "colorFrom": "ffffff",
+                "colorTo": "b892ff",
+                "strokeFrom": 6
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 25,
+                "length": 60,
+                "lifetime": 70,
+                "interp": "pow10Out",
+                "colorFrom": "adffef",
+                "colorTo": "b892ff",
+                "sizeFrom": 4,
+                "sizeTo": 0
+            }
+        ]
+    },
+    "consumes": {
+        "power": 120.0,
+        "items": [
+            "enhanced-kinetic-crystal/1",
+            "silicon/10"
+        ]
+    },
+    "outputItem": "tau-forged-silicon/4",
+    "outputLiquid": "plasma-flux/0.4",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "plasma-flux",
+                "padding": 3
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "b892ff",
+                "glowIntensity": 1.0,
+                "glowScale": 15
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.1,
+                "rotateSpeed": 25,
+                "color": "ffffff"
+            },
+            {
+                "type": "DrawPlasma",
+                "plasmaSections": 8,
+                "plasmaRange": 10,
+                "color": "adffef"
+            }
+        ]
+    },
+    "requirements": [
+        "hardened-carbide/500",
+        "quantum-alloy/200",
+        "crystalline-silicon/300"
+    ],
+    "research": "isotopic-accelerator",
+    "localizedName": "Flux-Injection Chamber",
+    "name": "flux-injection-chamber"
+}

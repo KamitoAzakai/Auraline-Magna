@@ -1,0 +1,29 @@
+{
+    "type": "GenericCrafter",
+    "description": "A high-intensity thermal chamber. It uses concentrated plasma arcs to flash-melt scrap and mineral deposits into molten slag at extreme volumes.",
+    "health": 12000,
+    "size": 3,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 120,
+    "itemCapacity": 30,
+    "craftTime": 30,
+    "consumes": {
+        "power": 6.5,
+        "items": [
+            "scrap/3"
+        ]
+    },
+    "outputLiquid": "slag/1.0",
+    "requirements": [
+        "copper/200",
+        "lead/150",
+        "graphite/100",
+        "silicon/80"
+    ],
+    "research": "melter",
+    "localizedName": "Igneous Liquefier",
+    "name": "igneous-liquefier"
+}

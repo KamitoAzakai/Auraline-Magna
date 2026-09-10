@@ -1,0 +1,32 @@
+{
+    "type": "GenericCrafter",
+    "description": "Advanced refrigeration plant. Infuses standard cryofluid with microscopic, ionized titanium shards to vastly increase thermal conductivity.",
+    "size": 3,
+    "health": 12000,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 90,
+    "itemCapacity": 20,
+    "liquidCapacity": 120,
+    "consumes": {
+        "power": 12.0,
+        "items": [
+            "titanium/3"
+        ],
+        "liquids": [
+            "cryofluid/0.5"
+        ]
+    },
+    "outputLiquid": "ionic-refrigerant/0.4",
+    "requirements": [
+        "lead/250",
+        "titanium/150",
+        "silicon/150",
+        "graphite/100"
+    ],
+    "research": "cryofluid-mixer",
+    "localizedName": "Ionic Cryo-Fractionator",
+    "name": "ionic-cryo-fractionator"
+}

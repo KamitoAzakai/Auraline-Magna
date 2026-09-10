@@ -1,0 +1,75 @@
+{
+    "type": "GenericCrafter",
+    "description": "A precision refinement facility. Injects Tau-isotopes into Crystalline Silicon using Plasma Flux as a molecular carrier. Produces Tau-forged Silicon.",
+    "size": 3,
+    "health": 24000,
+    "category": "crafting",
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "craftTime": 90,
+    "itemCapacity": 20,
+    "updateEffect": "lightningCharge",
+    "updateEffectChance": 0.05,
+    "craftEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "WaveEffect",
+                "colorFrom": "bf92ff",
+                "sizeTo": 20,
+                "lifetime": 15,
+                "strokeFrom": 2
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 5,
+                "length": 10,
+                "colorFrom": "ffffff",
+                "colorTo": "bf92ff"
+            }
+        ]
+    },
+    "consumes": {
+        "power": 25.0,
+        "items": [
+            "crystalline-silicon/2"
+        ],
+        "liquids": [
+            "plasma-flux/0.2"
+        ]
+    },
+    "outputItem": "tau-forged-silicon/1",
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawLiquidTile",
+                "drawLiquid": "plasma-flux",
+                "padding": 2
+            },
+            {
+                "type": "DrawFlame",
+                "color": "bf92ff",
+                "flareMag": 0.5,
+                "flareRadius": 1.5
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 0.8,
+                "glowScale": 6
+            }
+        ]
+    },
+    "requirements": [
+        "hardened-carbide/400",
+        "quantum-alloy/250",
+        "crystalline-silicon/200",
+        "thorium/500"
+    ],
+    "research": "plasma-flux-condenser",
+    "localizedName": "Tau-Silicon Injector",
+    "name": "tau-silicon-injector"
+}
