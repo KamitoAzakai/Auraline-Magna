@@ -1,0 +1,69 @@
+{
+    "type": "ImpactReactor",
+    "localizedName": "Aetheric Singularity Reactor",
+    "description": "The apex of Auraline energy science. Compresses Plasma Flux within a Tau-forged Quantum lattice to trigger a localized gravitational collapse. Generates vast amounts of power but requires constant material 'fuel' to prevent the singularity from evaporating.",
+    "size": 9,
+    "health": 500000,
+    "category": "power",
+    "hasItems": true,
+    "hasLiquids": true,
+    "itemCapacity": 500,
+    "powerProduction": 50000.0,
+    "itemDuration": 600,
+    "warmupSpeed": 0.001,
+    "consumes": {
+        "power": 500.0,
+        "items": [
+            "tau-forged-quantum-alloy/1"
+        ],
+        "liquids": [
+            "ionic-refrigerant/5.0"
+        ]
+    },
+    "updateEffect": {
+        "type": "ParticleEffect",
+        "particles": 5,
+        "length": 40,
+        "lifetime": 60,
+        "interp": "pow3In",
+        "colorFrom": "ffffff",
+        "colorTo": "b892ff",
+        "sizeFrom": 2,
+        "sizeTo": 0
+    },
+    "updateEffectChance": 0.2,
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawRegion",
+                "suffix": "-bottom"
+            },
+            {
+                "type": "DrawPlasma",
+                "suffix": "-plasma-",
+                "plasma1": "d0fff4",
+                "plasma2": "60c4cf"
+            },
+            {
+                "type": "DrawPulseShape",
+                "square": false,
+                "color": "b9f3f9",
+                "timeScl": 40,
+                "mag": 1.5
+            },
+            {
+                "type": "DrawDefault"
+            }
+        ]
+    },
+    "explosionRadius": 150,
+    "explosionDamage": 80000,
+    "flashHit": true,
+    "requirements": [
+        "tau-forged-quantum-alloy/1000",
+        "tau-forged-silicon/1500",
+        "enhanced-quantum-alloy/2000",
+        "hardened-carbide/5000"
+    ],
+    "name": "aetheric-singularity-reactor"
+}
