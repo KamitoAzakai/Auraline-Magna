@@ -12,7 +12,7 @@
     "liquidCapacity": 200,
     "updateEffect": "lightningCharge",
     "updateEffectChance": 0.1,
-    "craftEffect": "insBomb",
+    "craftEffect": "drawPulseShape",
     "consumes": {
         "power": 40.0,
         "items": [
