@@ -1,0 +1,29 @@
+type: UniversalCrafter
+
+name: universal-crafter
+
+localizedName: "Universal Crafter"
+
+description: "A programmable fabrication machine capable of dynamically converting selected materials into other materials."
+
+size: 5
+
+health: 30000
+
+category: crafting
+
+hasPower: true
+hasItems: true
+hasLiquids: true
+
+itemCapacity: 100
+liquidCapacity: 200
+
+requirements: [
+    surge-alloy/500
+    phase-fabric/300
+    silicon/400
+    thorium/250
+]
+
+research: cryo-silicon-crystallizer
