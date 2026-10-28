@@ -14,47 +14,47 @@
         "type": "MultiEffect",
         "effects": [{
                 "type": "ParticleEffect",
-                "particles": 2,
-                "length": 20,
-                "lifetime": 50,
+                "particles": 3,
+                "length": 24,
+                "lifetime": 42,
                 "colorFrom": "adffef",
                 "colorTo": "adffef00",
-                "sizeFrom": 2,
+                "sizeFrom": 3,
                 "sizeTo": 0
             },
             {
                 "type": "ParticleEffect",
-                "particles": 1,
-                "length": 10,
-                "lifetime": 80,
-                "colorFrom": "311e4d",
-                "colorTo": "00000000",
-                "sizeFrom": 3,
-                "sizeTo": 1
+                "particles": 2,
+                "length": 12,
+                "lifetime": 60,
+                "colorFrom": "87d4ff",
+                "colorTo": "311e4d00",
+                "sizeFrom": 2,
+                "sizeTo": 0
             }
         ]
     },
-    "updateEffectChance": 0.12,
+    "updateEffectChance": 0.2,
     "craftEffect": {
         "type": "MultiEffect",
         "effects": [{
                 "type": "WaveEffect",
-                "sizeTo": 40,
-                "lifetime": 30,
+                "sizeTo": 52,
+                "lifetime": 34,
                 "colorFrom": "ffffff",
                 "colorTo": "adffef",
-                "strokeFrom": 4
+                "strokeFrom": 5
             },
             {
                 "type": "ParticleEffect",
-                "particles": 15,
-                "length": 30,
-                "lifetime": 60,
+                "particles": 20,
+                "length": 38,
+                "lifetime": 52,
                 "line": true,
                 "strokeFrom": 2,
                 "strokeTo": 0,
                 "colorFrom": "adffef",
-                "colorTo": "311e4d"
+                "colorTo": "b892ff"
             }
         ]
     },
@@ -87,20 +87,20 @@
             {
                 "type": "DrawBlurSpin",
                 "blurThresh": 0.2,
-                "rotateSpeed": 6,
+                "rotateSpeed": 9,
                 "color": "adffef"
             },
             {
                 "type": "DrawBlurSpin",
                 "blurThresh": 0.2,
-                "rotateSpeed": -3,
+                "rotateSpeed": -4,
                 "color": "311e4d"
             },
             {
                 "type": "DrawGlowRegion",
                 "color": "adffef",
-                "glowIntensity": 0.8,
-                "glowScale": 15
+                "glowIntensity": 1.1,
+                "glowScale": 18
             }
         ]
     },

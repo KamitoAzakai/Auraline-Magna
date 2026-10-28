@@ -14,47 +14,47 @@
         "type": "MultiEffect",
         "effects": [{
                 "type": "ParticleEffect",
-                "particles": 2,
-                "length": 20,
-                "lifetime": 50,
-                "colorFrom": "adffef",
-                "colorTo": "adffef00",
+                "particles": 3,
+                "length": 28,
+                "lifetime": 56,
+                "colorFrom": "ffdd99",
+                "colorTo": "e3b3ff00",
                 "sizeFrom": 2,
                 "sizeTo": 0
             },
             {
                 "type": "ParticleEffect",
-                "particles": 1,
-                "length": 10,
-                "lifetime": 80,
-                "colorFrom": "311e4d",
-                "colorTo": "00000000",
-                "sizeFrom": 3,
+                "particles": 2,
+                "length": 16,
+                "lifetime": 72,
+                "colorFrom": "99ccff",
+                "colorTo": "311e4d00",
+                "sizeFrom": 2,
                 "sizeTo": 1
             }
         ]
     },
-    "updateEffectChance": 0.12,
+    "updateEffectChance": 0.16,
     "craftEffect": {
         "type": "MultiEffect",
         "effects": [{
                 "type": "WaveEffect",
-                "sizeTo": 40,
-                "lifetime": 30,
-                "colorFrom": "ffffff",
-                "colorTo": "adffef",
-                "strokeFrom": 4
+                "sizeTo": 56,
+                "lifetime": 44,
+                "colorFrom": "ffdd99",
+                "colorTo": "e3b3ff",
+                "strokeFrom": 5
             },
             {
                 "type": "ParticleEffect",
-                "particles": 15,
-                "length": 30,
-                "lifetime": 60,
+                "particles": 24,
+                "length": 44,
+                "lifetime": 70,
                 "line": true,
-                "strokeFrom": 2,
+                "strokeFrom": 3,
                 "strokeTo": 0,
-                "colorFrom": "adffef",
-                "colorTo": "311e4d"
+                "colorFrom": "ffdd99",
+                "colorTo": "e3b3ff"
             }
         ]
     },
@@ -88,20 +88,20 @@
             {
                 "type": "DrawBlurSpin",
                 "blurThresh": 0.2,
-                "rotateSpeed": 6,
-                "color": "adffef"
+                "rotateSpeed": 5,
+                "color": "ffdd99"
             },
             {
                 "type": "DrawBlurSpin",
                 "blurThresh": 0.2,
-                "rotateSpeed": -3,
-                "color": "311e4d"
+                "rotateSpeed": -7,
+                "color": "8f58bd"
             },
             {
                 "type": "DrawGlowRegion",
-                "color": "adffef",
-                "glowIntensity": 0.8,
-                "glowScale": 15
+                "color": "e3b3ff",
+                "glowIntensity": 1.2,
+                "glowScale": 20
             }
         ]
     },
