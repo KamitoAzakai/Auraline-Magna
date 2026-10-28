@@ -1,6 +1,6 @@
 {
     "type": "GenericCrafter",
-    "description": "A massive multi-stage refinery. Uses ionic refrigerant to super-cool crystalline silicon during high-energy sifting. Produces stabilized quantum alloy and abyssal sludge byproduct.",
+    "description": "Fuses tau-forged silicon and tau-forged thorium in ionic refrigerant to synthesize genesis alloy, with abyssal sludge released as a byproduct.",
     "size": 4,
     "health": 24000,
     "category": "crafting",
@@ -111,6 +111,6 @@
         "thorium/100",
         "silicon/200"
     ],
-    "localizedName": "Quantum Sifter",
+    "localizedName": "Genesis Alloy Synthesizer",
     "name": "quantum-sifter"
 }
