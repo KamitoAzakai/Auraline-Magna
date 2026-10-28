@@ -1,64 +1,73 @@
 {
-  "type": "ConsumeGenerator",
-  "name": "Steam Fusion Generator",
-  "description": "An advanced hybrid reactor. It flash-boils water into high-pressure steam by utilizing a controlled fusion reaction between Coal and Thorium.",
-  "health": "8000",
-  "category": "power",
-  "size": 2,
-  "hasPower": true,
-  "hasItems": true,
-  "hasLiquids": true,
-  "itemDuration": "600",
-  "powerProduction": "3000",
-  "consumes": {
-    "liquids": [
-      "water/0.5"
-    ],
-    "items": [
-      "coal/1",
-      "thorium/1"
+    "type": "ConsumeGenerator",
+    "name": "Steam Fusion Generator",
+    "description": "An advanced hybrid reactor. It flash-boils water into high-pressure steam by utilizing a controlled fusion reaction between Coal and Thorium.",
+    "health": "8000",
+    "category": "power",
+    "size": 2,
+    "hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "itemDuration": "600",
+    "powerProduction": "3000",
+    "consumes": {
+        "liquids": [
+            "water/0.5"
+        ],
+        "items": [
+            "coal/1",
+            "thorium/1"
+        ]
+    },
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawRegion",
+                "suffix": "-bottom"
+            },
+            {
+                "type": "DrawPulseShape",
+                "square": false,
+                "color": "b9f3f9",
+                "timeScl": 40,
+                "mag": 1.5
+            },
+            {
+                "type": "DrawLiquidRegion",
+                "drawLiquid": "water"
+            },
+            {
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawBlurSpin",
+                "suffix": "-turbine",
+                "rotateSpeed": 10,
+                "blurThresh": 0.05
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-top"
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-cap"
+            },
+            {
+                "type": "DrawGlowRegion",
+                "suffix": "-cap",
+                "color": "d0fff4",
+                "glowIntensity": 0.8,
+                "glowScale": 1.2
+            }
+        ]
+    },
+    "requirements": [
+        "thorium/300",
+        "surge-alloy/150",
+        "blast-compound/100",
+        "titanium/150",
+        "silicon/100",
+        "surge-alloy/10"
     ]
-  },
-  "drawer": {
-    "type": "DrawMulti",
-    "drawers": [
-      {
-        "type": "DrawRegion",
-        "suffix": "-bottom"
-      },
-      {
-        "type": "DrawPulseShape",
-        "square": false,
-        "color": "b9f3f9",
-        "timeScl": 40,
-        "mag": 1.5
-      },
-      {
-        "type": "DrawLiquidRegion",
-        "drawLiquid": "water"
-      },
-      {
-        "type": "DrawDefault"
-      },
-      {
-        "type": "DrawRegion",
-        "suffix": "-cap"
-      },
-      {
-        "type": "DrawGlowRegion",
-        "suffix": "-cap",
-        "color": "d0fff4",
-        "glowIntensity": 0.8,
-        "glowScale": 1.2
-      }
-    ]
-  },
-  "requirements": [
-    "thorium/300",
-    "surge-alloy/150",
-    "blast-compound/100",
-    "titanium/150",
-    "silicon/100",
-    "surge-alloy/10"
-  ]
 }
