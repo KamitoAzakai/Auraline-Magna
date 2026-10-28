@@ -1,70 +1,68 @@
 {
-  "name": "Auraline Giga-Core",
-  "type": "CoreBlock",
-  "description": "The ultimate command center. Utilizing Tau-forged materials, this core features near-infinite storage capacity and a localized repair field. It is the heart of a Giga-Factory.",
-  "size": 5,
-  "health": 1500000,
-  "armor": 500,
-  "category": "effect",
-  "itemCapacity": 1000000,
-  "unitCapModifier": 120,
-  "unitType": "omega-prime",
-  "updateEffect": {
-    "type": "MultiEffect",
-    "effects": [
-      {
-        "type": "RadialEffect",
-        "rotationSpacing": 90,
-        "amount": 4,
-        "length": 10,
-        "effect": "lightningCharge"
-      },
-      {
-        "type": "ParticleEffect",
-        "particles": 2,
-        "length": 20,
-        "lifetime": 60,
-        "colorFrom": "a488ff",
-        "colorTo": "ffffff00"
-      }
-    ]
-  },
-  "thrusterEffect": "nuclearcloud",
-  "incendResistance": 0.95,
-  "buildCostMultiplier": 0.5,
-  "drawer": {
-    "type": "DrawMulti",
-    "drawers": [
-      {
-        "type": "DrawDefault"
-      },
-      {
-        "type": "DrawBlurSpin",
-        "blurThresh": 0.6,
-        "rotateSpeed": 1.5
-      },
-      {
-        "type": "DrawGlowRegion",
-        "color": "a488ff",
-        "glowIntensity": 1.2,
-        "glowScale": 20
-      },
-      {
-        "type": "DrawArcSmelt",
-        "color": "8167e6",
-        "particles": 20,
-        "size": 15
-      }
-    ]
-  },
-  "requirements": [
-    "surge-alloy/2000",
-    "silicon/3000",
-    "phase-fabric/1500",
-    "titanium/5000",
-    "titanium/2000",
-    "surge-alloy/10000",
-    "thorium/5000"
-  ],
-  "research": "core-nucleus"
+    "name": "Auraline Giga-Core",
+    "type": "CoreBlock",
+    "description": "The ultimate command center. Utilizing Tau-forged materials, this core features near-infinite storage capacity and a localized repair field. It is the heart of a Giga-Factory.",
+    "size": 5,
+    "health": 1500000,
+    "armor": 500,
+    "category": "effect",
+    "itemCapacity": 1000000,
+    "unitCapModifier": 120,
+    "unitType": "gamma",
+    "updateEffect": {
+        "type": "MultiEffect",
+        "effects": [{
+                "type": "RadialEffect",
+                "rotationSpacing": 90,
+                "amount": 4,
+                "length": 10,
+                "effect": "lightningCharge"
+            },
+            {
+                "type": "ParticleEffect",
+                "particles": 2,
+                "length": 20,
+                "lifetime": 60,
+                "colorFrom": "a488ff",
+                "colorTo": "ffffff00"
+            }
+        ]
+    },
+    "thrusterEffect": "nuclearcloud",
+    "incendResistance": 0.95,
+    "buildCostMultiplier": 0.5,
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.6,
+                "rotateSpeed": 1.5
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 1.2,
+                "glowScale": 20
+            },
+            {
+                "type": "DrawArcSmelt",
+                "color": "8167e6",
+                "particles": 20,
+                "size": 15
+            }
+        ]
+    },
+    "requirements": [
+        "surge-alloy/2000",
+        "silicon/3000",
+        "phase-fabric/1500",
+        "titanium/5000",
+        "titanium/2000",
+        "surge-alloy/10000",
+        "thorium/5000"
+    ],
+    "research": "core-nucleus"
 }
