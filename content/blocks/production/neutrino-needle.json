@@ -1,24 +1,47 @@
 {
-  "name": "Neutrino Needle",
-  "type": "Drill",
-  "description": "A specialized 1x1 extraction unit. Uses ultrasonic pulses to destabilize ore molecular bonds, allowing for near-instant harvesting of any material.",
-  "size": 1,
-  "health": "40000",
-  "category": "production",
-  "tier": 90,
-  "drillTime": 1,
-  "itemCapacity": "20000",
-  "hardnessDrillMultiplier": 0,
-  "hasPower": true,
-  "updateEffect": "pulverizeRed",
-  "drillEffect": "mineHuge",
-  "consumes": {
-    "power": 15
-  },
-  "requirements": [
-    "surge-alloy/15",
-    "titanium/25",
-    "silicon/15",
-    "titanium/10"
-  ]
+    "name": "Neutrino Needle",
+    "type": "Drill",
+    "description": "A specialized 1x1 extraction unit. Uses ultrasonic pulses to destabilize ore molecular bonds, allowing for near-instant harvesting of any material.",
+    "size": 1,
+    "health": 40000,
+    "category": "production",
+    "tier": 90,
+    "drillTime": 1,
+    "itemCapacity": 20000,
+    "hardnessDrillMultiplier": 0,
+    "hasPower": true,
+    "updateEffect": "pulverizeRed",
+    "drillEffect": "mineHuge",
+    "consumes": {
+        "power": 15
+    },
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawBlurSpin",
+                "suffix": "-rotator",
+                "rotateSpeed": 24,
+                "blurThresh": 0.08
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-top"
+            },
+            {
+                "type": "DrawWarmupRegion",
+                "suffix": "-top",
+                "color": "a488ff",
+                "alpha": 0.8
+            }
+        ]
+    },
+    "requirements": [
+        "surge-alloy/15",
+        "titanium/25",
+        "silicon/15",
+        "titanium/10"
+    ]
 }

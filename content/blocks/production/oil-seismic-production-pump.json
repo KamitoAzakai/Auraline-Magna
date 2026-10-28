@@ -1,64 +1,63 @@
 {
-  "name": "Oil Seismic Production Pump",
-  "type": "GenericCrafter",
-  "description": "A specialized deep-bore drill that extracts oil from deep subterranean shale layers. Can be placed anywhere.",
-  "health": "12500",
-  "size": 3,
-  "category": "production",
-  "hasPower": true,
-  "hasLiquids": true,
-  "liquidCapacity": "100",
-  "craftTime": 30,
-  "outputLiquid": "oil/1.0",
-  "consumes": {
-    "power": 3
-  },
-  "drawer": {
-    "type": "DrawMulti",
-    "drawers": [
-      {
-        "type": "DrawRegion",
-        "suffix": "-bottom"
-      },
-      {
-        "type": "DrawLiquidRegion",
-        "drawLiquid": "oil",
-        "suffix": "-liquid"
-      },
-      {
-        "type": "DrawPistons",
-        "sinMag": 2.2,
-        "sinScl": 4,
-        "sideOffset": 0.5
-      },
-      {
-        "type": "DrawBlurSpin",
-        "suffix": "-rotator",
-        "rotateSpeed": 8,
-        "blurThresh": 0.01
-      },
-      {
-        "type": "DrawDefault // Draws the main 'oil-seismic-production-pump.png'"
-      },
-      {
-        "type": "DrawRegion",
-        "suffix": "-top"
-      },
-      {
-        "type": "DrawGlowRegion",
-        "suffix": "-top",
-        "color": "d0fff4",
-        "glowIntensity": 0.6,
-        "glowScale": 2
-      }
-    ]
-  },
-  "requirements": [
-    "copper/200",
-    "metaglass/150",
-    "silicon/100",
-    "titanium/80",
-    "silicon/50"
-  ],
-  "research": "rotary-pump"
+    "name": "Oil Seismic Production Pump",
+    "type": "GenericCrafter",
+    "description": "A specialized deep-bore drill that extracts oil from deep subterranean shale layers. Can be placed anywhere.",
+    "health": "12500",
+    "size": 3,
+    "category": "production",
+    "hasPower": true,
+    "hasLiquids": true,
+    "liquidCapacity": "100",
+    "craftTime": 30,
+    "outputLiquid": "oil/1.0",
+    "consumes": {
+        "power": 3
+    },
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawRegion",
+                "suffix": "-bottom"
+            },
+            {
+                "type": "DrawLiquidRegion",
+                "drawLiquid": "oil",
+                "suffix": "-liquid"
+            },
+            {
+                "type": "DrawPistons",
+                "sinMag": 2.2,
+                "sinScl": 4,
+                "sideOffset": 0.5
+            },
+            {
+                "type": "DrawBlurSpin",
+                "suffix": "-rotator",
+                "rotateSpeed": 8,
+                "blurThresh": 0.01
+            },
+            {
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawRegion",
+                "suffix": "-top"
+            },
+            {
+                "type": "DrawGlowRegion",
+                "suffix": "-top",
+                "color": "d0fff4",
+                "glowIntensity": 0.6,
+                "glowScale": 2
+            }
+        ]
+    },
+    "requirements": [
+        "copper/200",
+        "metaglass/150",
+        "silicon/100",
+        "titanium/80",
+        "silicon/50"
+    ],
+    "research": "rotary-pump"
 }
