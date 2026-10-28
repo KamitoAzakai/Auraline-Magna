@@ -76,10 +76,10 @@
         "items": [
             "silicon/2",
             "titanium/3",
-            "titanium/1"
+            "phase-fabric/1"
         ],
         "liquids": [
-            "water/0.5"
+            "synthetic-oil/0.5"
         ]
     },
     "outputLiquid": "nanite-slurry/0.4",
