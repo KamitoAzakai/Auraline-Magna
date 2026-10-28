@@ -13,10 +13,10 @@
   "ambientSound": "loopHum",
   "ambientSoundVolume": 0.06,
   "requirements": [
-    "tau-forged-thorium/200",
-    "tau-forged-quantum-alloy/150",
-    "hardened-carbide/800",
-    "crystalline-silicon/600"
+    "thorium/200",
+    "surge-alloy/150",
+    "titanium/800",
+    "silicon/600"
   ],
   "research": "thermal-generator"
 }

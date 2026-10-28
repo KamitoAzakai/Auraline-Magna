@@ -7,7 +7,7 @@
   "armor": 15,
   "category": "defense",
   "requirements": [
-    "hardened-carbide/6"
+    "titanium/6"
   ],
   "research": "hardened-carbide"
 }

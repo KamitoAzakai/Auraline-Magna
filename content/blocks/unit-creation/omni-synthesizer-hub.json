@@ -22,55 +22,55 @@
       "unit": "phase-mender",
       "time": 2500,
       "requirements": [
-        "enhanced-phase-fabric/150",
-        "tau-forged-silicon/100"
+        "phase-fabric/150",
+        "silicon/100"
       ]
     },
     {
       "unit": "tectonic-bore",
       "time": 5000,
       "requirements": [
-        "hardened-carbide/800",
+        "titanium/800",
         "thorium/1200",
-        "crystalline-silicon/400"
+        "silicon/400"
       ]
     },
     {
       "unit": "phase-architect",
       "time": 7600,
       "requirements": [
-        "hardened-carbide/800",
+        "titanium/800",
         "thorium/1200",
-        "crystalline-silicon/400",
-        "enhanced-phase-fabric/100"
+        "silicon/400",
+        "phase-fabric/100"
       ]
     },
     {
       "unit": "leviathan",
       "time": 43200,
       "requirements": [
-        "quantum-alloy/1500",
-        "enhanced-kinetic-crystal/200",
-        "tau-forged-thorium/1000"
+        "surge-alloy/1500",
+        "titanium/200",
+        "thorium/1000"
       ]
     },
     {
       "unit": "auraline-arch-titan",
       "time": 43200,
       "requirements": [
-        "tau-forged-quantum-alloy/2500",
-        "enhanced-quantum-alloy/3000",
-        "volatile-isotope/150"
+        "surge-alloy/2500",
+        "surge-alloy/3000",
+        "thorium/150"
       ]
     },
     {
       "unit": "void-sovereign",
       "time": 86400,
       "requirements": [
-        "tau-forged-quantum-alloy/5000",
-        "tau-forged-silicon/4000",
-        "volatile-isotope/500",
-        "enhanced-kinetic-crystal/200"
+        "surge-alloy/5000",
+        "silicon/4000",
+        "thorium/500",
+        "titanium/200"
       ]
     }
   ],
@@ -99,10 +99,10 @@
     ]
   },
   "requirements": [
-    "tau-forged-quantum-alloy/1200",
-    "enhanced-quantum-alloy/2500",
-    "hardened-carbide/5000",
-    "tau-forged-silicon/1500"
+    "surge-alloy/1200",
+    "surge-alloy/2500",
+    "titanium/5000",
+    "silicon/1500"
   ],
   "research": "tetrative-reconstructor"
 }

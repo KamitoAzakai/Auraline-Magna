@@ -50,10 +50,10 @@
   },
   "requirements": [
     "titanium/500",
-    "crystalline-silicon/350",
-    "hardened-carbide/650",
-    "kinetic-crystal/180",
-    "quantum-alloy/120",
+    "silicon/350",
+    "titanium/650",
+    "titanium/180",
+    "surge-alloy/120",
     "thorium/450"
   ],
   "category": "production",

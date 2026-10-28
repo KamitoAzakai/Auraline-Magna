@@ -10,25 +10,25 @@
     "power": 2500
   },
   "requirements": [
-    "tau-forged-quantum-alloy/10000",
-    "tau-forged-thorium/15000",
-    "tau-forged-silicon/20000",
-    "hardened-carbide/50000",
-    "genesis-alloy/10000",
-    "enhanced-phase-fabric/20000"
+    "surge-alloy/10000",
+    "thorium/15000",
+    "silicon/20000",
+    "titanium/50000",
+    "surge-alloy/10000",
+    "phase-fabric/20000"
   ],
   "research": {
     "parent": "star-faller-omega-silo",
     "requirements": [
-      "tau-forged-quantum-alloy/50000",
-      "tau-forged-thorium/80000",
-      "tau-forged-silicon/100000",
-      "hardened-carbide/200000",
-      "enhanced-phase-fabric/40000",
-      "kinetic-crystal/75000",
+      "surge-alloy/50000",
+      "thorium/80000",
+      "silicon/100000",
+      "titanium/200000",
+      "phase-fabric/40000",
+      "titanium/75000",
       "surge-alloy/150000",
-      "enhanced-kinetic-crystal/30000",
-      "crystalline-silicon/50000"
+      "titanium/30000",
+      "silicon/50000"
     ]
   }
 }

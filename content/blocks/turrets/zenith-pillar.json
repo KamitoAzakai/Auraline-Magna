@@ -1,79 +1,80 @@
 {
-    "name": "Zenith-Pillar",
-    "type": "ItemTurret",
-    "description": "The ultimate expression of Auraline dominance. Fires stabilized phase-beams that pierce entire enemy battalions.",
-    "size": 5,
-    "health": 12000,
-    "category": "turret",
-    "reload": 120,
-    "range": 650,
-    "recoil": 8,
-    "shake": 10,
-    "shootSound": "beam",
-    "shoot": {
-        "type": "ShootContinuous"
+  "name": "Zenith-Pillar",
+  "type": "ItemTurret",
+  "description": "The ultimate expression of Auraline dominance. Fires stabilized phase-beams that pierce entire enemy battalions.",
+  "size": 5,
+  "health": 12000,
+  "category": "turret",
+  "reload": 120,
+  "range": 650,
+  "recoil": 8,
+  "shake": 10,
+  "shootSound": "beam",
+  "shoot": {
+    "type": "ShootContinuous"
+  },
+  "consumes": {
+    "power": 25,
+    "liquids": [
+      "ionic-refrigerant/0.8",
+      "plasma-flux/0.25"
+    ]
+  },
+  "ammoTypes": {
+    "volatile-isotope": {
+      "type": "ContinuousLaserBulletType",
+      "damage": 4200,
+      "length": 660,
+      "width": 12,
+      "lifetime": 95,
+      "drawSize": 660,
+      "colors": [
+        "ff6b38",
+        "ffffff",
+        "b892ff"
+      ],
+      "lightColor": "b892ff",
+      "incendAmount": 5,
+      "incendSpread": 20,
+      "oscMag": 1,
+      "oscScl": 5
     },
-    "consumes": {
-        "power": 25,
-        "liquids": [
-            "ionic-refrigerant/0.8",
-            "plasma-flux/0.25"
-        ]
-    },
-    "ammoTypes": {
-        "volatile-isotope": {
-            "type": "ContinuousLaserBulletType",
-            "damage": 4200,
-            "length": 660,
-            "width": 12,
-            "lifetime": 95,
-            "drawSize": 660,
-            "colors": [
-                "ff6b38",
-                "ffffff",
-                "b892ff"
-            ],
-            "lightColor": "b892ff",
-            "incendAmount": 5,
-            "incendSpread": 20,
-            "oscMag": 1,
-            "oscScl": 5
-        },
-        "tau-forged-quantum-alloy": {
-            "type": "RailgunBulletType",
-            "damage": 5200,
-            "length": 650,
-            "updateEffect": "railTrail",
-            "hitEffect": "massiveExplosion",
-            "smokeEffect": "shootBigSmoke2",
-            "pierce": true
-        }
-    },
-    "drawer": {
-        "type": "DrawMulti",
-        "drawers": [{
-                "type": "DrawDefault"
-            },
-            {
-                "type": "DrawRegion",
-                "suffix": "-orb",
-                "y": 8,
-                "bounce": true,
-                "mag": 1.5,
-                "scl": 5
-            },
-            {
-                "type": "DrawHeatRegion",
-                "color": "ff6b38"
-            }
-        ]
-    },
-    "requirements": [
-        "tau-forged-quantum-alloy/850",
-        "enhanced-quantum-alloy/1200",
-        "volatile-isotope/250",
-        "kinetic-crystal/900",
-        "crystalline-silicon/1200"
-    ],
-    "research": "void-render-cannon"
+    "tau-forged-quantum-alloy": {
+      "type": "RailgunBulletType",
+      "damage": 5200,
+      "length": 650,
+      "updateEffect": "railTrail",
+      "hitEffect": "massiveExplosion",
+      "smokeEffect": "shootBigSmoke2",
+      "pierce": true
+    }
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawRegion",
+        "suffix": "-orb",
+        "y": 8,
+        "bounce": true,
+        "mag": 1.5,
+        "scl": 5
+      },
+      {
+        "type": "DrawHeatRegion",
+        "color": "ff6b38"
+      }
+    ]
+  },
+  "requirements": [
+    "surge-alloy/850",
+    "surge-alloy/1200",
+    "thorium/250",
+    "titanium/900",
+    "silicon/1200"
+  ],
+  "research": "void-render-cannon"
 }

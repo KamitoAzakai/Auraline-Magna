@@ -45,10 +45,10 @@
     }
   },
   "requirements": [
-    "hardened-carbide/800",
-    "quantum-alloy/400",
-    "crystalline-silicon/500",
-    "kinetic-crystal/250"
+    "titanium/800",
+    "surge-alloy/400",
+    "silicon/500",
+    "titanium/250"
   ],
   "research": "quantum-sifter"
 }

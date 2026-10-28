@@ -8,8 +8,8 @@
   "maxHeat": "1000",
   "heatConfig": "120",
   "requirements": [
-    "tau-forged-quantum-alloy/5",
-    "hardened-carbide/10",
+    "surge-alloy/5",
+    "titanium/10",
     "metaglass/15"
   ],
   "drawer": {

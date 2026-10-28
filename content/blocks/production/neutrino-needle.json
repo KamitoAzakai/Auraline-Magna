@@ -16,9 +16,9 @@
     "power": 15
   },
   "requirements": [
-    "tau-forged-quantum-alloy/15",
-    "hardened-carbide/25",
-    "crystalline-silicon/15",
-    "kinetic-crystal/10"
+    "surge-alloy/15",
+    "titanium/25",
+    "silicon/15",
+    "titanium/10"
   ]
 }

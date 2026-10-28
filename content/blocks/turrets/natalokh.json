@@ -54,7 +54,7 @@
   },
   "requirements": [
     "lead/500",
-    "hardened-carbide/200",
+    "titanium/200",
     "silicon/250",
     "titanium/300"
   ],

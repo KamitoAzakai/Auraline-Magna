@@ -11,9 +11,9 @@
     "power": 15
   },
   "requirements": [
-    "tau-forged-quantum-alloy/80",
-    "hardened-carbide/200",
-    "crystalline-silicon/150",
+    "surge-alloy/80",
+    "titanium/200",
+    "silicon/150",
     "metaglass/500"
   ],
   "research": "rotary-pump"

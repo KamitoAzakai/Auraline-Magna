@@ -12,8 +12,8 @@
   "lightningLength": 8,
   "category": "defense",
   "requirements": [
-    "quantum-alloy/24",
-    "crystalline-silicon/12"
+    "surge-alloy/24",
+    "silicon/12"
   ],
   "research": "quantum-alloy"
 }

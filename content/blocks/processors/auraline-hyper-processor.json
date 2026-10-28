@@ -40,8 +40,8 @@
     "interp": "circleOut"
   },
   "requirements": [
-    "hardened-carbide/100",
-    "crystalline-silicon/150",
+    "titanium/100",
+    "silicon/150",
     "phase-fabric/50",
     "surge-alloy/80"
   ],

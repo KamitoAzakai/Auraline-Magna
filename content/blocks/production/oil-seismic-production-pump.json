@@ -58,7 +58,7 @@
     "metaglass/150",
     "silicon/100",
     "titanium/80",
-    "crystalline-silicon/50"
+    "silicon/50"
   ],
   "research": "rotary-pump"
 }
