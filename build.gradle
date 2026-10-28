@@ -17,7 +17,7 @@ repositories {
 }
 
 ext {
-    mindustryVersion = 'v146'
+    mindustryVersion = 'v160.7'
 }
 
 java {
@@ -40,7 +40,7 @@ jar {
     }
 
     from(projectDir) {
-        include "mod.hjson"
+        include "mod.json", "icon.png"
     }
 
     from("content") {
