@@ -1,0 +1,24 @@
+{
+  "name": "Neutrino Needle",
+  "type": "Drill",
+  "description": "A specialized 1x1 extraction unit. Uses ultrasonic pulses to destabilize ore molecular bonds, allowing for near-instant harvesting of any material.",
+  "size": 1,
+  "health": "40000",
+  "category": "production",
+  "tier": 90,
+  "drillTime": 1,
+  "itemCapacity": "20000",
+  "hardnessDrillMultiplier": 0,
+  "hasPower": true,
+  "updateEffect": "pulverizeRed",
+  "drillEffect": "mineHuge",
+  "consumes": {
+    "power": 15
+  },
+  "requirements": [
+    "tau-forged-quantum-alloy/15",
+    "hardened-carbide/25",
+    "crystalline-silicon/15",
+    "kinetic-crystal/10"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "Floor",
+  "name": "Crystal Silt",
+  "description": "High-friction crystalline fragments. Its jagged composition slows down mechanical movement.",
+  "variants": 4,
+  "mapColor": "e3b3ff",
+  "speedMultiplier": 0.7,
+  "attributes": {
+    "heat": 0.2,
+    "charge": 0.4
+  }
+}

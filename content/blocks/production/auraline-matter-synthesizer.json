@@ -1,0 +1,34 @@
+{
+  "type": "ItemSource",
+  "name": "Auraline Matter-Synthesizer",
+  "description": "The peak of Auraline achievement. Synthesizes any material from pure energy. Unlocking this requires a total commitment of the Empire's endgame reserves.",
+  "size": 1,
+  "health": "50000",
+  "category": "production",
+  "buildVisibility": "shown",
+  "consumes": {
+    "power": 2500
+  },
+  "requirements": [
+    "tau-forged-quantum-alloy/10000",
+    "tau-forged-thorium/15000",
+    "tau-forged-silicon/20000",
+    "hardened-carbide/50000",
+    "genesis-alloy/10000",
+    "enhanced-phase-fabric/20000"
+  ],
+  "research": {
+    "parent": "star-faller-omega-silo",
+    "requirements": [
+      "tau-forged-quantum-alloy/50000",
+      "tau-forged-thorium/80000",
+      "tau-forged-silicon/100000",
+      "hardened-carbide/200000",
+      "enhanced-phase-fabric/40000",
+      "kinetic-crystal/75000",
+      "surge-alloy/150000",
+      "enhanced-kinetic-crystal/30000",
+      "crystalline-silicon/50000"
+    ]
+  }
+}

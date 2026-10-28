@@ -1,0 +1,15 @@
+{
+  "name": "Nanite Slurry",
+  "description": "Trillions of microscopic machines suspended in a conductive metallic medium. Automatically seals breaches in Giga-structures and reinforces unit armor.",
+  "color": "808080",
+  "lightColor": "a488ff",
+  "viscosity": 0.7,
+  "temperature": 0.2,
+  "heatCapacity": 0.8,
+  "explosiveness": 0,
+  "flammability": 0,
+  "radioactivity": 0,
+  "charge": 0.5,
+  "effect": "shielded",
+  "research": "silicon"
+}

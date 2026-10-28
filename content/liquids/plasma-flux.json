@@ -1,0 +1,9 @@
+{
+  "name": "Plasma Flux",
+  "description": "A liquid state of pure thermal energy. Extremely corrosive and incredibly hot.",
+  "color": "ffa665",
+  "temperature": 2,
+  "viscosity": 0.5,
+  "effect": "melting",
+  "research": "slag"
+}

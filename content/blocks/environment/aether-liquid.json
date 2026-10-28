@@ -1,0 +1,16 @@
+{
+  "type": "Floor",
+  "name": "Aether Liquid",
+  "description": "Natural pools of raw, super-cooled Aether. Extremely hazardous to unshielded units.",
+  "isLiquid": true,
+  "liquidDrop": "ionic-refrigerant",
+  "variants": 0,
+  "cacheLayer": "water",
+  "mapColor": "6e45ff",
+  "attributes": {
+    "heat": -1.2
+  },
+  "speedMultiplier": 0.2,
+  "status": "electrified",
+  "statusDuration": 150
+}

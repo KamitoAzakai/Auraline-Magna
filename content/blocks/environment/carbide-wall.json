@@ -1,0 +1,12 @@
+{
+  "type": "StaticWall",
+  "name": "Carbide Wall",
+  "description": "An immovable monolith of raw Carbide. Its dense molecular structure is impenetrable by standard weaponry.",
+  "variants": 3,
+  "attributes": {
+    "heat": 0.3
+  },
+  "mapColor": "3e3852",
+  "shadowAlpha": 0.6,
+  "shadowOffset": 2
+}

@@ -1,0 +1,19 @@
+{
+  "type": "Floor",
+  "name": "Darkened Aether Liquid",
+  "description": "A highly compressed, deep-layer variant of Aether Liquid. Its density makes it impassable for most ground units.",
+  "isLiquid": true,
+  "liquidDrop": "ionic-refrigerant",
+  "liquidMultiplier": 2,
+  "variants": 0,
+  "cacheLayer": "water",
+  "mapColor": "2c626a",
+  "speedMultiplier": 0.1,
+  "drownTime": 80,
+  "status": "aetheric-pressure",
+  "statusDuration": "100",
+  "attributes": {
+    "heat": -1.5,
+    "depth": 1
+  }
+}

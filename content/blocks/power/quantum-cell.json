@@ -1,0 +1,32 @@
+{
+  "type": "Battery",
+  "name": "Quantum Cell",
+  "description": "A high-density power storage unit that utilizes stabilized phase-matter to store vast amounts of energy.",
+  "health": "30000",
+  "size": 1,
+  "category": "power",
+  "consumes": {
+    "powerBuffered": "25000000"
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawPulseShape",
+        "color": "b892ff",
+        "radius": 3
+      }
+    ]
+  },
+  "requirements": [
+    "titanium/100",
+    "silicon/150",
+    "lead/200",
+    "surge-alloy/100",
+    "quantum-alloy/10"
+  ],
+  "research": "battery"
+}

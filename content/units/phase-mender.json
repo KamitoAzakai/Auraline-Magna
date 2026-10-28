@@ -1,0 +1,54 @@
+{
+  "type": "flying",
+  "name": "Phase-Mender",
+  "description": "A specialized Tier 3 support unit. Emits a high-frequency phase-aura that reconstructs damaged hulls and stabilizes overheating weapon systems. Guided by an autonomous triage AI.",
+  "health": 5000,
+  "armor": 8,
+  "hitSize": 12,
+  "speed": 2.8,
+  "accel": 0.15,
+  "drag": 0.05,
+  "flying": true,
+  "controller": "RepairAI",
+  "targetAir": false,
+  "targetGround": false,
+  "commandLimit": 6,
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",
+      "amount": 65,
+      "reload": 60,
+      "range": 100
+    },
+    {
+      "type": "StatusFieldAbility",
+      "effect": "overclock",
+      "duration": 120,
+      "reload": 240,
+      "range": 80
+    }
+  ],
+  "weapons": [
+    {
+      "name": "mender-beam",
+      "x": 0,
+      "y": 4,
+      "reload": 20,
+      "mirror": false,
+      "shootSound": "lasershoot",
+      "predictTarget": false,
+      "healPercent": 12,
+      "bullet": {
+        "type": "LaserBoltType",
+        "damage": -100,
+        "healPercent": 12,
+        "collidesTeam": true,
+        "recoil": 0,
+        "speed": 5,
+        "lifetime": 30,
+        "backColor": "b892ff",
+        "frontColor": "ffffff"
+      }
+    }
+  ]
+}

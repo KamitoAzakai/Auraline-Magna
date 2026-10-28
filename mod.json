@@ -1,0 +1,9 @@
+{
+  "name": "auraline-magna-mod",
+  "displayName": "Auraline Magna Mod",
+  "description": "An extensive mod adding high-tier content, new mechanics, and quality-of-life improvements to Mindustry. Still in development.",
+  "author": "Kai",
+  "version": "1.79.0.1",
+  "minGameVersion": "146",
+  "main": "auralinemagna.AuralineMagnaMod"
+}

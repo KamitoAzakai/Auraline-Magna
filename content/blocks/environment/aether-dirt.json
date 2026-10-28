@@ -1,0 +1,12 @@
+{
+  "type": "Floor",
+  "name": "Aether Dirt",
+  "description": "Fine silicate dust infused with Aetheric residue. Provides stable footing for Auraline constructs.",
+  "variants": 3,
+  "speedMultiplier": 1.1,
+  "breakage": 0.5,
+  "attributes": {
+    "heat": 0.1
+  },
+  "mapColor": "2d2445"
+}

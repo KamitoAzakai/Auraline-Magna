@@ -1,0 +1,11 @@
+{
+  "name": "Volatile Isotope",
+  "description": "A highly unstable radioactive element harvested from the core of dying stars. Packs immense energy but is prone to catastrophic detonation.",
+  "color": "d13dfa",
+  "explosiveness": 2.5,
+  "flammability": 0.5,
+  "radioactivity": 3,
+  "charge": 0,
+  "cost": 5,
+  "research": "thorium"
+}

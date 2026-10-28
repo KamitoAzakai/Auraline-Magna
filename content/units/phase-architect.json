@@ -1,0 +1,53 @@
+{
+  "type": "flying",
+  "name": "Phase-Architect",
+  "description": "The pinnacle of Auraline logistical engineering. The Phase-Architect uses stabilized phase-fields to assemble structures at a molecular level. Significantly faster and more intelligent than the Poly-class units, it automatically assists in construction and restores fallen structures with extreme priority.",
+  "health": 12000,
+  "armor": 10,
+  "hitSize": 15,
+  "speed": 4.5,
+  "rotateSpeed": 15,
+  "accel": 0.1,
+  "drag": 0.05,
+  "lowAltitude": false,
+  "flying": true,
+  "mineTier": 3,
+  "mineSpeed": 12,
+  "buildSpeed": 6.5,
+  "controller": "BuilderAI",
+  "defaultCommand": "rebuild",
+  "engineOffset": 8,
+  "engineSize": 4,
+  "itemCapacity": 120,
+  "abilities": [
+    {
+      "type": "RepairFieldAbility",
+      "amount": 50,
+      "reload": 30,
+      "range": 80
+    }
+  ],
+  "weapons": [
+    {
+      "name": "phase-builder-beam",
+      "x": 0,
+      "y": 0,
+      "mirror": false,
+      "reload": 10,
+      "noAmmoPlayer": true,
+      "bullet": {
+        "type": "LaserBoltType",
+        "damage": 0,
+        "speed": 8,
+        "lifetime": 20,
+        "healPercent": 10,
+        "collidesTeam": true,
+        "backColor": "b892ff",
+        "frontColor": "ffffff",
+        "trailColor": "b892ff",
+        "trailWidth": 2,
+        "trailLength": 10
+      }
+    }
+  ]
+}

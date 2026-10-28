@@ -1,0 +1,36 @@
+{
+    "type": "Unloader",
+    "name": "Quantum Siphon",
+    "description": "Uses localized gravity wells to pull materials from containers at extreme velocities. Capable of saturating even the fastest Giga-belts.",
+    "health": 2000,
+    "size": 1,
+    "category": "distribution",
+    "speed": 0,
+    "itemCapacity": 20,
+    "updateEffect": "lightningCharge",
+    "updateEffectChance": 0.03,
+    "drawer": {
+        "type": "DrawMulti",
+        "drawers": [{
+                "type": "DrawDefault"
+            },
+            {
+                "type": "DrawGlowRegion",
+                "color": "a488ff",
+                "glowIntensity": 0.8,
+                "glowScale": 3
+            },
+            {
+                "type": "DrawBlurSpin",
+                "blurThresh": 0.1,
+                "rotateSpeed": 10
+            }
+        ]
+    },
+    "requirements": [
+        "titanium/25",
+        "crystalline-silicon/10",
+        "enhanced-phase-fabric/10"
+    ],
+    "research": "unloader"
+}

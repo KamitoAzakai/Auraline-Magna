@@ -1,0 +1,61 @@
+{
+  "name": "Tectonic Drill",
+  "type": "Drill",
+  "description": "A heavy-duty industrial drill. Uses Tau-forged resonators to induce localized tectonic shifts, shattering ore veins instantly. Requires constant cooling.",
+  "size": 3,
+  "tier": 8,
+  "drillTime": 16,
+  "health": "3200",
+  "itemCapacity": "120",
+  "hardnessDrillMultiplier": 8,
+  "consumes": {
+    "power": 8.5,
+    "liquids": [
+      "ionic-refrigerant/0.35"
+    ]
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+      {
+        "type": "DrawRegion",
+        "suffix": "-bottom"
+      },
+      {
+        "type": "DrawPistons",
+        "sinMag": 1.5,
+        "sinScl": 5
+      },
+      {
+        "type": "DrawBlurSpin",
+        "suffix": "-rotator",
+        "rotateSpeed": 12
+      },
+      {
+        "type": "DrawDefault"
+      },
+      {
+        "type": "DrawGlowRegion",
+        "suffix": "-top",
+        "color": "d0fff4"
+      },
+      {
+        "type": "DrawPulseShape",
+        "square": true,
+        "color": "d0fff4",
+        "timeScl": 40,
+        "mag": 1.2
+      }
+    ]
+  },
+  "requirements": [
+    "titanium/500",
+    "crystalline-silicon/350",
+    "hardened-carbide/650",
+    "kinetic-crystal/180",
+    "quantum-alloy/120",
+    "thorium/450"
+  ],
+  "category": "production",
+  "research": "kinetic-crystal"
+}

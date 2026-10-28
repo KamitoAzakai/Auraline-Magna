@@ -1,0 +1,19 @@
+{
+  "name": "Torrent Intake",
+  "type": "Pump",
+  "description": "A high-velocity water extraction system. Features dual-stage turbines to saturate industrial cooling systems instantly.",
+  "health": "5000",
+  "size": 2,
+  "category": "production",
+  "hasPower": true,
+  "pumpAmount": 0.5,
+  "consumes": {
+    "power": 1.5
+  },
+  "requirements": [
+    "metaglass/150",
+    "silicon/100",
+    "titanium/120"
+  ],
+  "research": "impulse-pump"
+}

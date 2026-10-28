@@ -1,0 +1,14 @@
+{
+  "type": "StaticWall",
+  "name": "Veridian Aether Wall",
+  "description": "A jagged formation of oxidized Carbide. The teal coloration indicates a high concentration of volatile atmospheric gases trapped within the stone.",
+  "variants": 3,
+  "attributes": {
+    "heat": -0.2,
+    "gas-concentration": 0.8
+  },
+  "mapColor": "2e5a5e",
+  "emitLight": true,
+  "lightRadius": 35,
+  "lightColor": "4ef0d033"
+}
